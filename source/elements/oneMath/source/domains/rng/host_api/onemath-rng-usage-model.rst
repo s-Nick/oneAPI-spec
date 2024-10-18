@@ -27,7 +27,7 @@ Buffer-based example
 
 .. code-block:: cpp
 
-    #include "oneapi/mkl/rng.hpp"
+    #include "oneapi/math/rng.hpp"
 
     int main() {
         sycl::queue q;
@@ -48,7 +48,7 @@ USM-based example
 
 .. code-block:: cpp
 
-    #include "oneapi/mkl/rng.hpp"
+    #include "oneapi/math/rng.hpp"
 
     int main() {
         sycl::queue q;

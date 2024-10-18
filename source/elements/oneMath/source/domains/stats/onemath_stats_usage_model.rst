@@ -25,7 +25,7 @@ USM-based example
 
 .. code-block:: cpp
 
-    #include "oneapi/mkl/stats.hpp"
+    #include "oneapi/math/stats.hpp"
 
     int main() {
         sycl::queue queue;

@@ -27,7 +27,7 @@ Example of Scalar Random Numbers Generation
 
 .. code-block:: cpp
 
-    #include "oneapi/mkl/rng/device.hpp"
+    #include "oneapi/math/rng/device.hpp"
 
     int main() {
         sycl::queue q;
@@ -53,7 +53,7 @@ Example of Vector Random Numbers Generation
 
 .. code-block:: cpp
 
-    #include "oneapi/mkl/rng/device.hpp"
+    #include "oneapi/math/rng/device.hpp"
 
     int main() {
         sycl::queue q;
