@@ -69,7 +69,7 @@ class exponential
                 * ``oneapi::math::rng::exponential_method::icdf``
                 * ``oneapi::math::rng::exponential_method::icdf_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_onemath_rng_method_values>`.
 
 .. container:: section
 

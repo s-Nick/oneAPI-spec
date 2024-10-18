@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemath_rng_distributions_template_parameter_mkl_rng_method_values:
+.. _onemath_rng_distributions_template_parameter_onemath_rng_method_values:
 
 Distributions Template Parameter Method
 =======================================

@@ -77,7 +77,7 @@ class beta
                 * ``oneapi::math::rng::beta_method::cja``
                 * ``oneapi::math::rng::beta_method::cja_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_onemath_rng_method_values>`.
 
 .. container:: section
 

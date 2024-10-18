@@ -77,7 +77,7 @@ It's implementation defined which type ``SequenceContainerOrView`` represents.
                 * ``oneapi::math::rng::gaussian_mv_method::box_muller2``
                 * ``oneapi::math::rng::gaussian_mv_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_onemath_rng_method_values>`.
 
 .. container:: section
 
