@@ -7,7 +7,7 @@
 Data storage
 ============
 
-The usage of prepended namespace specifiers ``oneapi::mkl::dft`` is
+The usage of prepended namespace specifiers ``oneapi::math::dft`` is
 omitted below for conciseness.
 
 The data storage convention observed by a ``descriptor`` object depends on
@@ -69,7 +69,7 @@ USM allocations.
 
 .. code-block:: cpp
 
-    namespace dft = oneapi::mkl::dft;
+    namespace dft = oneapi::math::dft;
     dft::descriptor<dft::precision::SINGLE, dft::domain::COMPLEX> desc({n1, n2, n3});
     std::vector<std::int64_t> strides({0, n2*n3, n3, 1});
     std::int64_t dist = n1*n2*n3;
@@ -122,7 +122,7 @@ USM allocations.
 
 .. code-block:: cpp
 
-    namespace dft = oneapi::mkl::dft;
+    namespace dft = oneapi::math::dft;
     dft::descriptor<dft::precision::SINGLE, dft::domain::COMPLEX> desc({n1, n2, n3});
     std::vector<std::int64_t> strides({0, n2*n3, n3, 1});
     std::int64_t dist = n1*n2*n3;
@@ -171,7 +171,7 @@ forward and backward domains, with USM allocations.
 
 .. code-block:: cpp
 
-    namespace dft = oneapi::mkl::dft;
+    namespace dft = oneapi::math::dft;
     dft::descriptor<dft::precision::SINGLE, dft::domain::REAL> desc({n1, n2, n3});
     // Note: integer divisions here below
     std::vector<std::int64_t> fwd_strides({0, 2*n2*(n3/2 + 1), 2*(n3/2 + 1), 1});

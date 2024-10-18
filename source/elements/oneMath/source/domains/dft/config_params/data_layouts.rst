@@ -7,7 +7,7 @@
 Configuration of data layouts
 -----------------------------
 
-The usage of prepended namespace specifiers ``oneapi::mkl::dft`` is
+The usage of prepended namespace specifiers ``oneapi::math::dft`` is
 omitted below for conciseness.
 
 The DFT interface provides the configuration parameters
@@ -285,7 +285,7 @@ the reverse direction as shown below.
 
 .. code-block:: cpp
 
-   namespace dft = oneapi::mkl::dft;
+   namespace dft = oneapi::math::dft;
    // ...
    desc.set_value(dft::config_param::INPUT_STRIDES,  fwd_domain_strides);
    desc.set_value(dft::config_param::OUTPUT_STRIDES, bwd_domain_strides);

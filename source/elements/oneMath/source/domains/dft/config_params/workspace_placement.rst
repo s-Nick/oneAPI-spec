@@ -7,7 +7,7 @@
 Workspace placement
 -------------------
 
-The usage of prepended namespace specifiers ``oneapi::mkl::dft`` is
+The usage of prepended namespace specifiers ``oneapi::math::dft`` is
 omitted below for conciseness.
 
 DFT implementations often require temporary storage for intermediate data whilst computing DFTs.
@@ -77,7 +77,7 @@ This is shown in the following example code:
 
 .. code-block:: cpp
 
-   namespace dft = oneapi::mkl::dft;
+   namespace dft = oneapi::math::dft;
    // Create a descriptor
    dft::descriptor<dft::precision::SINGLE, dom> desc(n);
    // 1. Set the workspace placement to WORKSPACE_EXTERNAL

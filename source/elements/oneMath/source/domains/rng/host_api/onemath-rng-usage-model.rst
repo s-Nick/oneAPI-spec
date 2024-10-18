@@ -33,11 +33,11 @@ Buffer-based example
         sycl::queue q;
 
         // Create the random number generator object
-        oneapi::mkl::rng::philox4x32x10 engine(q, seed);
+        oneapi::math::rng::philox4x32x10 engine(q, seed);
         // Create the distribution object
-        oneapi::mkl::rng::gaussian<double> distr(5.0, 2.0);
+        oneapi::math::rng::gaussian<double> distr(5.0, 2.0);
         // Fill the SYCL buffer with random numbers
-        oneapi::mkl::rng::generate(distr, engine, n, sycl_buffer);
+        oneapi::math::rng::generate(distr, engine, n, sycl_buffer);
 
         // ...
     }
@@ -54,11 +54,11 @@ USM-based example
         sycl::queue q;
 
         // Create the random number generator object
-        oneapi::mkl::rng::philox4x32x10 engine(q, seed);
+        oneapi::math::rng::philox4x32x10 engine(q, seed);
         // Create the distribution object
-        oneapi::mkl::rng::gaussian<double> distr(5.0, 2.0);
+        oneapi::math::rng::gaussian<double> distr(5.0, 2.0);
         // Fill the USM memory under the pointer with random numbers
-        auto event = oneapi::mkl::rng::generate(distr, engine, n, usm_ptr);
+        auto event = oneapi::math::rng::generate(distr, engine, n, usm_ptr);
         // ...
         // wait until generation is finalized
         event.wait();

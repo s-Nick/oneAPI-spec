@@ -36,11 +36,11 @@ USM-based example
         // allocate Unified Shared Memory for the dataset of the size n_observations * n_dims and fill it with any data
         // allocate Unified Shared Memory for the mean output of the size n_dims
 
-        // create oneapi::mkl::stats::dataset
-        auto dataset = oneapi::mkl::stats::make_dataset<oneapi::mkl::stats::layout::row_major>(n_dims, n_observations, dataset_ptr);
+        // create oneapi::math::stats::dataset
+        auto dataset = oneapi::math::stats::make_dataset<oneapi::math::stats::layout::row_major>(n_dims, n_observations, dataset_ptr);
 
         // call statistics computation routine
-        auto event = oneapi::mkl::stats::mean(queue, dataset, mean_ptr);
+        auto event = oneapi::math::stats::mean(queue, dataset, mean_ptr);
 
         // wait until computations are completed
         event.wait();

@@ -7,15 +7,15 @@
 The ``descriptor`` class template
 =================================
 
-Instances of any ``oneapi::mkl::dft::descriptor`` class define DFT(s) to be
-computed. The usage of prepended namespace specifiers ``oneapi::mkl::dft`` is
+Instances of any ``oneapi::math::dft::descriptor`` class define DFT(s) to be
+computed. The usage of prepended namespace specifiers ``oneapi::math::dft`` is
 omitted below for conciseness.
 
 Description
 +++++++++++
 
 Any desired DFT is fully defined by an instance of a specialization of the
-``descriptor`` class template, declared in the ``oneapi::mkl::dft`` namespace.
+``descriptor`` class template, declared in the ``oneapi::math::dft`` namespace.
 The :ref:`scoped enumeration types<onemath_dft_enums>` ``precision``, ``domain``,
 ``config_param`` and ``config_value`` defined in the same namespace (and the
 corresponding ranges of values) are relevant to the definition and
@@ -29,7 +29,7 @@ device encapsulated by the ``sycl::queue`` object required by that function.
 
 The desired forward (resp. backward) DFT calculations may then be computed by
 passing such a committed ``descriptor`` object to a ``compute_forward`` (resp.
-``compute_backward``) function (defined in the ``oneapi::mkl::dft`` namespace as
+``compute_backward``) function (defined in the ``oneapi::math::dft`` namespace as
 well), along with the relevant data containers (``sycl::buffer`` object(s) or
 pointer(s) to a device-accessible USM allocations) for the  desired DFT(s). This
 function makes the ``descriptor`` object enqueue the operations relevant for the
@@ -45,7 +45,7 @@ desired calculations to the ``sycl::queue`` object it was given when committing 
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       class descriptor {
@@ -180,7 +180,7 @@ without copying them.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>::descriptor(std::int64_t length);
@@ -192,7 +192,7 @@ without copying them.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>::descriptor(std::vector<std::int64_t> lengths);
@@ -203,7 +203,7 @@ without copying them.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>::descriptor(const descriptor<prec,dom>& other);
@@ -214,7 +214,7 @@ without copying them.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>::descriptor(descriptor<prec,dom>&& other);
@@ -248,11 +248,11 @@ without copying them.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
-   ``oneapi::mkl::host_bad_alloc()``
+   ``oneapi::math::host_bad_alloc()``
       If any memory allocations on host have failed, for instance due to
       insufficient memory.
 
-   ``oneapi::mkl::unimplemented()``
+   ``oneapi::math::unimplemented()``
       If the dimension :math:`d`, *i.e.*, the size of ``lengths``, is larger
       than what is supported by the library implementation.
    
@@ -271,7 +271,7 @@ The copy assignment operator results in a deep copy.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>& descriptor<prec,dom>::operator=(const descriptor<prec,dom>& other);
@@ -282,7 +282,7 @@ The copy assignment operator results in a deep copy.
 
 .. code-block:: cpp
    
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       descriptor<prec,dom>& descriptor<prec,dom>::operator=(descriptor<prec,dom>&& other);
@@ -306,7 +306,7 @@ The copy assignment operator results in a deep copy.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
-   ``oneapi::mkl::host_bad_alloc()``
+   ``oneapi::math::host_bad_alloc()``
       If any memory allocations on host have failed, for instance due to
       insufficient memory.
 
@@ -338,7 +338,7 @@ to be used for a specific value of ``param``.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, std::int64_t value);
@@ -354,7 +354,7 @@ This version of ``set_value`` supports the following values of ``param``:
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, real_scalar_t value);
@@ -370,7 +370,7 @@ This version of ``set_value`` supports the following values of ``param``:
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, const std::vector<std::int64_t>& value);
@@ -391,7 +391,7 @@ the :ref:`configuration of data layouts<onemath_dft_config_data_layouts>`.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, config_value value);
@@ -407,7 +407,7 @@ This version of ``set_value`` supports the following values of ``param``:
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, const std::int64_t* value);
@@ -432,7 +432,7 @@ recommended by the compile-time deprecation warning.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_value(config_param param, ...);
@@ -478,12 +478,12 @@ to inform about the recommended alternative.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       - If the provided ``param`` corresponds to a read-only configuration parameter;
       - If the overloaded version being used does not support ``param``;
       - If the provided ``param`` and/or configuration value are/is not valid.
 
-   ``oneapi::mkl::unimplemented()``
+   ``oneapi::math::unimplemented()``
       If the provided ``param`` and configuration value are valid, but not
       supported by the library implementation.
 
@@ -519,7 +519,7 @@ to be used for a specific value of ``param``.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, domain* value_ptr) const;
@@ -532,7 +532,7 @@ This version of ``get_value`` supports only ``config_param::FORWARD_DOMAIN`` for
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, precision* value_ptr) const;
@@ -545,7 +545,7 @@ This version of ``get_value`` supports only ``config_param::PRECISION`` for
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, std::int64_t* value_ptr) const;
@@ -572,7 +572,7 @@ emitted to inform about the recommended alternative in such cases.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, real_scalar_t* value_ptr) const;
@@ -590,7 +590,7 @@ single-precision (resp. double-precision) descriptors.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, std::vector<std::int64_t>* value_ptr) const;
@@ -613,7 +613,7 @@ This version of ``get_value`` supports the following values of ``param``:
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, config_value* value_ptr) const;
@@ -630,7 +630,7 @@ This version of ``get_value`` supports the following values of ``param``:
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::get_value(config_param param, ...) const;
@@ -685,16 +685,16 @@ to inform about the recommended alternative.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
    
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       - If the overloaded version being used does not support ``param``;
       - If ``value_ptr`` is ``nullptr``;
       - If ``value_ptr->size()`` is not as expected when querying a vector-valued parameter.
 
-   ``oneapi::mkl::uninitialized``
+   ``oneapi::math::uninitialized``
       If ``param`` is ``config_param::WORKSPACE_EXTERNAL_BYTES`` and the
       calling object is not committed.
 
-   ``oneapi::mkl::unimplemented()``
+   ``oneapi::math::unimplemented()``
       If the queried ``param`` is valid, but not supported by the library
       implementation.
 
@@ -736,7 +736,7 @@ be used in compute calls. However, the aforementioned restrictions will still ap
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_workspace(sycl::buffer<real_scalar_t, 1> &workspaceBuf);
@@ -746,7 +746,7 @@ be used in compute calls. However, the aforementioned restrictions will still ap
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::set_workspace(real_scalar_t* workspaceUSM);
@@ -778,14 +778,14 @@ be used in compute calls. However, the aforementioned restrictions will still ap
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
    
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       If the provided buffer ``workspaceBuf`` is not sufficiently large or is a
       sub-buffer, or if the provided USM allocation ``workspaceUSM`` is
       ``nullptr`` when an external workspace of size greater than zero is
       required, or if the provided USM allocation ``workspaceUSM`` is not
       accessible by the device.
 
-   ``oneapi::mkl::uninitialized()``
+   ``oneapi::math::uninitialized()``
       If ``set_workspace`` is called before the descriptor is committed.
 
 
@@ -816,7 +816,7 @@ called again.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <precision prec, domain dom>
       void descriptor<prec,dom>::commit(sycl::queue& queue);
@@ -841,14 +841,14 @@ called again.
    ``descriptor`` object's configuration was found to be inconsistent, for
    instance):
    
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       If ``queue`` is found to be invalid in any way.
 
-   ``oneapi::mkl::host_bad_alloc()``
+   ``oneapi::math::host_bad_alloc()``
       If any host side only memory allocations fail, for instance due to lack of
       memory.
 
-   ``oneapi::mkl::device_bad_alloc()``
+   ``oneapi::math::device_bad_alloc()``
       If any device or shared memory allocation fail.
  
 **Descriptor class member table:** :ref:`onemath_dft_descriptor_member_table`

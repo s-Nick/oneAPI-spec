@@ -7,11 +7,11 @@
 The ``compute_backward`` function templates
 ===========================================
 
-The ``oneapi::mkl::dft::compute_backward`` function templates enable the
+The ``oneapi::math::dft::compute_backward`` function templates enable the
 computation of backward DFT(s), as defined by a (committed)
-``oneapi::mkl::dft::descriptor`` object, on user-provided data. These function
-templates are declared in the ``oneapi::mkl::dft`` namespace; the usage of
-prepended namespace specifiers ``oneapi::mkl::dft`` is omitted below for conciseness.
+``oneapi::math::dft::descriptor`` object, on user-provided data. These function
+templates are declared in the ``oneapi::math::dft`` namespace; the usage of
+prepended namespace specifiers ``oneapi::math::dft`` is omitted below for conciseness.
 
 .. _onemath_dft_compute_backward_description:
 
@@ -45,7 +45,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename data_type>
       void compute_backward(descriptor_type              &desc,
@@ -57,7 +57,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type typename data_type>
       void compute_backward(descriptor_type              &desc,
@@ -70,7 +70,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
    
       template <typename descriptor_type, typename input_type, typename output_type>
       void compute_backward(descriptor_type              &desc,
@@ -82,7 +82,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename input_type, typename output_type>
       void compute_backward(descriptor_type              &desc,
@@ -202,7 +202,7 @@ progress of the enqueued DFT calculations.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       If ``desc`` is invalid. For instance, if its configuration value
       associated with configuration parameter ``config_param::COMMIT_STATUS`` is
       not ``config_param::COMMITTED``.
@@ -216,7 +216,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename data_type>
       sycl::event compute_backward(descriptor_type                &desc,
@@ -228,7 +228,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename data_type>
       sycl::event compute_backward(descriptor_type                &desc,
@@ -241,7 +241,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename input_type, typename output_type>
       sycl::event compute_backward(descriptor_type                &desc,
@@ -254,7 +254,7 @@ progress of the enqueued DFT calculations.
 
 .. code-block:: cpp
 
-   namespace oneapi::mkl::dft {
+   namespace oneapi::math::dft {
 
       template <typename descriptor_type, typename input_type, typename output_type>
       sycl::event compute_backward(descriptor_type                &desc,
@@ -378,7 +378,7 @@ progress of the enqueued DFT calculations.
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
-   ``oneapi::mkl::invalid_argument()``
+   ``oneapi::math::invalid_argument()``
       If ``desc`` is invalid. For instance, if its configuration value
       associated with configuration parameter ``config_param::COMMIT_STATUS`` is
       not ``config_param::COMMITTED``. It will also be thrown if any required

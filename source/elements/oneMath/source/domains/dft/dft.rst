@@ -132,7 +132,7 @@ Recommended usage
 +++++++++++++++++
 
 The desired DFT to be computed is entirely defined by an object ``desc`` of a
-specialization of the ``oneapi::mkl::dft::descriptor``
+specialization of the ``oneapi::math::dft::descriptor``
 :ref:`class template<onemath_dft_descriptor>`.
 The desired floating-point format and kind of forward domain are determined by
 ``desc``'s particular class, *i.e.*, by the specialization values of the
@@ -151,12 +151,12 @@ a ``sycl::queue`` object. The successful completion of that operation makes
 ``desc`` ready to compute the desired DFT *as configured*, for the particular
 device and context encapsulated by the latter. ``desc`` may then be used with
 user-provided, device-accessible data, in a
-``oneapi::mkl::dft::compute_forward`` (resp.
-``oneapi::mkl::dft::compute_backward``) function to enqueue operations relevant
+``oneapi::math::dft::compute_forward`` (resp.
+``oneapi::math::dft::compute_backward``) function to enqueue operations relevant
 to the desired forward (resp. backward) DFT calculations.
 
 .. note::
-  Objects of any ``oneapi::mkl::dft::descriptor`` class
+  Objects of any ``oneapi::math::dft::descriptor`` class
 
   - must be successfully committed prior to providing them to any compute
     function;
@@ -164,14 +164,14 @@ to the desired forward (resp. backward) DFT calculations.
     after they were already successfully committed;
   - deliver best performance for DFT calculations when created, configured and
     committed outside applications' hotpath(s) that use them multiple times for
-    identically-configured DFTs. ``oneapi::mkl::dft::compute_forward`` and/or
-    ``oneapi::mkl::dft::compute_backward`` should be the only oneMath DFT-related
+    identically-configured DFTs. ``oneapi::math::dft::compute_forward`` and/or
+    ``oneapi::math::dft::compute_backward`` should be the only oneMath DFT-related
     routines invoked in programs' hotpaths.
 
 Summary table
 ~~~~~~~~~~~~~
 
-The table below summarizes the identifiers of the ``oneapi::mkl::dft`` namespace
+The table below summarizes the identifiers of the ``oneapi::math::dft`` namespace
 relevant to computing DFTs.
 
 .. _onemath_dft_summary_table:
@@ -186,7 +186,7 @@ relevant to computing DFTs.
          :header-rows: 1
          :widths: 33 64   
 
-         * -     Identifier in ``oneapi::mkl::dft``
+         * -     Identifier in ``oneapi::math::dft``
            -     Description
          * -     ``descriptor``
            -     A template for classes whose instances define a specific DFT to

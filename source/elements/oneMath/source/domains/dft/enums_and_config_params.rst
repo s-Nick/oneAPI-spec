@@ -7,10 +7,10 @@
 DFT-related scoped enumeration types
 ------------------------------------
 
-The following scoped enumeration types, defined in the ``oneapi::mkl::dft``
+The following scoped enumeration types, defined in the ``oneapi::math::dft``
 namespace, are used for constructing and configuring ``descriptor`` objects
 consistently with the DFT(s) they are meant to define. The usage of prepended
-namespace specifiers ``oneapi::mkl::dft`` is omitted below for conciseness.
+namespace specifiers ``oneapi::math::dft`` is omitted below for conciseness.
 
 .. list-table::
       :header-rows: 1
@@ -48,7 +48,7 @@ data, the computation being carried out by oneMath and the delivered results.
 
    .. code:: cpp
 
-      namespace oneapi::mkl::dft {
+      namespace oneapi::math::dft {
         enum class precision {
             SINGLE,
             DOUBLE
@@ -83,7 +83,7 @@ the backward domain type is always complex.
 
    .. code:: cpp
 
-      namespace oneapi::mkl::dft {
+      namespace oneapi::math::dft {
         enum class domain {
             REAL,
             COMPLEX
@@ -114,7 +114,7 @@ Values in this scoped enumeration type represent configuration parameters for
 
    .. code:: cpp
 
-      namespace oneapi::mkl::dft {
+      namespace oneapi::math::dft {
         enum class config_param {
             // read-only parameters:
             FORWARD_DOMAIN,
@@ -287,7 +287,7 @@ configuration values associated with some
 
    .. code:: cpp
 
-      namespace oneapi::mkl::dft {
+      namespace oneapi::math::dft {
         enum class config_value {
             // for config_param::COMMIT_STATUS
             COMMITTED,
