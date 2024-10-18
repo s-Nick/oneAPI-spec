@@ -2,13 +2,13 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_unmrq:
+.. _onemath_lapack_unmrq:
 
 unmrq
 =====
 
 Multiplies a complex matrix by the unitary matrix :math:`Q` of the RQ
-factorization formed by :ref:`onemkl_lapack_gerqf`.
+factorization formed by :ref:`onemath_lapack_gerqf`.
 
 .. container:: section
 
@@ -27,7 +27,7 @@ The routine multiplies a rectangular complex :math:`m \times n` matrix :math:`C`
 :math:`Q` or :math:`Q^H`, where :math:`Q` is the complex unitary matrix defined
 as a product of :math:`k` elementary reflectors :math:`H(i)` of order :math:`n`:
 :math:`Q = H(1)^HH(2)^H ... H(k)^H` as returned by the RQ factorization routine
-:ref:`onemkl_lapack_gerqf`.
+:ref:`onemath_lapack_gerqf`.
 
 Depending on the parameters ``side`` and ``trans``, the routine can form one of
 the matrix products :math:`QC`, :math:`Q^HC`, :math:`CQ`, or :math:`CQ^H`
@@ -82,14 +82,14 @@ k
     If ``side = oneapi::mkl::side::right``, :math:`0 \le k \le n`
 
 a
-    The buffer ``a`` as returned by :ref:`onemkl_lapack_gerqf`.
+    The buffer ``a`` as returned by :ref:`onemath_lapack_gerqf`.
     The second dimension of ``a`` must be at least :math:`\max(1,k)`.
 
 lda
     The leading dimension of ``a``.
 
 tau
-    The buffer ``tau`` as returned by :ref:`onemkl_lapack_gerqf`.
+    The buffer ``tau`` as returned by :ref:`onemath_lapack_gerqf`.
 
 c
     The buffer ``c`` contains the matrix :math:`C`. The second dimension of
@@ -101,7 +101,7 @@ ldc
 scratchpad_size
     Size of scratchpad memory as a number of floating point elements of type
     ``T``. Size should not be less than the value returned by
-    :ref:`onemkl_lapack_unmrq_scratchpad_size` function.
+    :ref:`onemath_lapack_unmrq_scratchpad_size` function.
 
 .. container:: section
 
@@ -120,17 +120,17 @@ scratchpad
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
     Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -187,14 +187,14 @@ k
     If ``side = oneapi::mkl::side::right``, :math:`0 \le k \le n`
 
 a
-    The pointer to ``a`` as returned by :ref:`onemkl_lapack_gerqf`.
+    The pointer to ``a`` as returned by :ref:`onemath_lapack_gerqf`.
     The second dimension of ``a`` must be at least :math:`\max(1,k)`.
 
 lda
     The leading dimension of ``a``.
 
 tau
-    The pointer to ``tau`` as returned by :ref:`onemkl_lapack_gerqf`.
+    The pointer to ``tau`` as returned by :ref:`onemath_lapack_gerqf`.
 
 c
     The pointer ``c`` points to the matrix :math:`C`. The second dimension of
@@ -206,7 +206,7 @@ ldc
 scratchpad_size
     Size of scratchpad memory as a number of floating point elements of type
     ``T``. Size should not be less than the value returned by
-    :ref:`onemkl_lapack_unmrq_scratchpad_size` function.
+    :ref:`onemath_lapack_unmrq_scratchpad_size` function.
 
 events
     List of events to wait for before starting computation. Defaults to empty list.
@@ -228,17 +228,17 @@ scratchpad
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
     Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -252,4 +252,4 @@ This routine shall throw the following exceptions if the associated condition is
 
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-linear-equation-routines`
+**Parent topic:** :ref:`onemath_lapack-linear-equation-routines`

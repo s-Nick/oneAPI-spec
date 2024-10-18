@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_rayleigh:
+.. _onemath_rng_rayleigh:
 
 rayleigh
 ========
 
 Class is used for generation of Rayleigh distributed real types random numbers.
 
-.. _onemkl_rng_rayleigh_description:
+.. _onemath_rng_rayleigh_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers Rayleigh distributed with displacement :math:`a`, and scalefactor :math:`(b, \beta)`, where :math:`a, \beta \in R; \beta > 0`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers Rayleigh distributed with displacement :math:`a`, and scalefactor :math:`(b, \beta)`, where :math:`a, \beta \in R; \beta > 0`.
 
-The Rayleigh distribution is a special case of the :ref:`onemkl_rng_weibull` distribution, where the shape parameter `\alpha` = 2 .
+The Rayleigh distribution is a special case of the :ref:`onemath_rng_weibull` distribution, where the shape parameter `\alpha` = 2 .
 
 The probability distribution is given by:
 
@@ -29,7 +29,7 @@ The cumulative distribution function is as follows:
 
     F_{a, \beta}(x) = \left\{ \begin{array}{rcl} 1 - exp(-\frac{(x - a)^2)}{\beta^2}), x \ge a \\ 0, x < a \end{array}\right.
 
-.. _onemkl_rng_rayleigh_syntax:
+.. _onemath_rng_rayleigh_syntax:
 
 class rayleigh
 --------------
@@ -71,7 +71,7 @@ class rayleigh
                 * ``oneapi::mkl::rng::rayleigh_method::icdf``
                 * ``oneapi::mkl::rng::rayleigh_method::icdf_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -190,4 +190,4 @@ class rayleigh
 
             Returns the distribution parameter `b` - scalefactor value.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_uniform_bits:
+.. _onemath_rng_uniform_bits:
 
 uniform_bits
 ============
 
 Class is used for generation of uniformly distributed bits in 32/64-bit chunks.
 
-.. _onemkl_rng_uniform_bits_description:
+.. _onemath_rng_uniform_bits_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide uniformly distributed bits in 32/64-bit chunks. It is designed to ensure each bit in the 32/64-bit chunk is uniformly distributed. Can be not supported by the specific engine.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide uniformly distributed bits in 32/64-bit chunks. It is designed to ensure each bit in the 32/64-bit chunk is uniformly distributed. Can be not supported by the specific engine.
 
 class uniform_bits
 ------------------
@@ -57,4 +57,4 @@ class uniform_bits
 
             The type which defines type of generated random numbers.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

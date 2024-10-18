@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_variation_user_mean:
+.. _onemath_stats_variation_user_mean:
 
 variation with provided mean
 ============================
 
 Entry point to compute variation with the provided mean values.
 
-.. _onemkl_stats_variation_user_mean_description:
+.. _onemath_stats_variation_user_mean_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::variation function is used to compute an array of variation (variation for each dataset's dimension) with the provided mean values.
 
-:ref:`onemkl_stats_variation_user_mean` supports the following precisions for data:
+:ref:`onemath_stats_variation_user_mean` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::variation function is used to compute an array of variat
         * - ``double``
 
 
-.. _onemkl_stats_variation_user_mean_buffer:
+.. _onemath_stats_variation_user_mean_buffer:
 
 oneapi::mkl::stats::variation (buffer version)
 ----------------------------------------------
@@ -54,7 +54,7 @@ oneapi::mkl::stats::variation (buffer version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 
 .. container:: section
@@ -84,7 +84,7 @@ oneapi::mkl::stats::variation (buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when variation.get_count() == 0, or mean.get_count() == 0, or dataset object is invalid
 
-.. _onemkl_stats_variation_user_mean_usm:
+.. _onemath_stats_variation_user_mean_usm:
 
 variation with provided mean (USM version)
 ------------------------------------------
@@ -115,7 +115,7 @@ variation with provided mean (USM version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -153,5 +153,5 @@ variation with provided mean (USM version)
 
     Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_stats_routines`
+**Parent topic:** :ref:`onemath_stats_routines`
 

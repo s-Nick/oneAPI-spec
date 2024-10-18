@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_imatcopy:
+.. _onemath_blas_imatcopy:
 
 imatcopy
 ========
@@ -10,7 +10,7 @@ imatcopy
 Computes an in-place scaled matrix transpose or copy operation
 using a general dense matrix.
 
-.. _onemkl_blas_imatcopy_description:
+.. _onemath_blas_imatcopy_description:
 
 .. rubric:: Description
 
@@ -44,7 +44,7 @@ and ``C`` is ``m`` x ``n`` on input.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_imatcopy_buffer:
+.. _onemath_blas_imatcopy_buffer:
 
 imatcopy (Buffer Version)
 -------------------------
@@ -85,7 +85,7 @@ imatcopy (Buffer Version)
 
    trans
       Specifies op(``C``), the transposition operation applied to the
-      matrix ``C``. See :ref:`onemkl_datatypes` for more details.
+      matrix ``C``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of ``C`` on input. Must be at least zero.
@@ -149,22 +149,22 @@ imatcopy (Buffer Version)
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_imatcopy_usm:
+.. _onemath_blas_imatcopy_usm:
 
 imatcopy (USM Version)
 ----------------------
@@ -205,7 +205,7 @@ imatcopy (USM Version)
 
    trans
       Specifies op(``C``), the transposition operation applied to the
-      matrix ``C``. See :ref:`onemkl_datatypes` for more details.
+      matrix ``C``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows for the matrix ``C`` on input. Must be at least zero.
@@ -280,19 +280,19 @@ imatcopy (USM Version)
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
 
 
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

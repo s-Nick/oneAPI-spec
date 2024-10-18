@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_set_dense_vector_data:
+.. _onemath_sparse_set_dense_vector_data:
 
 set_dense_vector_data
 =====================
@@ -21,9 +21,9 @@ with ``set_dense_vector_data``.
 
 In the case of USM, the object does not take ownership of the data.
 
-Also see :ref:`onemkl_sparse_init_dense_vector`.
+Also see :ref:`onemath_sparse_init_dense_vector`.
 
-.. _onemkl_sparse_set_dense_vector_data_buffer:
+.. _onemath_sparse_set_dense_vector_data_buffer:
 
 set_dense_vector_data (Buffer version)
 --------------------------------------
@@ -47,7 +47,7 @@ set_dense_vector_data (Buffer version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`. Must
+      See :ref:`supported template types<onemath_sparse_supported_types>`. Must
       be the same type as was used when creating the ``dense_vector_handle_t``.
 
 .. container:: section
@@ -58,7 +58,7 @@ set_dense_vector_data (Buffer version)
       The SYCL command queue which will be used for SYCL kernels execution.
 
    dvhandle
-      Handle already initialized with :ref:`onemkl_sparse_init_dense_vector`.
+      Handle already initialized with :ref:`onemath_sparse_init_dense_vector`.
 
    size
       Number of elements of the provided data ``val``. Must be at least 0.
@@ -75,12 +75,12 @@ set_dense_vector_data (Buffer version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_set_dense_vector_data_usm:
+.. _onemath_sparse_set_dense_vector_data_usm:
 
 set_dense_vector_data (USM version)
 -----------------------------------
@@ -104,7 +104,7 @@ set_dense_vector_data (USM version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`. Must
+      See :ref:`supported template types<onemath_sparse_supported_types>`. Must
       be the same type as was used when creating the ``dense_vector_handle_t``.
 
 .. container:: section
@@ -115,7 +115,7 @@ set_dense_vector_data (USM version)
       The SYCL command queue which will be used for SYCL kernels execution.
 
    dvhandle
-      Handle already initialized with :ref:`onemkl_sparse_init_dense_vector`.
+      Handle already initialized with :ref:`onemath_sparse_init_dense_vector`.
 
    size
       Number of elements of the provided data ``val``. Must be at least 1.
@@ -134,9 +134,9 @@ set_dense_vector_data (USM version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

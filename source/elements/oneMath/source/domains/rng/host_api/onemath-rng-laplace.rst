@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_laplace:
+.. _onemath_rng_laplace:
 
 laplace
 =======
 
 Class is used for generation of Laplace distributed real types random numbers.
 
-.. _onemkl_rng_laplace_description:
+.. _onemath_rng_laplace_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers Laplace distributed with mean value (or average) :math:`a`, and scalefactor :math:`(b, \beta)`, where :math:`a, \beta \in R; \beta > 0`. The scalefactor value determines the standard deviation as :math:`\sigma = \beta\sqrt{2}`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers Laplace distributed with mean value (or average) :math:`a`, and scalefactor :math:`(b, \beta)`, where :math:`a, \beta \in R; \beta > 0`. The scalefactor value determines the standard deviation as :math:`\sigma = \beta\sqrt{2}`.
 
 The probability distribution is given by:
 
@@ -27,7 +27,7 @@ The cumulative distribution function is as follows:
 
      F_{a, \beta}(x) = \left\{ \begin{array}{rcl} \frac{1}{2}exp(-\frac{|x - a|}{\beta}), x \ge a \\ 1 - \frac{1}{2}exp(-\frac{|x - a|}{\beta}), x < a \end{array}\right.
 
-.. _onemkl_rng_laplace_syntax:
+.. _onemath_rng_laplace_syntax:
 
 class laplace
 -------------
@@ -66,7 +66,7 @@ class laplace
                 * ``oneapi::mkl::rng::laplace_method::by_default``
                 * ``oneapi::mkl::rng::laplace_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -185,4 +185,4 @@ class laplace
 
             Returns the distribution parameter `b` - scalefactor value.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

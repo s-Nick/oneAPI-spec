@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_max:
+.. _onemath_stats_max:
 
 max
 ===
 
 Entry point to compute max values.
 
-.. _onemkl_stats_max_description:
+.. _onemath_stats_max_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::max function is used to compute a max values arrays (max value for each dataset's dimension).
 
-:ref:`onemkl_stats_max` supports the following precisions for data:
+:ref:`onemath_stats_max` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::max function is used to compute a max values arrays (max
         * - ``double``
 
 
-.. _onemkl_stats_max_buffer:
+.. _onemath_stats_max_buffer:
 
 max (buffer version)
 --------------------
@@ -54,7 +54,7 @@ max (buffer version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -80,7 +80,7 @@ max (buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when max.get_count() == 0, or dataset object is invalid
 
-.. _onemkl_stats_max_usm:
+.. _onemath_stats_max_usm:
 
 max (USM version)
 -----------------
@@ -110,7 +110,7 @@ max (USM version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -146,5 +146,5 @@ max (USM version)
     Output event to wait on to ensure computation is complete.
 
 
-**Parent topic:** :ref:`onemkl_stats_routines`
+**Parent topic:** :ref:`onemath_stats_routines`
 

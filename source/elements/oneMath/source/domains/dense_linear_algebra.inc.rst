@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_dense_linear_algebra:
+.. _onemath_dense_linear_algebra:
 
 Dense Linear Algebra
 ---------------------
 
 This section contains information about dense linear algebra routines:
 
-:ref:`matrix-storage` provides information about dense matrix and vector storage formats that are used by oneMKL :ref:`onemkl_blas` and :ref:`onemkl_lapack`.
+:ref:`matrix-storage` provides information about dense matrix and vector storage formats that are used by oneMath :ref:`onemath_blas` and :ref:`onemath_lapack`.
 
-:ref:`onemkl_blas` provides vector, matrix-vector, and matrix-matrix routines for dense matrices and vector operations.
+:ref:`onemath_blas` provides vector, matrix-vector, and matrix-matrix routines for dense matrices and vector operations.
 
 :ref:`value_or_pointer` describes some details of how scalar parameters (such as ``alpha`` and ``beta``) are handled so that users may pass either values or pointers for these parameters.
 
-:ref:`onemkl_lapack` provides more complex dense linear algebra routines, e.g., matrix factorization, solving dense systems of linear equations, least square problems, eigenvalue and singular value problems, and performing a number of related computational tasks.
+:ref:`onemath_lapack` provides more complex dense linear algebra routines, e.g., matrix factorization, solving dense systems of linear equations, least square problems, eigenvalue and singular value problems, and performing a number of related computational tasks.
 
 .. toctree::
     :hidden:

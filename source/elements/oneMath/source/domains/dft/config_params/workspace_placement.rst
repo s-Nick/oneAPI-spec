@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_dft_config_workspace_placement:
+.. _onemath_dft_config_workspace_placement:
 
 Workspace placement
 -------------------
@@ -25,7 +25,7 @@ For some backends and configurations, externally-managed workspaces may reduce
 performance.
 
 A typical workflow for using externally-managed workspaces is given
-:ref:`below<onemkl_dft_typical_usage_of_workspace_external>`.
+:ref:`below<onemath_dft_typical_usage_of_workspace_external>`.
 
 Automatically- and externally-managed workspaces
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,7 +36,7 @@ it manages its workspace automatically (configuration value
 ``config_value::WORKSPACE_AUTOMATIC``) or if it is to be provided with an
 external workspace (configuration value ``config_value::WORKSPACE_EXTERNAL``).
 
-.. _onemkl_dft_config_value_workspace_automatic:
+.. _onemath_dft_config_value_workspace_automatic:
 
 .. rubric:: Automatically-managed workspace
 
@@ -44,7 +44,7 @@ The default value for the ``config_param::WORKSPACE_PLACEMENT`` is ``config_valu
 
 When set to ``config_value::WORKSPACE_AUTOMATIC`` the user does not need to provide an external workspace. The workspace will be automatically managed by the backend library.
 
-.. _onemkl_dft_config_value_workspace_external:
+.. _onemath_dft_config_value_workspace_external:
 
 .. rubric:: Externally-managed workspace
 
@@ -55,10 +55,10 @@ When a descriptor is committed with ``config_value::WORKSPACE_EXTERNAL`` set
 for ``config_param::WORKSPACE_PLACEMENT``, the user must provide an external 
 workspace before calling any compute function.
 More details can be found in the section dedicated to the ``set_workspace``
-:ref:`member function<onemkl_dft_descriptor_set_workspace>` and in the typical
-usage illustrated :ref:`below<onemkl_dft_typical_usage_of_workspace_external>`.
+:ref:`member function<onemath_dft_descriptor_set_workspace>` and in the typical
+usage illustrated :ref:`below<onemath_dft_typical_usage_of_workspace_external>`.
 
-.. _onemkl_dft_typical_usage_of_workspace_external:
+.. _onemath_dft_typical_usage_of_workspace_external:
 
 Typical usage of externally-managed workspaces
 ++++++++++++++++++++++++++++++++++++++++++++++
@@ -97,5 +97,5 @@ This is shown in the following example code:
    // 5. Now USM compute functions can be called.
 
 
-**Parent topic:** :ref:`onemkl_dft_enums`
+**Parent topic:** :ref:`onemath_dft_enums`
 

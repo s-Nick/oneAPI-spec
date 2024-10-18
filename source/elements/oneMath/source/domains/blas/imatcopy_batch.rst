@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_imatcopy_batch:
+.. _onemath_blas_imatcopy_batch:
 
 imatcopy_batch
 ==============
@@ -10,12 +10,12 @@ imatcopy_batch
 Computes a group of in-place scaled matrix transpose or copy operations
 using general dense matrices.
 
-.. _onemkl_blas_imatcopy_batch_description:
+.. _onemath_blas_imatcopy_batch_description:
 
 .. rubric:: Description
 
 The ``imatcopy_batch`` routines perform a series of in-place scaled matrix
-copies or transpositions. They are batched versions of :ref:`onemkl_blas_imatcopy`,
+copies or transpositions. They are batched versions of :ref:`onemath_blas_imatcopy`,
 but the ``imatcopy_batch`` routines perform their operations with
 groups of matrices. Each group contains matrices with the same parameters.
 
@@ -53,7 +53,7 @@ and buffer memory.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_imatcopy_batch_buffer:
+.. _onemath_blas_imatcopy_batch_buffer:
 
 imatcopy_batch (Buffer Version)
 -------------------------------
@@ -127,7 +127,7 @@ parameter.
 
    trans
       Specifies op(``C``), the transposition operation applied to the
-      matrices ``C``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``C``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of each matrix ``C`` on input. Must be at least zero.
@@ -199,22 +199,22 @@ parameter.
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_imatcopy_batch_usm:
+.. _onemath_blas_imatcopy_batch_usm:
    
 imatcopy_batch (USM Version)
 ----------------------------
@@ -491,19 +491,19 @@ matrices is given by the ``batch_size`` parameter.
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
 
 
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_getri_batch:
+.. _onemath_lapack_getri_batch:
 
 getri_batch
 ===========
 
-Computes the inverses of a batch of LU-factored matrices determined by :ref:`onemkl_lapack_getrf_batch`.
+Computes the inverses of a batch of LU-factored matrices determined by :ref:`onemath_lapack_getrf_batch`.
 
 .. container:: section
 
@@ -24,7 +24,7 @@ Computes the inverses of a batch of LU-factored matrices determined by :ref:`one
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_lapack_getri_batch_buffer:
+.. _onemath_lapack_getri_batch_buffer:
 
 getri_batch (Buffer Version)
 ----------------------------
@@ -37,7 +37,7 @@ The buffer version of ``getri_batch`` supports only the strided API.
 
 **Strided API**
 
-The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`. Before calling this routine, call the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function to factorize :math:`A_i`.
+The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`. Before calling this routine, call the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function to factorize :math:`A_i`.
 
 .. container:: section
 
@@ -60,7 +60,7 @@ n
   Order of the matrices :math:`A_i` (:math:`0 \le n`).
 
 a
-  Result of the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function.
+  Result of the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function.
 
 lda
   Leading dimension of :math:`A_i` (:math:`n\le \text{lda}`).
@@ -69,7 +69,7 @@ stride_a
   Stride between the beginnings of matrices :math:`A_i` inside the batch array ``a``.
 
 ipiv
-  Arrays returned by the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function.
+  Arrays returned by the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function.
 
 stride_ipiv
   Stride between the beginnings of arrays :math:`\text{ipiv}_i` inside the array ``ipiv``.
@@ -81,7 +81,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemkl_lapack_getri_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemath_lapack_getri_batch_scratchpad_size` function.
 
 .. container:: section
 
@@ -96,13 +96,13 @@ a
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
  
 
 The ``info`` code of the problem can be obtained by `info()` method of exception object:
@@ -124,7 +124,7 @@ The USM version of ``getri_batch`` supports the group API and strided API.
 
 **Group API**
 
-The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`, :math:`i \in \{1...batch\_size\}`. Before calling this routine, call the Group API of the :ref:`onemkl_lapack_getrf_batch_usm` function to factorize :math:`A_i`.
+The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`, :math:`i \in \{1...batch\_size\}`. Before calling this routine, call the Group API of the :ref:`onemath_lapack_getrf_batch_usm` function to factorize :math:`A_i`.
 Total number of problems to solve, ``batch_size``, is a sum of sizes of all of the groups of parameters as provided by ``group_sizes`` array.
 
 .. container:: section
@@ -148,13 +148,13 @@ n
   Array of ``group_count`` :math:`n_g` parameters specifying the order of the matrices :math:`A_i` (:math:`0 \le n_g`) belonging to group :math:`g`.
 
 a
-  Result of the Group API of the :ref:`onemkl_lapack_getrf_batch_usm` function.
+  Result of the Group API of the :ref:`onemath_lapack_getrf_batch_usm` function.
 
 lda
   Array of ``group_count`` :math:`\text{lda}_g` parameters specifying the leading dimensions of the matrices :math:`A_i` (:math:`n_g \le \text{lda}_g`) belonging to group :math:`g`.
 
 ipiv
-  Arrays returned by the Group API of the :ref:`onemkl_lapack_getrf_batch_usm` function.
+  Arrays returned by the Group API of the :ref:`onemath_lapack_getrf_batch_usm` function.
 
 group_count
   Number of groups of parameters. Must be at least 0.
@@ -166,7 +166,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of  type ``T``. Size should not be less than the value returned by the Group API of the :ref:`onemkl_lapack_getri_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of  type ``T``. Size should not be less than the value returned by the Group API of the :ref:`onemath_lapack_getri_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -190,13 +190,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
  
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -208,7 +208,7 @@ This routine shall throw the following exceptions if the associated condition is
 
 **Strided API**
 
-The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`. Before calling this routine, call the Strided API of the :ref:`onemkl_lapack_getrf_batch_usm` function to factorize :math:`A_i`.
+The routine computes the inverses :math:`A_i^{-1}` of general matrices :math:`A_i`. Before calling this routine, call the Strided API of the :ref:`onemath_lapack_getrf_batch_usm` function to factorize :math:`A_i`.
 
 .. container:: section
    
@@ -231,7 +231,7 @@ n
   Order of the matrices :math:`A_i` (:math:`0 \le n`).
 
 a
-  Result of the Strided API of the :ref:`onemkl_lapack_getrf_batch_usm` function.
+  Result of the Strided API of the :ref:`onemath_lapack_getrf_batch_usm` function.
 
 lda
   Leading dimension of :math:`A_i` (:math:`n \le \text{lda}`).
@@ -240,7 +240,7 @@ stride_a
   Stride between the beginnings of matrices :math:`A_i` inside the batch array ``a``.
 
 ipiv
-  Arrays returned by the Strided API of the :ref:`onemkl_lapack_getrf_batch_usm` function.
+  Arrays returned by the Strided API of the :ref:`onemath_lapack_getrf_batch_usm` function.
 
 stride_ipiv
   Stride between the beginnings of arrays :math:`\text{ipiv}_i` inside the array ``ipiv``.
@@ -252,7 +252,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size 
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemkl_lapack_getri_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemath_lapack_getri_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -276,13 +276,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -292,5 +292,5 @@ This routine shall throw the following exceptions if the associated condition is
 
     If ``info`` is not zero and `detail()` returns zero, then there were some errors for some of the problems in the supplied batch and ``info`` code contains the number of failed calculations in a batch.
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`
 

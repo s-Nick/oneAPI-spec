@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_philox4x32x10:
+.. _onemath_rng_philox4x32x10:
 
 philox4x32x10
 =============
 
 The Philox4x32x10 counter-based pseudorandom number generator.
 
-.. _onemkl_rng_philox4x32x10_description:
+.. _onemath_rng_philox4x32x10_description:
 
 .. rubric:: Description
 
@@ -19,7 +19,7 @@ The Philox4x32x10 engine is a keyed family of generator of counter-based BRNG. T
 
     .. rubric:: Generation algorithm
 
-    The generator has 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemkl_rng_bibliography>`]:
+    The generator has 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemath_rng_bibliography>`]:
 
     1. :math:`c_n=c_{n-1} + 1`
     2. :math:`\omega_n = f(c_n)`, where :math:`f` is a function that takes 128-bit argument and returns a 128-bit number. The returned number is obtained as follows:
@@ -44,7 +44,7 @@ The Philox4x32x10 engine is a keyed family of generator of counter-based BRNG. T
     3. Integer output: :math:`r_{4n + k} = \omega_n(k)`, where :math:`\omega_n(k)` is the k-th 32-bit integer in quadruple :math:`\omega_n, k = 0, 1, 2, 3`
     4. Real output: :math:`u_n=(int)r_n / 2^{32} + 1/2`
 
-.. _onemkl_rng_philox4x32x10_description_syntax:
+.. _onemath_rng_philox4x32x10_description_syntax:
 
 class philox4x32x10
 -------------------
@@ -111,7 +111,7 @@ class philox4x32x10
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`k = seed, c = 0`, where :math:`k` is a 64-bit key, :math:`c` is a 128-bit counter.
@@ -127,7 +127,7 @@ class philox4x32x10
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume
@@ -193,4 +193,4 @@ class philox4x32x10
         other
           Valid ``philox4x32x10`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

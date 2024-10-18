@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_potrs_batch:
+.. _onemath_lapack_potrs_batch:
 
 potrs_batch
 ===========
@@ -24,7 +24,7 @@ Computes the LU factorizations of a batch of general matrices.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_lapack_potrs_batch_buffer:
+.. _onemath_lapack_potrs_batch_buffer:
 
 potrs_batch (Buffer Version)
 ----------------------------
@@ -42,7 +42,7 @@ The buffer version of ``potrs_batch`` supports only the strided API.
  | :math:`A_i = L_iL_i^T` for real data, :math:`A_i = L_iL_i^H` for complex data if ``uplo = mkl::uplo::lower``,
  | where :math:`L_i` is a lower triangular matrix and :math:`U_i` is upper triangular.
  | The systems are solved with multiple right-hand sides stored in the columns of the matrices :math:`B_i`.
- | Before calling this routine, matrices :math:`A_i` should be factorized by call to the Strided API of the :ref:`onemkl_lapack_potrf_batch_buffer` function.
+ | Before calling this routine, matrices :math:`A_i` should be factorized by call to the Strided API of the :ref:`onemath_lapack_potrf_batch_buffer` function.
 
 .. container:: section
 
@@ -73,7 +73,7 @@ nrhs
   The number of right-hand sides (:math:`0 \le \text{nrhs}`).
 
 a
-  Array containing batch of factorizations of the matrices :math:`A_i`, as returned by the Strided API of the :ref:`onemkl_lapack_potrf_batch_buffer` function.
+  Array containing batch of factorizations of the matrices :math:`A_i`, as returned by the Strided API of the :ref:`onemath_lapack_potrf_batch_buffer` function.
 
 lda
   Leading dimension of :math:`A_i`.
@@ -97,7 +97,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemkl_lapack_potrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemath_lapack_potrs_batch_scratchpad_size` function.
 
 .. container:: section
 
@@ -112,13 +112,13 @@ b
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -130,7 +130,7 @@ This routine shall throw the following exceptions if the associated condition is
    
    If ``info`` is zero, then for some of the matrices diagonal element of the Cholesky factor is zero, and the solve could not be completed. The indices of such matrices in the batch can be obtained with `ids()` method of the exception object. The indices of first zero diagonal elements in these matrices can be obtained by `exceptions()` method of exception object.
 
-.. _onemkl_lapack_potrs_batch_usm:
+.. _onemath_lapack_potrs_batch_usm:
 
 potrs_batch (USM Version)
 -------------------------
@@ -175,7 +175,7 @@ nrhs
  | Each :math:`\text{nrhs}_g` specifies the number of right-hand sides supplied for group :math:`g` in corresponding part of array ``b``.
 
 a
-  Array of ``batch_size`` pointers to Cholesky factored matrices :math:`A_i` as returned by the Group API of the :ref:`onemkl_lapack_potrf_batch_usm` function.
+  Array of ``batch_size`` pointers to Cholesky factored matrices :math:`A_i` as returned by the Group API of the :ref:`onemath_lapack_potrf_batch_usm` function.
 
 lda
  | Array of ``group_count`` :math:`\text{lda}_g` parameters.
@@ -198,7 +198,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Group API of the :ref:`onemkl_lapack_potrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Group API of the :ref:`onemath_lapack_potrs_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -222,13 +222,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -247,7 +247,7 @@ This routine shall throw the following exceptions if the associated condition is
  | :math:`A_i = L_iL_i^T` for real data, :math:`A_i = L_iL_i^H` for complex data if ``uplo = mkl::uplo::lower``,
  | where :math:`L_i` is a lower triangular matrix and :math:`U_i` is upper triangular.
  | The systems are solved with multiple right-hand sides stored in the columns of the matrices :math:`B_i`.
- | Before calling this routine, matrices :math:`A_i` should be factorized by call to the Strided API of the :ref:`onemkl_lapack_potrf_batch_usm` function.
+ | Before calling this routine, matrices :math:`A_i` should be factorized by call to the Strided API of the :ref:`onemath_lapack_potrf_batch_usm` function.
 
 .. container:: section
 
@@ -278,7 +278,7 @@ nrhs
   The number of right-hand sides (:math:`0 \le nrhs`).
 
 a
-  Array containing batch of factorizations of the matrices :math:`A_i`, as returned by the Strided API of the :ref:`onemkl_lapack_potrf_batch_usm` function.
+  Array containing batch of factorizations of the matrices :math:`A_i`, as returned by the Strided API of the :ref:`onemath_lapack_potrf_batch_usm` function.
 
 lda
   Leading dimension of :math:`A_i`.
@@ -302,7 +302,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemkl_lapack_potrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemath_lapack_potrs_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -326,13 +326,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    Exception is thrown in case of problems during calculations. The info code of the problem can be obtained by `info()` method of exception object:
 
@@ -344,5 +344,5 @@ This routine shall throw the following exceptions if the associated condition is
 
    If ``info`` is zero, then for some of the matrices diagonal element of the Cholesky factor is zero, and the solve could not be completed. The indices of such matrices in the batch can be obtained with `ids()` method of the exception object. The indices of first zero diagonal elements in these matrices can be obtained by `exceptions()` method of exception object.
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`
 

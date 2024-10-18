@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_distributions_method:
+.. _onemath_device_rng_distributions_method:
 
 Distributions Template Parameter Method
 =======================================

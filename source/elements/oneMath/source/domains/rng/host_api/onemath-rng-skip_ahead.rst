@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_skip_ahead:
+.. _onemath_rng_skip_ahead:
 
 skip_ahead
 ==========
 
 Proceed state of engine by the skip-ahead method.
 
-.. _onemkl_rng_skip_ahead_description:
+.. _onemath_rng_skip_ahead_description:
 
 .. rubric:: Description and Assumptions
 
@@ -22,7 +22,7 @@ oneapi::mkl::rng::skip_ahead function changes the current state of the engine so
 
     |image0|
 
-.. _onemkl_rng_skip_ahead_common:
+.. _onemath_rng_skip_ahead_common:
 
 skip_ahead
 ----------
@@ -69,7 +69,7 @@ skip_ahead
     oneapi::mkl::rng::skip_ahead(engine_3, 14);
 
 
-.. _onemkl_rng_skip_ahead_ex:
+.. _onemath_rng_skip_ahead_ex:
 
 skip_ahead (Interface with a partitioned number of skipped elements)
 --------------------------------------------------------------------
@@ -116,6 +116,6 @@ skip_ahead (Interface with a partitioned number of skipped elements)
     oneapi::mkl::rng::skip_ahead(engine_2, num_to_skip);
 
 
-**Parent topic:** :ref:`onemkl_rng_service_routines`
+**Parent topic:** :ref:`onemath_rng_service_routines`
 
 .. |image0| image:: ../../equations/rng-skip-ahead.png

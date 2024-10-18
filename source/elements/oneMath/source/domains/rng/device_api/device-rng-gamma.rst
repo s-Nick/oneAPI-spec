@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_gamma:
+.. _onemath_device_rng_gamma:
 
 gamma
 =====
@@ -225,4 +225,4 @@ class gamma
             Returns the amount of random numbers that were rejected during
             the last ``generate`` function call. If no ``generate`` calls, ``0`` is returned.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`

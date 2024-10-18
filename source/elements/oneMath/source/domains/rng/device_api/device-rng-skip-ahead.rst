@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_skip_ahead:
+.. _onemath_device_rng_skip_ahead:
 
 skip_ahead
 ==========
@@ -76,4 +76,4 @@ skip_ahead
         would be: :math:`num\_to\_skip[0] + num\_to\_skip[1] \cdot 2^{64} + ... + 
         num\_to\_skip[1] \cdot 2^{64 (n - 1)}`, where `n` is a number of elements in `num_to_skip` list.
 
-**Parent topic:** :ref:`onemkl_device_rng_service_routines`
+**Parent topic:** :ref:`onemath_device_rng_service_routines`

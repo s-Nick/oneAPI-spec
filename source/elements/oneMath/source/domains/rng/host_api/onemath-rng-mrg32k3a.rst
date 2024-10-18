@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_mrg32k3a:
+.. _onemath_rng_mrg32k3a:
 
 mrg32k3a
 ========
 
 The combined multiple recursive pseudorandom number generator MRG32k3a.
 
-.. _onemkl_rng_mrg32k3a_description:
+.. _onemath_rng_mrg32k3a_description:
 
 .. rubric:: Description
 
-MRG32k3a engine is a 32-bit combined multiple recursive generator with two components of order 3 :ref:`[L'Ecuyer99a] <onemkl_rng_bibliography>`. MRG32k3a combined generator meets the requirements for modern RNGs, such as good multidimensional uniformity, or a long period (:math:`p \approx 2^{191}`).
+MRG32k3a engine is a 32-bit combined multiple recursive generator with two components of order 3 :ref:`[L'Ecuyer99a] <onemath_rng_bibliography>`. MRG32k3a combined generator meets the requirements for modern RNGs, such as good multidimensional uniformity, or a long period (:math:`p \approx 2^{191}`).
 
 .. container:: section
 
@@ -33,7 +33,7 @@ MRG32k3a engine is a 32-bit combined multiple recursive generator with two compo
     :math:`a_{21} = 527612, a_{22} = 0, a_{23} = -1370589, m_2 = 2^{32} - 22853`
 
 
-.. _onemkl_rng_mrg32k3a_description_syntax:
+.. _onemath_rng_mrg32k3a_description_syntax:
 
 class mrg32k3a
 --------------
@@ -100,7 +100,7 @@ class mrg32k3a
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue object``, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue object``, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`x_{-3} = seed \ mod \ m_1, x_{-2} = x_{-1} = y_{-3} = y_{-2} = y_{-1} = 1`.
@@ -116,7 +116,7 @@ class mrg32k3a
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume
@@ -198,4 +198,4 @@ class mrg32k3a
         other
             Valid ``mrg32k3a`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

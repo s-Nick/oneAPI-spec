@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_getrs_batch:
+.. _onemath_lapack_getrs_batch:
 
 getrs_batch
 ===========
@@ -24,7 +24,7 @@ Solves a system of linear equations with a batch of LU-factored square coefficie
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_lapack_getrs_batch_buffer:
+.. _onemath_lapack_getrs_batch_buffer:
 
 getrs_batch (Buffer Version)
 ----------------------------
@@ -41,7 +41,7 @@ The buffer version of ``getrs_batch`` supports only the strided API.
  | :math:`A_iX_i = B_i`, if ``trans=mkl::transpose::nontrans``
  | :math:`A_i^TX_i = B_i`, if ``trans=mkl::transpose::trans``
  | :math:`A_i^HX_i = B_i`, if ``trans=mkl::transpose::conjtrans``
- | Before calling this routine, the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function should be called to compute the LU factorizations of :math:`A_i`.
+ | Before calling this routine, the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function should be called to compute the LU factorizations of :math:`A_i`.
 
 .. container:: section
 
@@ -73,7 +73,7 @@ nrhs
   Number of right-hand sides (:math:`0 \le \text{nrhs}`).
 
 a
-  Array containing the factorizations of the matrices :math:`A_i`, as returned the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function.
+  Array containing the factorizations of the matrices :math:`A_i`, as returned the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function.
 
 lda
   Leading dimension of :math:`A_i`.
@@ -82,7 +82,7 @@ stride_a
   Stride between the beginnings of matrices :math:`A_i` inside the batch array ``a``.
 
 ipiv
-  ``ipiv`` array, as returned by the Strided API of the :ref:`onemkl_lapack_getrf_batch_buffer` function.
+  ``ipiv`` array, as returned by the Strided API of the :ref:`onemath_lapack_getrf_batch_buffer` function.
 
 stride_ipiv
   Stride between the beginnings of arrays :math:`\text{ipiv}_i` inside the array ``ipiv``.
@@ -103,7 +103,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemkl_lapack_getrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemath_lapack_getrs_batch_scratchpad_size` function.
 
 .. container:: section
 
@@ -118,13 +118,13 @@ b
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
  
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -136,7 +136,7 @@ This routine shall throw the following exceptions if the associated condition is
 
     If ``info`` is zero, then diagonal element of some of :math:`U_i` is zero, and the solve could not be completed. The indices of such matrices in the batch can be obtained with `ids()` method of the exception object. The indices of first zero diagonal elements in these :math:`U_i` matrices can be obtained by `exceptions()` method of exception object.
 
-.. _onemkl_lapack_getrs_batch_usm:
+.. _onemath_lapack_getrs_batch_usm:
 
 getrs_batch (USM Version)
 -------------------------
@@ -153,7 +153,7 @@ The USM version of ``getrs_batch`` supports the group API and strided API.
  | :math:`A_iX_i = B_i`, if ``trans=mkl::transpose::nontrans``
  | :math:`A_i^TX_i = B_i`, if ``trans=mkl::transpose::trans``
  | :math:`A_i^HX_i = B_i`, if ``trans=mkl::transpose::conjtrans``
- | Before calling this routine, call the Group API of the :ref:`onemkl_lapack_getrf_batch_usm` function to compute the LU factorizations of :math:`A_i`.
+ | Before calling this routine, call the Group API of the :ref:`onemath_lapack_getrf_batch_usm` function to compute the LU factorizations of :math:`A_i`.
  | Total number of problems to solve, ``batch_size``, is a sum of sizes of all of the groups of parameters as provided by ``group_sizes`` array.
 
 .. rubric:: Syntax
@@ -184,13 +184,13 @@ nrhs
   Array of ``group_count`` parameters :math:`\text{nrhs}_g` specifying the number of right-hand sides (:math:`0 \le \text{nrhs}_g`) for group :math:`g`.
 
 a
-  Array of ``batch_size`` pointers to factorizations of the matrices :math:`A_i`, as returned by the Group API of the:ref:`onemkl_lapack_getrf_batch_usm` function.
+  Array of ``batch_size`` pointers to factorizations of the matrices :math:`A_i`, as returned by the Group API of the:ref:`onemath_lapack_getrf_batch_usm` function.
 
 lda
   Array of ``group_count`` parameters :math:`\text{lda}_g` specifying the leading dimensions of :math:`A_i` from group :math:`g`.
 
 ipiv
-  ``ipiv`` array, as returned by the Group API of the :ref:`onemkl_lapack_getrf_batch_usm` function.
+  ``ipiv`` array, as returned by the Group API of the :ref:`onemath_lapack_getrf_batch_usm` function.
 
 b 
   The array containing ``batch_size`` pointers to the matrices :math:`B_i` whose columns are the right-hand sides for the systems of equations.
@@ -208,7 +208,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
     
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Group API of the :ref:`onemkl_lapack_getrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Group API of the :ref:`onemath_lapack_getrs_batch_scratchpad_size` function.
   
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -232,13 +232,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    Exception is thrown in case of problems during calculations. The info code of the problem can be obtained by info() method of exception object:
 
@@ -256,7 +256,7 @@ This routine shall throw the following exceptions if the associated condition is
  | :math:`A_iX_i = B_i`, if ``trans=mkl::transpose::nontrans``
  | :math:`A_i^TX_i = B_i`, if ``trans=mkl::transpose::trans``
  | :math:`A_i^HX_i = B_i`, if ``trans=mkl::transpose::conjtrans``
- | Before calling this routine, the Strided API of the :ref:`onemkl_lapack_getrf_batch` function should be called to compute the LU factorizations of :math:`A_i`.
+ | Before calling this routine, the Strided API of the :ref:`onemath_lapack_getrf_batch` function should be called to compute the LU factorizations of :math:`A_i`.
 
 .. container:: section
 
@@ -288,7 +288,7 @@ nrhs
   Number of right-hand sides (:math:`0 \le \text{nrhs}`).
 
 a
-  Array containing the factorizations of the matrices :math:`A_i`, as returned by the Strided API of the:ref:`onemkl_lapack_getrf_batch_usm` function.
+  Array containing the factorizations of the matrices :math:`A_i`, as returned by the Strided API of the:ref:`onemath_lapack_getrf_batch_usm` function.
 
 lda
   Leading dimension of :math:`A_i`.
@@ -318,7 +318,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
     
 scratchpad_size 
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemkl_lapack_getrs_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by the Strided API of the :ref:`onemath_lapack_getrs_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -342,13 +342,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
     
@@ -361,5 +361,5 @@ This routine shall throw the following exceptions if the associated condition is
    If ``info`` is zero, then diagonal element of some of :math:`U_i` is zero, and the solve could not be completed. The indices of such matrices in the batch can be obtained with `ids()` method of the exception object. The indices of first zero diagonal elements in these :math:`U_i` matrices can be obtained by `exceptions()` method of exception object.
 
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`
 

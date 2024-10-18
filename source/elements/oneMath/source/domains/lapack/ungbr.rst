@@ -2,13 +2,13 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_ungbr:
+.. _onemath_lapack_ungbr:
 
 ungbr
 =====
 
 Generates the complex unitary matrix :math:`Q` or :math:`P^{t}` determined by
-:ref:`onemkl_lapack_gebrd`.
+:ref:`onemath_lapack_gebrd`.
 
 .. container:: section
 
@@ -25,7 +25,7 @@ Generates the complex unitary matrix :math:`Q` or :math:`P^{t}` determined by
 
 The routine generates the whole or part of the unitary matrices :math:`Q`
 and :math:`P^{H}` formed by the routines
-:ref:`onemkl_lapack_gebrd`.
+:ref:`onemath_lapack_gebrd`.
 All valid combinations of arguments are described in *Input Parameters*; in
 most cases you need the following:
 
@@ -100,22 +100,22 @@ n
 k
    If ``gen = generate::q``, the number of columns in the original
    :math:`m \times k` matrix returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
    If ``gen = generate::p``, the number of rows in the original
    :math:`k \times n` matrix returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 a
    The buffer ``a`` as returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 lda
    The leading dimension of ``a``.
 
 tau
-   For ``gen = generate::q``, the array ``tauq`` as returned by :ref:`onemkl_lapack_gebrd`.
-   For ``gen = generate::p``, the array ``taup`` as returned by :ref:`onemkl_lapack_gebrd`.
+   For ``gen = generate::q``, the array ``tauq`` as returned by :ref:`onemath_lapack_gebrd`.
+   For ``gen = generate::p``, the array ``taup`` as returned by :ref:`onemath_lapack_gebrd`.
 
    The dimension of ``tau`` must be at least :math:`\max(1, \min(m, k))` for
    ``gen = generate::q``, or :math:`\max(1, \min(m, k))` for
@@ -123,7 +123,7 @@ tau
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type :math:`T`.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_ungbr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_ungbr_scratchpad_size` function.
 
 .. container:: section
 
@@ -143,17 +143,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -204,22 +204,22 @@ n
 k
    If ``gen = generate::q``, the number of columns in the original
    :math:`m \times k` matrix returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
    If ``gen = generate::p``, the number of rows in the original
    :math:`k \times n` matrix returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 a
    The pointer to ``a`` as returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 lda
    The leading dimension of ``a``.
 
 tau
-   For ``gen = generate::q``, the array ``tauq`` as returned by :ref:`onemkl_lapack_gebrd`.
-   For ``gen = generate::p``, the array ``taup`` as returned by :ref:`onemkl_lapack_gebrd`.
+   For ``gen = generate::q``, the array ``tauq`` as returned by :ref:`onemath_lapack_gebrd`.
+   For ``gen = generate::p``, the array ``taup`` as returned by :ref:`onemath_lapack_gebrd`.
 
    The dimension of ``tau`` must be at least :math:`\max(1, \min(m, k))` for
    ``gen = generate::q``, or :math:`\max(1, \min(m, k))` for
@@ -227,7 +227,7 @@ tau
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type :math:`T`.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_ungbr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_ungbr_scratchpad_size` function.
 
 events
    List of events to wait for before starting computation. Defaults to empty list.
@@ -250,17 +250,17 @@ scratchpad
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -274,6 +274,6 @@ This routine shall throw the following exceptions if the associated condition is
          
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-singular-value-eigenvalue-routines`
+**Parent topic:** :ref:`onemath_lapack-singular-value-eigenvalue-routines`
 
 

@@ -2,9 +2,9 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_appendix:
+.. _onemath_appendix:
 
-oneMKL Appendix
+oneMath Appendix
 ================
 
 .. include:: future_considerations.inc.rst

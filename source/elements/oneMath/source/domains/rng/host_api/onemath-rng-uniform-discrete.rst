@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_uniform_discrete:
+.. _onemath_rng_uniform_discrete:
 
 uniform (discrete)
 ==================
 
 Class is used for generation of uniformly distributed integer types random numbers.
 
-.. _onemkl_rng_uniform_discrete_description:
+.. _onemath_rng_uniform_discrete_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers uniformly distributed over the interval :math:`[a, b)`, where :math:`a`, :math:`b` are the left and right bounds of the
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers uniformly distributed over the interval :math:`[a, b)`, where :math:`a`, :math:`b` are the left and right bounds of the
 interval, respectively, and :math:`a, b \in R; a < b`.
 
 The probability distribution is given by:
@@ -29,7 +29,7 @@ The cumulative distribution function is as follows:
     F_{a, b}(x) = \left\{ \begin{array}{rcl} 0, x < a \\ \frac{\lfloor x - a + 1 \rfloor}{b-a}, a \leq x < b, x \in R \\ 1, x \ge b \end{array}\right.
 
 
-.. _onemkl_rng_uniform_discrete_syntax:
+.. _onemath_rng_uniform_discrete_syntax:
 
 class uniform
 -------------
@@ -63,7 +63,7 @@ class uniform
                 * ``oneapi::mkl::rng::uniform_method::by_default``
                 * ``oneapi::mkl::rng::uniform_method::standard``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -182,4 +182,4 @@ class uniform
 
             Returns the distribution parameter `b` - right bound.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

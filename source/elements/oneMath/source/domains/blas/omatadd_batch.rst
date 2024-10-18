@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_omatadd_batch:
+.. _onemath_blas_omatadd_batch:
 
 omatadd_batch
 =============
@@ -10,12 +10,12 @@ omatadd_batch
 Computes a group of out-of-place scaled matrix additions using general
 dense matrices.
 
-.. _onemkl_blas_omatadd_batch_description:
+.. _onemath_blas_omatadd_batch_description:
 
 .. rubric:: Description
 
 The ``omatadd_batch`` routines perform a series of out-of-place scaled matrix
-additions. They are batched versions of :ref:`onemkl_blas_omatadd`,
+additions. They are batched versions of :ref:`onemath_blas_omatadd`,
 but the ``omatadd_batch`` routines perform their operations with
 groups of matrices. Each group contains matrices with the same parameters.
 
@@ -53,7 +53,7 @@ and buffer memory.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_omatadd_batch_buffer:
+.. _onemath_blas_omatadd_batch_buffer:
 
 omatadd_batch (Buffer Version)
 ------------------------------
@@ -156,11 +156,11 @@ memory, with the exception of the following in-place operations:
 
    transa
       Specifies op(``A``), the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Specifies op(``B``), the transposition operation applied to the
-      matrices ``B``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``B``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows for the result matrix ``C``. Must be at least zero.
@@ -282,22 +282,22 @@ memory, with the exception of the following in-place operations:
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_omatadd_batch_usm:
+.. _onemath_blas_omatadd_batch_usm:
    
 omatadd_batch (USM Version)
 ---------------------------
@@ -616,11 +616,11 @@ in-place operations:
 
    transa
       Specifies op(``A``), the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Specifies op(``B``), the transposition operation applied to the
-      matrices ``B``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``B``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows for the result matrix ``C``. Must be at least zero.
@@ -752,19 +752,19 @@ in-place operations:
    implementation-specific exception(s) in case of error conditions
    not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
 
 
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

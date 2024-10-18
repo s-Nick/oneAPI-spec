@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack-linear-equation-routines:
+.. _onemath_lapack-linear-equation-routines:
 
 LAPACK Linear Equation Routines
 ===============================
@@ -26,56 +26,56 @@ LAPACK Linear Equation Routines
          * -     Routines
            -     Scratchpad Size Routines
            -     Description     
-         * -     :ref:`onemkl_lapack_geqrf`
-           -     :ref:`onemkl_lapack_geqrf_scratchpad_size`
+         * -     :ref:`onemath_lapack_geqrf`
+           -     :ref:`onemath_lapack_geqrf_scratchpad_size`
            -     Computes the QR factorization of a general m-by-n matrix.
-         * -     :ref:`onemkl_lapack_gerqf`
-           -     :ref:`onemkl_lapack_gerqf_scratchpad_size`
+         * -     :ref:`onemath_lapack_gerqf`
+           -     :ref:`onemath_lapack_gerqf_scratchpad_size`
            -     Computes the RQ factorization of a general m-by-n matrix.
-         * -     :ref:`onemkl_lapack_getrf`
-           -     :ref:`onemkl_lapack_getrf_scratchpad_size`
+         * -     :ref:`onemath_lapack_getrf`
+           -     :ref:`onemath_lapack_getrf_scratchpad_size`
            -     Computes the LU factorization of a general m-by-n matrix.   
-         * -     :ref:`onemkl_lapack_getri`
-           -     :ref:`onemkl_lapack_getri_scratchpad_size`
+         * -     :ref:`onemath_lapack_getri`
+           -     :ref:`onemath_lapack_getri_scratchpad_size`
            -     Computes the inverse of an LU-factored general matrix.   
-         * -     :ref:`onemkl_lapack_getrs`
-           -     :ref:`onemkl_lapack_getrs_scratchpad_size`
+         * -     :ref:`onemath_lapack_getrs`
+           -     :ref:`onemath_lapack_getrs_scratchpad_size`
            -     Solves a system of linear equations with an LU-factored square coefficient matrix, with multiple right-hand sides.    
-         * -     :ref:`onemkl_lapack_hetrf`
-           -     :ref:`onemkl_lapack_hetrf_scratchpad_size`
+         * -     :ref:`onemath_lapack_hetrf`
+           -     :ref:`onemath_lapack_hetrf_scratchpad_size`
            -     Computes the Bunch-Kaufman factorization of a complex Hermitian matrix.
-         * -     :ref:`onemkl_lapack_orgqr`
-           -     :ref:`onemkl_lapack_orgqr_scratchpad_size`
+         * -     :ref:`onemath_lapack_orgqr`
+           -     :ref:`onemath_lapack_orgqr_scratchpad_size`
            -     Generates the real orthogonal matrix :math:`Q` of the QR factorization formed by geqrf.
-         * -     :ref:`onemkl_lapack_ormqr`
-           -     :ref:`onemkl_lapack_ormqr_scratchpad_size`
+         * -     :ref:`onemath_lapack_ormqr`
+           -     :ref:`onemath_lapack_ormqr_scratchpad_size`
            -     Multiplies a real matrix by the orthogonal matrix :math:`Q` of the QR factorization formed by geqrf.
-         * -     :ref:`onemkl_lapack_ormrq`
-           -     :ref:`onemkl_lapack_ormrq_scratchpad_size`
+         * -     :ref:`onemath_lapack_ormrq`
+           -     :ref:`onemath_lapack_ormrq_scratchpad_size`
            -     Multiplies a real matrix by the orthogonal matrix :math:`Q` of the RQ factorization formed by gerqf.
-         * -     :ref:`onemkl_lapack_potrf`
-           -     :ref:`onemkl_lapack_potrf_scratchpad_size`
+         * -     :ref:`onemath_lapack_potrf`
+           -     :ref:`onemath_lapack_potrf_scratchpad_size`
            -     Computes the Cholesky factorization of a symmetric (Hermitian) positive-definite matrix.   
-         * -     :ref:`onemkl_lapack_potri`
-           -     :ref:`onemkl_lapack_potri_scratchpad_size`
+         * -     :ref:`onemath_lapack_potri`
+           -     :ref:`onemath_lapack_potri_scratchpad_size`
            -     Computes the inverse of a Cholesky-factored symmetric (Hermitian) positive-definite matrix.   
-         * -     :ref:`onemkl_lapack_potrs`
-           -     :ref:`onemkl_lapack_potrs_scratchpad_size`
+         * -     :ref:`onemath_lapack_potrs`
+           -     :ref:`onemath_lapack_potrs_scratchpad_size`
            -     Solves a system of linear equations with a Cholesky-factored symmetric (Hermitian) positive-definite coefficient matrix, with multiple right-hand sides.    
-         * -     :ref:`onemkl_lapack_sytrf`
-           -     :ref:`onemkl_lapack_sytrf_scratchpad_size`
+         * -     :ref:`onemath_lapack_sytrf`
+           -     :ref:`onemath_lapack_sytrf_scratchpad_size`
            -     Computes the Bunch-Kaufman factorization of a symmetric matrix.   
-         * -     :ref:`onemkl_lapack_trtrs`
-           -     :ref:`onemkl_lapack_trtrs_scratchpad_size`
+         * -     :ref:`onemath_lapack_trtrs`
+           -     :ref:`onemath_lapack_trtrs_scratchpad_size`
            -     Solves a system of linear equations with a triangular coefficient matrix, with multiple right-hand sides.    
-         * -     :ref:`onemkl_lapack_ungqr`
-           -     :ref:`onemkl_lapack_ungqr_scratchpad_size`
+         * -     :ref:`onemath_lapack_ungqr`
+           -     :ref:`onemath_lapack_ungqr_scratchpad_size`
            -     Generates the complex unitary matrix :math:`Q` of the QR factorization formed by geqrf.
-         * -     :ref:`onemkl_lapack_unmqr`
-           -     :ref:`onemkl_lapack_unmqr_scratchpad_size`
+         * -     :ref:`onemath_lapack_unmqr`
+           -     :ref:`onemath_lapack_unmqr_scratchpad_size`
            -     Multiplies a complex matrix by the unitary matrix :math:`Q` of the QR factorization formed by geqrf.
-         * -     :ref:`onemkl_lapack_unmrq`
-           -     :ref:`onemkl_lapack_unmrq_scratchpad_size`
+         * -     :ref:`onemath_lapack_unmrq`
+           -     :ref:`onemath_lapack_unmrq_scratchpad_size`
            -     Multiplies a complex matrix by the unitary matrix :math:`Q` of the RQ factorization formed by gerqf.
 
 

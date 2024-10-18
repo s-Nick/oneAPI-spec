@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_hypergeometric:
+.. _onemath_rng_hypergeometric:
 
 hypergeometric
 ==============
 
 Class is used for generation of hypergeometrically distributed integer types random numbers.
 
-.. _onemkl_rng_hypergeometric_description:
+.. _onemath_rng_hypergeometric_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers hypergeometrically distributed with lot size :math:`l`, size of sampling :math:`s`, and number of marked elements in the lot :math:`m`, where :math:`l, m, s \in N \bigcup \{0\}; l \ge max (s, m)`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers hypergeometrically distributed with lot size :math:`l`, size of sampling :math:`s`, and number of marked elements in the lot :math:`m`, where :math:`l, m, s \in N \bigcup \{0\}; l \ge max (s, m)`.
 
 Consider a lot of :math:`l` elements comprising :math:`m` marked and :math:`l` - :math:`m` unmarked elements. A trial sampling without replacement of exactly :math:`s` elements from this lot helps to define the hypergeometric distribution, which is the probability that the group of :math:`s` elements contains exactly :math:`k` marked elements.
 
@@ -29,7 +29,7 @@ The cumulative distribution function is as follows:
 
      F_{l, s, m}(x) = \left\{ \begin{array}{rcl} 0, x < max(0, s + m - l) \\ \sum^{\lfloor x \rfloor}_{k = max(0, s + m - l)}\frac{C^k_mC^{s-k}_{l-m}}{C^s_l}, max(0, s + m - l) \leq x \leq min(s, m) \\ 1, x > min(s, m) \end{array}\right.
 
-.. _onemkl_rng_hypergeometric_syntax:
+.. _onemath_rng_hypergeometric_syntax:
 
 class hypergeometric
 --------------------
@@ -71,7 +71,7 @@ class hypergeometric
                 * ``oneapi::mkl::rng::hypergeometric_method::by_default``
                 * ``oneapi::mkl::rng::hypergeometric_method::h2pe``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -206,4 +206,4 @@ class hypergeometric
 
             Returns the distribution parameter `m` - number of marked elements.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

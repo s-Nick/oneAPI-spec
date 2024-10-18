@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_poisson:
+.. _onemath_rng_poisson:
 
 poisson
 =======
 
 Class is used for generation of Poisson distributed integer types random numbers.
 
-.. _onemkl_rng_poisson_description:
+.. _onemath_rng_poisson_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers Poisson distributed with distribution parameter :math:`\lambda`, where :math:`\lambda \in R; \lambda > 0;`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers Poisson distributed with distribution parameter :math:`\lambda`, where :math:`\lambda \in R; \lambda > 0;`.
 
 The probability distribution is given by:
 
@@ -27,7 +27,7 @@ The cumulative distribution function is as follows:
 
     F_{\lambda}(x) = \left\{ \begin{array}{rcl} \sum_{k = 0}^{\lfloor x \rfloor} \frac{\lambda^ke^{-\lambda}}{k!}, x \ge 0 \\ 0, x < 0 \end{array}\right.
 
-.. _onemkl_rng_poisson_syntax:
+.. _onemath_rng_poisson_syntax:
 
 class poisson
 -------------
@@ -67,7 +67,7 @@ class poisson
                 * ``oneapi::mkl::rng::poisson_method::ptpe``
                 * ``oneapi::mkl::rng::poisson_method::gaussian_icdf_based``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -170,4 +170,4 @@ class poisson
 
             Returns the distribution parameter `lambda`.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

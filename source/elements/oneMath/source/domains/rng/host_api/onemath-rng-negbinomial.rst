@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_negative_binomial:
+.. _onemath_rng_negative_binomial:
 
 negative_binomial
 =================
 
 Class is used for generation of negative binomially distributed integer types random numbers.
 
-.. _onemkl_rng_negative_binomial_description:
+.. _onemath_rng_negative_binomial_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers negative binomially distributed with distribution parameters :math:`a` and :math:`p`, where :math:`p, a \in R; 0 \leq p \leq 1, a > 0`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers negative binomially distributed with distribution parameters :math:`a` and :math:`p`, where :math:`p, a \in R; 0 \leq p \leq 1, a > 0`.
 
 The probability distribution is given by:
 
@@ -28,7 +28,7 @@ The cumulative distribution function is as follows:
     F_{a, p}(x) = \left\{ \begin{array}{rcl} \sum^{\lfloor x \rfloor}_{k = 0} C^k_{a + k - 1}p^a(1 - p)^{k}, x \ge 0, x \in R \\ 0, x < 0 \end{array}\right.
 
 
-.. _onemkl_rng_negative_binomial_syntax:
+.. _onemath_rng_negative_binomial_syntax:
 
 class negative_binomial
 -----------------------
@@ -69,7 +69,7 @@ class negative_binomial
                 * ``oneapi::mkl::rng::negative_binomial_method::by_default``
                 * ``oneapi::mkl::rng::negative_binomial_method::nbar``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -188,4 +188,4 @@ class negative_binomial
 
             Returns the distribution parameter `p` - the second distribution parameter.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

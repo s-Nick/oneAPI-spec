@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_copy_batch:
+.. _onemath_blas_copy_batch:
 
 copy_batch
 ==========
 
 Computes a group of ``copy`` operations.
 
-.. _onemkl_blas_copy_batch_description:
+.. _onemath_blas_copy_batch_description:
 
 .. rubric:: Description
 
-The ``copy_batch`` routines are batched versions of :ref:`onemkl_blas_copy`, performing
+The ``copy_batch`` routines are batched versions of :ref:`onemath_blas_copy`, performing
 multiple ``copy`` operations in a single call. Each ``copy`` 
 operation copies one vector to another.
    
@@ -28,7 +28,7 @@ operation copies one vector to another.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_copy_batch_buffer:
+.. _onemath_blas_copy_batch_buffer:
 
 copy_batch (Buffer Version)
 ---------------------------
@@ -128,22 +128,22 @@ where:
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_copy_batch_usm:
+.. _onemath_blas_copy_batch_usm:
 
 copy_batch (USM Version)
 ------------------------
@@ -354,20 +354,20 @@ The total number of vectors in ``x`` and ``y`` are given by the ``batch_size`` p
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:**:ref:`blas-like-extensions`

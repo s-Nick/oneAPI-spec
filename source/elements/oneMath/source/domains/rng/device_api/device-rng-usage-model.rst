@@ -2,9 +2,9 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_usage_model:
+.. _onemath_device_rng_usage_model:
 
-oneMKL RNG Device Usage Model
+oneMath RNG Device Usage Model
 =============================
 
 .. contents::
@@ -12,7 +12,7 @@ oneMKL RNG Device Usage Model
     :depth: 1
 
 A typical usage model for device routines is the same as described in
-:ref:`onemkl_rng_usage_model`:
+:ref:`onemath_rng_usage_model`:
 
 
 #. Create and initialize the object for basic random number generator.
@@ -74,4 +74,4 @@ Example of Vector Random Numbers Generation
         // ...
     }
 
-**Parent topic:** :ref:`onemkl_device_rng_routines`
+**Parent topic:** :ref:`onemath_device_rng_routines`

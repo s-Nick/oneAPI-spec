@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_lognormal:
+.. _onemath_device_rng_lognormal:
 
 lognormal
 =========
@@ -86,7 +86,7 @@ class lognormal
                 * ``oneapi::mkl::rng::device::lognormal_method::by_default``
                 * ``oneapi::mkl::rng::device::lognormal_method::box_muller2``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_device_rng_distributions_method>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_device_rng_distributions_method>`.
 
 
 .. container:: section
@@ -239,4 +239,4 @@ class lognormal
 
             Returns the distribution parameter `scale` - scalefactor value.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`

@@ -2,9 +2,9 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_domains:
+.. _onemath_domains:
 
-oneMKL Domains
+oneMath Domains
 ================
 
 This section describes the Data Parallel C++ (DPC++) interface.

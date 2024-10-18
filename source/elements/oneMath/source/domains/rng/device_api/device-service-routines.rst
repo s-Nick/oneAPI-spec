@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_service_routines:
+.. _onemath_device_rng_service_routines:
 
 Device Service Routines
 =======================
@@ -15,7 +15,7 @@ Device Service Routines
    * -  Routine
      -  Description
 
-   * -  :ref:`onemkl_device_rng_skip_ahead`
+   * -  :ref:`onemath_device_rng_skip_ahead`
      -  Proceed state of engine by the skip-ahead method to skip a given number of elements from the original sequence.
 
 .. toctree::
@@ -24,4 +24,4 @@ Device Service Routines
 
    device-rng-skip-ahead.rst
 
-**Parent topic:** :ref:`onemkl_device_rng_routines`
+**Parent topic:** :ref:`onemath_device_rng_routines`

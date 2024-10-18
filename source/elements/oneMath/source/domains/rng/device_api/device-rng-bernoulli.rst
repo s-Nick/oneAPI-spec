@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_bernoulli:
+.. _onemath_device_rng_bernoulli:
 
 bernoulli
 =========
@@ -82,7 +82,7 @@ class bernoulli
                 * ``oneapi::mkl::rng::bernoulli_method::by_default``
                 * ``oneapi::mkl::rng::bernoulli_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -185,5 +185,5 @@ class bernoulli
 
             Returns the distribution parameter `p` - probability.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`
 

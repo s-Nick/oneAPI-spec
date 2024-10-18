@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_init_csr_matrix:
+.. _onemath_sparse_init_csr_matrix:
 
 init_csr_matrix
 ===============
@@ -28,13 +28,13 @@ certain math operations where the output is a sparse matrix, e.g., sparse matrix
 addition (sparse matrix + sparse matrix = sparse matrix), and multiplication of
 two sparse matrices, the number of non-zero elements in the output sparse matrix
 are not known in advance and must be calculated as part of the operation API.
-Such APIs are currently not part of the oneMKL Specification, but will be added
+Such APIs are currently not part of the oneMath Specification, but will be added
 in the future. This behavior is currently left to be implementation-defined, but
-may be clarified in the oneMKL Specification in the future.
+may be clarified in the oneMath Specification in the future.
 
-See :ref:`onemkl_sparse_matrix_handle`.
+See :ref:`onemath_sparse_matrix_handle`.
 
-.. _onemkl_sparse_init_csr_matrix_buffer:
+.. _onemath_sparse_init_csr_matrix_buffer:
 
 init_csr_matrix (Buffer version)
 --------------------------------
@@ -63,10 +63,10 @@ init_csr_matrix (Buffer version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
    indexType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
 .. container:: section
 
@@ -91,21 +91,21 @@ init_csr_matrix (Buffer version)
 
    index
       Indicates how input arrays are indexed. The possible options are described
-      in :ref:`onemkl_enum_index_base` enum class.
+      in :ref:`onemath_enum_index_base` enum class.
 
    row_ptr
       Buffer of length at least ``num_rows+1``. Refer to
-      :ref:`onemkl_sparse_csr` format for detailed description of ``row_ptr``.
+      :ref:`onemath_sparse_csr` format for detailed description of ``row_ptr``.
 
    col_ind
       Buffer of length at least ``nnz`` containing the column indices in
-      ``index``-based numbering. Refer to :ref:`onemkl_sparse_csr` format for
+      ``index``-based numbering. Refer to :ref:`onemath_sparse_csr` format for
       detailed description of ``col_ind``.
 
    val
       Buffer of length at least ``nnz``. Contains the data of the input matrix
       which is not implicitly zero. The remaining input values are implicit
-      zeros. Refer to :ref:`onemkl_sparse_csr` format for detailed description
+      zeros. Refer to :ref:`onemath_sparse_csr` format for detailed description
       of ``val``.
 
 .. container:: section
@@ -134,12 +134,12 @@ init_csr_matrix (Buffer version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_init_csr_matrix_usm:
+.. _onemath_sparse_init_csr_matrix_usm:
 
 init_csr_matrix (USM version)
 -----------------------------
@@ -168,10 +168,10 @@ init_csr_matrix (USM version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
    indexType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
 .. container:: section
 
@@ -196,23 +196,23 @@ init_csr_matrix (USM version)
 
    index
       Indicates how input arrays are indexed. The possible options are described
-      in :ref:`onemkl_enum_index_base` enum class.
+      in :ref:`onemath_enum_index_base` enum class.
 
    row_ptr
       USM pointer of length at least ``num_rows+1``. Refer to
-      :ref:`onemkl_sparse_csr` format for detailed description of ``row_ptr``.
+      :ref:`onemath_sparse_csr` format for detailed description of ``row_ptr``.
       The data must be accessible on the device.
 
    col_ind
       USM pointer of length at least ``nnz`` containing the column indices in
-      ``index``-based numbering. Refer to :ref:`onemkl_sparse_csr` format for
+      ``index``-based numbering. Refer to :ref:`onemath_sparse_csr` format for
       detailed description of ``col_ind``. The data must be accessible on the
       device.
 
    val
       USM pointer of length at least ``nnz``. Contains the data of the input
       matrix which is not implicitly zero. The remaining input values are
-      implicit zeros. Refer to :ref:`onemkl_sparse_csr` format for detailed
+      implicit zeros. Refer to :ref:`onemath_sparse_csr` format for detailed
       description of ``val``. The data must be accessible on the device. Using a
       USM pointer with a smaller allocated memory size is undefined behavior.
 
@@ -242,9 +242,9 @@ init_csr_matrix (USM version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

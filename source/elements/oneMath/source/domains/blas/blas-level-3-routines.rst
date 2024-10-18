@@ -22,23 +22,23 @@ BLAS Level 3 Routines
 
          * -     Routines
            -     Description     
-         * -     :ref:`onemkl_blas_gemm`   
+         * -     :ref:`onemath_blas_gemm`   
            -     Computes a matrix-matrix product with general matrices.   
-         * -     :ref:`onemkl_blas_hemm`   
+         * -     :ref:`onemath_blas_hemm`   
            -     Computes a matrix-matrix product where one input matrix is Hermitian and one is general.   
-         * -     :ref:`onemkl_blas_herk`   
+         * -     :ref:`onemath_blas_herk`   
            -     Performs a Hermitian rank-k update.    
-         * -     :ref:`onemkl_blas_her2k`   
+         * -     :ref:`onemath_blas_her2k`   
            -     Performs a Hermitian rank-2k update.    
-         * -     :ref:`onemkl_blas_symm`   
+         * -     :ref:`onemath_blas_symm`   
            -     Computes a matrix-matrix product where one input matrix is symmetric and one matrix is general.   
-         * -     :ref:`onemkl_blas_syrk`   
+         * -     :ref:`onemath_blas_syrk`   
            -     Performs a symmetric rank-k update.    
-         * -     :ref:`onemkl_blas_syr2k`   
+         * -     :ref:`onemath_blas_syr2k`   
            -     Performs a symmetric rank-2k update.    
-         * -     :ref:`onemkl_blas_trmm`   
+         * -     :ref:`onemath_blas_trmm`   
            -     Computes a matrix-matrix product where one input matrix is triangular and one input matrix is general.   
-         * -     :ref:`onemkl_blas_trsm`   
+         * -     :ref:`onemath_blas_trsm`   
            -     Solves a triangular matrix equation (forward or backward solve).   
 
 
@@ -56,4 +56,4 @@ BLAS Level 3 Routines
     trmm
     trsm
 
-**Parent topic:** :ref:`onemkl_blas`
+**Parent topic:** :ref:`onemath_blas`

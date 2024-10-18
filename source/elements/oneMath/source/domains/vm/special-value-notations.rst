@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_special_value_notations:
+.. _onemath_vm_special_value_notations:
 
 Special Value Notations
 =======================
@@ -60,5 +60,5 @@ Special Value Notations
    well-defined computationally.
 
 
-**Parent topic:** :ref:`onemkl_vm`
+**Parent topic:** :ref:`onemath_vm`
 

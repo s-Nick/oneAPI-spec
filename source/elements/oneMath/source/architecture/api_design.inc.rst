@@ -2,82 +2,82 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_api_design:
+.. _onemath_api_design:
 
 API Design
 -----------
 
-This section discusses the general features of oneMKL API design. In particular, it covers the use of namespaces and data types from C++, from DPC++ and new ones introduced for oneMKL APIs.
+This section discusses the general features of oneMath API design. In particular, it covers the use of namespaces and data types from C++, from DPC++ and new ones introduced for oneMath APIs.
 
-.. _onemkl_namespaces:
+.. _onemath_namespaces:
 
-oneMKL namespaces
+oneMath namespaces
 ++++++++++++++++++
 
-The oneMKL library uses C++ namespaces to organize routines by mathematical domain.  All oneMKL objects and routines shall be contained within the ``oneapi::mkl`` base namespace.  The individual oneMKL domains use a secondary namespace layer as follows:
+The oneMath library uses C++ namespaces to organize routines by mathematical domain.  All oneMath objects and routines shall be contained within the ``oneapi::mkl`` base namespace.  The individual oneMath domains use a secondary namespace layer as follows:
 
 ========================  =======================================================================================================
-namespace                 oneMKL domain or content
+namespace                 oneMath domain or content
 ========================  =======================================================================================================
-``oneapi::mkl``           oneMKL base namespace, contains general oneMKL data types, objects, exceptions and routines
-``oneapi::mkl::blas``     Dense linear algebra routines from BLAS and BLAS like extensions. The oneapi::mkl::blas namespace should contain two namespaces column_major and row_major to support both matrix layouts. See :ref:`onemkl_blas`
-``oneapi::mkl::lapack``   Dense linear algebra routines from LAPACK and LAPACK like extensions. See :ref:`onemkl_lapack`
-``oneapi::mkl::sparse``   Sparse linear algebra routines from Sparse BLAS and Sparse Solvers. See :ref:`onemkl_sparse_linear_algebra`
-``oneapi::mkl::dft``      Discrete Fourier Transforms. See :ref:`onemkl_dft`
-``oneapi::mkl::rng``      Random number generator routines. See :ref:`onemkl_rng`
-``oneapi::mkl::vm``       Vector mathematics routines, e.g. trigonometric, exponential functions acting on elements of a vector. See :ref:`onemkl_vm`
+``oneapi::mkl``           oneMath base namespace, contains general oneMath data types, objects, exceptions and routines
+``oneapi::mkl::blas``     Dense linear algebra routines from BLAS and BLAS like extensions. The oneapi::mkl::blas namespace should contain two namespaces column_major and row_major to support both matrix layouts. See :ref:`onemath_blas`
+``oneapi::mkl::lapack``   Dense linear algebra routines from LAPACK and LAPACK like extensions. See :ref:`onemath_lapack`
+``oneapi::mkl::sparse``   Sparse linear algebra routines from Sparse BLAS and Sparse Solvers. See :ref:`onemath_sparse_linear_algebra`
+``oneapi::mkl::dft``      Discrete Fourier Transforms. See :ref:`onemath_dft`
+``oneapi::mkl::rng``      Random number generator routines. See :ref:`onemath_rng`
+``oneapi::mkl::vm``       Vector mathematics routines, e.g. trigonometric, exponential functions acting on elements of a vector. See :ref:`onemath_vm`
 ========================  =======================================================================================================
 
 .. note::
    :name: Implementation Requirement
 
-   Inside each oneMKL domain, there are many routines, classes, enums and objects defined which constitute the breadth and scope of that oneMKL domain.  
-   It is permitted for a library implementation of the oneMKL specification to implement either all, one or more than one of the domains in oneMKL. However, within an implementation of a specific domain, all relevant routines, classes, enums and objects (including those relevant enums and objects which live outside a particular domain in the general ``oneapi::mkl`` namespace must be both declared and defined in the library so that an application that uses that domain could build and link against that library implementation successfully.
+   Inside each oneMath domain, there are many routines, classes, enums and objects defined which constitute the breadth and scope of that oneMath domain.  
+   It is permitted for a library implementation of the oneMath specification to implement either all, one or more than one of the domains in oneMath. However, within an implementation of a specific domain, all relevant routines, classes, enums and objects (including those relevant enums and objects which live outside a particular domain in the general ``oneapi::mkl`` namespace must be both declared and defined in the library so that an application that uses that domain could build and link against that library implementation successfully.
 
-   It is however acceptable to throw the runtime exception :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>` inside of the routines or class member functions in that domain that have not been fully implemented.  
-   For instance, a library may choose to implement the oneMKL BLAS functionality and in particular may choose to implement only the :ref:`onemkl_blas_gemm` api for their library, in which case they must also include all the other blas namespaced routines and throw the :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>` exception inside all the others.  
+   It is however acceptable to throw the runtime exception :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>` inside of the routines or class member functions in that domain that have not been fully implemented.  
+   For instance, a library may choose to implement the oneMath BLAS functionality and in particular may choose to implement only the :ref:`onemath_blas_gemm` api for their library, in which case they must also include all the other blas namespaced routines and throw the :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>` exception inside all the others.  
    
    In such a case, the implemented routines in such a library should be communicated clearly and easily understood by users of that library.
 
 
-.. _onemkl_cpp_datatypes:
+.. _onemath_cpp_datatypes:
 
 Standard C++ datatype usage
 +++++++++++++++++++++++++++
 
-oneMKL uses C++ STL data types for scalars where applicable:
+oneMath uses C++ STL data types for scalars where applicable:
 
 * Integer scalars are C++ fixed-size integer types (``std::intN_t``, ``std::uintN_t``).
 * Complex numbers are represented by C++ ``std::complex`` types.
 
-In general, scalar integer arguments to oneMKL routines are 64-bit integers (``std::int64_t`` or ``std::uint64_t``). Integer vectors and matrices may have varying bit widths, defined on a per-routine basis.
+In general, scalar integer arguments to oneMath routines are 64-bit integers (``std::int64_t`` or ``std::uint64_t``). Integer vectors and matrices may have varying bit widths, defined on a per-routine basis.
 
-.. _onemkl_dpcpp_datatypes:
+.. _onemath_dpcpp_datatypes:
 
 DPC++ datatype usage
 ++++++++++++++++++++
 
-oneMKL uses the following DPC++ data types:
+oneMath uses the following DPC++ data types:
 
-* SYCL queue ``sycl::queue`` for scheduling kernels on a SYCL device. See :ref:`onemkl_queues` for more details.
-* SYCL buffer ``sycl::buffer`` for buffer-based memory access. See :ref:`onemkl_buffers` for more details.
-* Unified Shared Memory (USM) for pointer-based memory access. See :ref:`onemkl_usm` for more details.
-* SYCL event ``sycl::event`` for output event synchronization in oneMKL routines with USM pointers. See :ref:`onemkl_synchronization_with_usm` for more details.
-* Vector of SYCL events ``std::vector<sycl::event>`` for input events synchronization in oneMKL routines with USM pointers. See :ref:`onemkl_synchronization_with_usm` for more details.
+* SYCL queue ``sycl::queue`` for scheduling kernels on a SYCL device. See :ref:`onemath_queues` for more details.
+* SYCL buffer ``sycl::buffer`` for buffer-based memory access. See :ref:`onemath_buffers` for more details.
+* Unified Shared Memory (USM) for pointer-based memory access. See :ref:`onemath_usm` for more details.
+* SYCL event ``sycl::event`` for output event synchronization in oneMath routines with USM pointers. See :ref:`onemath_synchronization_with_usm` for more details.
+* Vector of SYCL events ``std::vector<sycl::event>`` for input events synchronization in oneMath routines with USM pointers. See :ref:`onemath_synchronization_with_usm` for more details.
 
 .. note::
-    The class ``sycl::vector_class`` has been removed from SYCL 2020 and the standard class ``std::vector`` should be used instead for vector of SYCL events in oneMKL routines with USM pointers
+    The class ``sycl::vector_class`` has been removed from SYCL 2020 and the standard class ``std::vector`` should be used instead for vector of SYCL events in oneMath routines with USM pointers
 
-.. _onemkl_datatypes:
+.. _onemath_datatypes:
 
-oneMKL defined datatypes
+oneMath defined datatypes
 ++++++++++++++++++++++++
 
-oneMKL dense and sparse linear algebra routines use scoped enum types as type-safe replacements for the traditional character arguments used in C/Fortran implementations of BLAS and LAPACK. These types all belong to the ``oneapi::mkl`` namespace.  
+oneMath dense and sparse linear algebra routines use scoped enum types as type-safe replacements for the traditional character arguments used in C/Fortran implementations of BLAS and LAPACK. These types all belong to the ``oneapi::mkl`` namespace.  
 
 Each enumeration value comes with two names: A single-character name (the traditional BLAS/LAPACK character) and a longer, more descriptive name. The two names are exactly equivalent and may be used interchangeably.
 
-      .. _onemkl_enum_transpose:
+      .. _onemath_enum_transpose:
 
       .. rubric:: transpose
          :name: transpose
@@ -104,7 +104,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
               -  ``transpose::conjtrans``
               -  Perform Hermitian transpose (transpose and conjugate). Is the same as ``transpose::trans`` for real matrices.
 
-      .. _onemkl_enum_uplo:
+      .. _onemath_enum_uplo:
 
       .. rubric:: uplo
          :name: uplo
@@ -132,7 +132,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
       In both cases, elements that are not in the selected triangle are
       not accessed or updated.
 
-      .. _onemkl_enum_diag:
+      .. _onemath_enum_diag:
 
       .. rubric:: diag
          :name: diag
@@ -156,7 +156,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
               -  ``diag::unit``
               -  The matrix is unit triangular (the diagonal entries are all 1's). The diagonal entries in the matrix data are not accessed.
 
-      .. _onemkl_enum_side:
+      .. _onemath_enum_side:
 
       .. rubric:: side
          :name: side
@@ -181,7 +181,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
               -  ``side::right``
               -  The special form matrix is on the right in the multiplication.
 
-      .. _onemkl_enum_offset:
+      .. _onemath_enum_offset:
 
       .. rubric:: offset
          :name: offset
@@ -209,7 +209,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
               -  ``offset::row``
               -  The offset to apply to the output matrix is a row offset, that is to say all the rows in the ``C_offset`` matrix are the same and given by the elements in the ``co`` array.
 
-      .. _onemkl_enum_index_base:
+      .. _onemath_enum_index_base:
 
       .. rubric:: index_base
          :name: index_base
@@ -232,7 +232,7 @@ Each enumeration value comes with two names: A single-character name (the tradit
               -  Index arrays for an input matrix are provided using one-based (Fortran style) index values.  That is, indices start at 1.
 
 
-      .. _onemkl_enum_layout:
+      .. _onemath_enum_layout:
 
       .. rubric:: layout
          :name: layout
@@ -259,6 +259,6 @@ Each enumeration value comes with two names: A single-character name (the tradit
 
 
 .. note::
-        :ref:`onemkl_appendix` may contain other API design decisions or recommendations that may be of use to the general developer of oneMKL, but which may not necessarily be part of the oneMKL specification.
+        :ref:`onemath_appendix` may contain other API design decisions or recommendations that may be of use to the general developer of oneMath, but which may not necessarily be part of the oneMath specification.
 
 

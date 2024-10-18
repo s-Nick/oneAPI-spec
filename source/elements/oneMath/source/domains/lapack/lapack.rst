@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack:
+.. _onemath_lapack:
 
 LAPACK Routines
 +++++++++++++++
 
-oneMKL provides a DPC++ interface to select routines from the Linear Algebra PACKage (LAPACK), as well as several LAPACK-like extension routines.
+oneMath provides a DPC++ interface to select routines from the Linear Algebra PACKage (LAPACK), as well as several LAPACK-like extension routines.
 LAPACK routines require column major layout of matrices.
 
 .. include:: lapack-linear-equation-routines.inc.rst
@@ -24,7 +24,7 @@ LAPACK routines require column major layout of matrices.
          :class: NoteTipHead
 
 
-      Different arrays used as parameters to oneMKL LAPACK routines must
+      Different arrays used as parameters to oneMath LAPACK routines must
       not overlap.
 
 
@@ -41,4 +41,4 @@ LAPACK routines require column major layout of matrices.
       values may cause LAPACK to return unexpected results or become
       unstable.
 
-**Parent topic:** :ref:`onemkl_dense_linear_algebra`
+**Parent topic:** :ref:`onemath_dense_linear_algebra`

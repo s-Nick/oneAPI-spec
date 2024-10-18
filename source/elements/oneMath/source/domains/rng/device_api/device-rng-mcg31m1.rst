@@ -2,16 +2,16 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_mcg31m1:
+.. _onemath_device_rng_mcg31m1:
 
 mcg31m1
 =======
 
-The 31-bit multiplicative congruential pseudorandom number generator MCG(:math:`1132489760, 2^{32}-1`) :ref:`[L'Ecuyer99a] <onemkl_rng_bibliography>`.
+The 31-bit multiplicative congruential pseudorandom number generator MCG(:math:`1132489760, 2^{32}-1`) :ref:`[L'Ecuyer99a] <onemath_rng_bibliography>`.
 
 .. rubric:: Description
 
-The mcg31m1 engine is a 31-bit multiplicative congruential generator :ref:`[L'Ecuyer99] <onemkl_rng_bibliography>`. 
+The mcg31m1 engine is a 31-bit multiplicative congruential generator :ref:`[L'Ecuyer99] <onemath_rng_bibliography>`. 
 The mcg31m1 generator belongs to linear congruential generators with the period length of approximately :math:`2^{31}`. 
 Such generators are still used as default random number generators in various software systems, mainly due to the 
 simplicity of the portable versions implementation, speed, and compatibility with the earlier systems versions. 
@@ -98,4 +98,4 @@ class mcg31m1
         offset
             Number of skipped elements.
 
-**Parent topic:** :ref:`onemkl_device_rng_engines`
+**Parent topic:** :ref:`onemath_device_rng_engines`

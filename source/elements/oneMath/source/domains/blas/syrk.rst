@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_syrk:
+.. _onemath_blas_syrk:
 
 syrk
 ====
 
 Performs a symmetric rank-k update.
 
-.. _onemkl_blas_syrk_description:
+.. _onemath_blas_syrk_description:
 
 .. rubric:: Description
 
@@ -42,7 +42,7 @@ Here op(``A``) is ``n``-by-``k``, and ``C`` is ``n``-by-``n``.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_syrk_buffer:
+.. _onemath_blas_syrk_buffer:
 
 syrk (Buffer Version)
 ---------------------
@@ -89,10 +89,10 @@ syrk (Buffer Version)
 
    upper_lower
       Specifies whether ``C``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    trans
-      Specifies op(``A``), the transposition operation applied to ``A`` (See :ref:`onemkl_datatypes` for more details). Conjugation is never performed, even if ``trans`` = ``transpose::conjtrans``.
+      Specifies op(``A``), the transposition operation applied to ``A`` (See :ref:`onemath_datatypes` for more details). Conjugation is never performed, even if ``trans`` = ``transpose::conjtrans``.
 
    n
       Number of rows and columns in ``C``. The value of ``n`` must be at
@@ -169,22 +169,22 @@ syrk (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_syrk_usm:
+.. _onemath_blas_syrk_usm:
 
 syrk (USM Version)
 ------------------
@@ -233,11 +233,11 @@ syrk (USM Version)
 
    upper_lower
       Specifies whether ``C``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    trans
       Specifies op(``A``), the transposition operation applied to
-      ``A`` (See :ref:`onemkl_datatypes` for more details). Conjugation is never performed, even if
+      ``A`` (See :ref:`onemath_datatypes` for more details). Conjugation is never performed, even if
       ``trans`` = ``transpose::conjtrans``.
 
    n
@@ -322,20 +322,20 @@ syrk (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-level-3-routines`

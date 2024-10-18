@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_orgbr:
+.. _onemath_lapack_orgbr:
 
 orgbr
 =====
 
 Generates the real orthogonal matrix :math:`Q` or :math:`P^{T}`
 determined by
-:ref:`onemkl_lapack_gebrd`.
+:ref:`onemath_lapack_gebrd`.
 
 ``orgbr`` supports the following precisions.
 
@@ -25,7 +25,7 @@ determined by
   .. rubric:: Description
       
 The routine generates the whole or part of the orthogonal matrices
-:math:`Q` and :math:`P^{T}` formed by the routines :ref:`onemkl_lapack_gebrd`.
+:math:`Q` and :math:`P^{T}` formed by the routines :ref:`onemath_lapack_gebrd`.
 All valid combinations of arguments are described in *Input parameters*. In
 most cases you need the following:
 
@@ -100,15 +100,15 @@ n
 k
    If ``gen = generate::q``, the number of columns in the original
    :math:`m \times k` matrix reduced by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
    If ``gen = generate::p``, the number of rows in the original
    :math:`k \times n` matrix reduced by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 a
    The buffer ``a`` as returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 lda
    The leading dimension of ``a``.
@@ -116,12 +116,12 @@ lda
 tau
    Buffer, size :math:`\min(m,k)` if ``gen = generate::q``, size
    :math:`\min(n,k)` if ``gen = generate::p``. Scalar factor of the
-   elementary reflectors, as returned by :ref:`onemkl_lapack_gebrd` in the array tauq
+   elementary reflectors, as returned by :ref:`onemath_lapack_gebrd` in the array tauq
    or taup.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_orgbr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_orgbr_scratchpad_size` function.
 
 .. container:: section
 
@@ -141,17 +141,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -202,15 +202,15 @@ n
 k
    If ``gen = generate::q``, the number of columns in the original
    :math:`m \times k` matrix reduced by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
    If ``gen = generate::p``, the number of rows in the original
    :math:`k \times n` matrix reduced by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 a
    Pointer to array ``a`` as returned by
-   :ref:`onemkl_lapack_gebrd`.
+   :ref:`onemath_lapack_gebrd`.
 
 lda
    The leading dimension of ``a``.
@@ -218,12 +218,12 @@ lda
 tau
    Pointer to array of size :math:`\min(m,k)` if ``gen = generate::q``, size
    :math:`\min(n,k)` if ``gen = generate::p``. Scalar factor of the
-   elementary reflectors, as returned by :ref:`onemkl_lapack_gebrd` in the array tauq
+   elementary reflectors, as returned by :ref:`onemath_lapack_gebrd` in the array tauq
    or taup.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_orgbr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_orgbr_scratchpad_size` function.
 
 events
    List of events to wait for before starting computation. Defaults to empty list.
@@ -246,17 +246,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -270,5 +270,5 @@ This routine shall throw the following exceptions if the associated condition is
          
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-singular-value-eigenvalue-routines`
+**Parent topic:** :ref:`onemath_lapack-singular-value-eigenvalue-routines`
 

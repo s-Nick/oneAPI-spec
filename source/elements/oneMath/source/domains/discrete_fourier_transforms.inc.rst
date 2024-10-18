@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_discrete_fourier_transforms:
+.. _onemath_discrete_fourier_transforms:
 
 Discrete Fourier Transforms
 ----------------------------------
 
-The :ref:`onemkl_dft` offer several options for computing Discrete Fourier Transforms (DFTs).
+The :ref:`onemath_dft` offer several options for computing Discrete Fourier Transforms (DFTs).
 
 .. toctree::
     :hidden:

@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_mrg32k3a:
+.. _onemath_device_rng_mrg32k3a:
 
 mrg32k3a
 ========
@@ -12,7 +12,7 @@ The combined multiple recursive pseudorandom number generator MRG32k3a.
 .. rubric:: Description
 
 MRG32k3a engine is a 32-bit combined multiple recursive generator with two components of order 3
-[:ref:`L'Ecuyer99a<onemkl_rng_bibliography>`]. MRG32k3a combined generator meets the requirements for 
+[:ref:`L'Ecuyer99a<onemath_rng_bibliography>`]. MRG32k3a combined generator meets the requirements for 
 modern RNGs, such as good multidimensional uniformity, or a long period (:math:`p \approx 2^{191}`).
 
 
@@ -210,4 +210,4 @@ class mrg32k3a
         offset
             Number of skipped elements. Offset is calculated as: ``num_to_skip`` [0]+ ``num_to_skip`` [1]*2\ :sup:`64` + ``num_to_skip`` [2]\* 2\ :sup:`128` + … + ``num_to_skip`` [``n``-1]\*2\ :sup:`64` \*(``n``-1).
 
-**Parent topic:** :ref:`onemkl_device_rng_engines`
+**Parent topic:** :ref:`onemath_device_rng_engines`

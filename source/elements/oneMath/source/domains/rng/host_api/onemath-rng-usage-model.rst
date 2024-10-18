@@ -2,9 +2,9 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_usage_model:
+.. _onemath_rng_usage_model:
 
-oneMKL RNG Host Usage Model
+oneMath RNG Host Usage Model
 ===========================
 
 
@@ -65,4 +65,4 @@ USM-based example
         // ...
     }
 
-**Parent topic:** :ref:`onemkl_rng_manual_offload_routines`
+**Parent topic:** :ref:`onemath_rng_manual_offload_routines`

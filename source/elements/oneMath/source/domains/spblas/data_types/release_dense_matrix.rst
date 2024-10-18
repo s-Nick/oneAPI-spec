@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_release_dense_matrix:
+.. _onemath_sparse_release_dense_matrix:
 
 release_dense_matrix
 ====================
@@ -38,7 +38,7 @@ If a USM pointer was provided, the data is not free'd.
       The SYCL command queue which will be used for SYCL kernels execution.
 
    dmhandle
-      Handle initialized with :ref:`onemkl_sparse_init_dense_matrix`.
+      Handle initialized with :ref:`onemath_sparse_init_dense_matrix`.
 
    dependencies
       List of events to depend on before starting asynchronous tasks that access
@@ -60,8 +60,8 @@ If a USM pointer was provided, the data is not free'd.
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

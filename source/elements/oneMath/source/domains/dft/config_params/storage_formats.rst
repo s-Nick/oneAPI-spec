@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_dft_data_storage:
+.. _onemath_dft_data_storage:
 
 Data storage
 ============
@@ -15,7 +15,7 @@ whether it is a real or complex descriptor and, in case of complex descriptors,
 on the configuration value associated with configuration parameter
 ``config_param::COMPLEX_STORAGE``.
 
-.. _onemkl_dft_complex_storage:
+.. _onemath_dft_complex_storage:
 
 Complex descriptors
 -------------------
@@ -36,7 +36,7 @@ and imaginary parts of those entries are accessed and stored as ``float`` (resp.
 
 These two behaviors are further specified and illustrated below.
 
-.. _onemkl_dft_complex_storage_complex_complex:
+.. _onemath_dft_complex_storage_complex_complex:
 
 .. rubric:: ``config_value::COMPLEX_COMPLEX`` for ``config_param::COMPLEX_STORAGE``
 
@@ -47,7 +47,7 @@ allocation or ``sycl::buffer`` object). Any relevant entry
 :math:`\left(\cdot\right)^{m}_{k_1, k_2,\dots ,k_d}` is accessed/stored from/in
 a data container provided at compute time at the index value expressed in eq.
 :eq:`eq_idx_data_layout` (see the page dedicated to the
-:ref:`configuration of data layout<onemkl_dft_config_data_layouts>`)
+:ref:`configuration of data layout<onemath_dft_config_data_layouts>`)
 of that data container, whose elementary data type is (possibly implicitly
 re-interpreted as) ``std::complex<float>`` (resp. ``std::complex<double>``) for
 single-precision (resp. double-precision) descriptors.
@@ -88,7 +88,7 @@ USM allocations.
     // Upon completion of ev, in backward domain: entry {m;k1,k2,k3}
     //   = Z[ strides[0] + k1*strides[1] + k2*strides[2] + k3*strides[3] + m*dist ]
 
-.. _onemkl_dft_complex_storage_real_real:
+.. _onemath_dft_complex_storage_real_real:
 
 .. rubric:: ``config_value::REAL_REAL`` for ``config_param::COMPLEX_STORAGE``
 
@@ -100,7 +100,7 @@ the real and imaginary parts of the relevant entries separately. The real and
 imaginary parts of any relevant complex entry
 :math:`\left(\cdot\right)^{m}_{k_1, k_2,\dots ,k_d}` are both stored at the
 index value expressed in eq. :eq:`eq_idx_data_layout` (see the page dedicated to
-the :ref:`configuration of data layout<onemkl_dft_config_data_layouts>`) of
+the :ref:`configuration of data layout<onemath_dft_config_data_layouts>`) of
 their respective data containers, whose elementary data type is (possibly
 implicitly re-interpreted as) ``float`` (resp. ``double``) for single-precision
 (resp. double-precision) descriptors.
@@ -146,7 +146,7 @@ USM allocations.
     // and the imaginary part of entry {m;k1,k2,k3}
     //   = ZI[ strides[0] + k1*strides[1] + k2*strides[2] + k3*strides[3] + m*dist ]
 
-.. _onemkl_dft_real_storage:
+.. _onemath_dft_real_storage:
 
 Real descriptors
 ----------------
@@ -197,4 +197,4 @@ forward and backward domains, with USM allocations.
     //   Note: if n3/2 < k3 < n3, entry {m;k1,k2,k3} is not stored explicitly
     //   since it is equal to std::conj(entry {m;n1-k1,n2-k2,n3-k3})
 
-**Parent topic** :ref:`onemkl_dft_enums`
+**Parent topic** :ref:`onemath_dft_enums`

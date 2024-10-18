@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_potrs_batch_scratchpad_size:
+.. _onemath_lapack_potrs_batch_scratchpad_size:
 
 potrs_batch_scratchpad_size
 ===========================
 
-Computes size of scratchpad memory required for the :ref:`onemkl_lapack_potrs_batch` function.
+Computes size of scratchpad memory required for the :ref:`onemath_lapack_potrs_batch` function.
 
 .. container:: section
 
@@ -26,7 +26,7 @@ Computes size of scratchpad memory required for the :ref:`onemkl_lapack_potrs_ba
 
 **Group API**
 
-Computes the number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Group API of the :ref:`onemkl_lapack_potrs_batch` function.
+Computes the number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Group API of the :ref:`onemath_lapack_potrs_batch` function.
 
 .. container:: section
 
@@ -77,7 +77,7 @@ group_sizes Array of group_count integers. Array element with index :math:`g` sp
    
   .. rubric:: Return Values
 
-Number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Group API of the :ref:`onemkl_lapack_potrs_batch` function.
+Number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Group API of the :ref:`onemath_lapack_potrs_batch` function.
 
 .. container:: section
 
@@ -85,18 +85,18 @@ Number of elements of type ``T`` the scratchpad memory should able to hold to be
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    Exception is thrown in case of incorrect supplied argument value.
    Position of wrong argument can be determined by `info()` method of exception object.
 
 **Strided API**
 
-Computes the number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Strided API of the :ref:`onemkl_lapack_potrs_batch` function.
+Computes the number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Strided API of the :ref:`onemath_lapack_potrs_batch` function.
 
 .. container:: section
 
@@ -145,7 +145,7 @@ batch_size
    
   .. rubric:: Return Values
 
-Number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Strided API of the :ref:`onemkl_lapack_potrs_batch` function.
+Number of elements of type ``T`` the scratchpad memory should able to hold to be passed to the Strided API of the :ref:`onemath_lapack_potrs_batch` function.
 
 .. container:: section
 
@@ -153,14 +153,14 @@ Number of elements of type ``T`` the scratchpad memory should able to hold to be
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    Exception is thrown in case of incorrect supplied argument value.
    Position of wrong argument can be determined by `info()` method of exception object.
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`
 

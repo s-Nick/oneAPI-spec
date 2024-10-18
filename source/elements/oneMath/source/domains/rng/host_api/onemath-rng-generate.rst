@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_generate:
+.. _onemath_rng_generate:
 
 generate
 ========
 
 Entry point to obtain random numbers from a given engine with proper statistics of a given distribution.
 
-.. _onemkl_rng_generate_description:
+.. _onemath_rng_generate_description:
 
 .. rubric:: Description and Assumptions
 
 oneapi::mkl::rng::generate function produces random numbers sequence from the given engine object and applied transformation from a given distribution object.
 
-.. _onemkl_rng_generate_buffer:
+.. _onemath_rng_generate_buffer:
 
 generate (Buffer version)
 -------------------------
@@ -44,10 +44,10 @@ generate (Buffer version)
     .. rubric:: Input Parameters
 
     distr
-        Distribution object. See :ref:`onemkl_rng_distributions` for details.
+        Distribution object. See :ref:`onemath_rng_distributions` for details.
 
     engine
-        Engine object. See :ref:`onemkl_rng_engines_basic_random_number_generators` for details.
+        Engine object. See :ref:`onemath_rng_engines_basic_random_number_generators` for details.
 
     n
         Number of random values to be generated.
@@ -66,7 +66,7 @@ generate (Buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when n > r.get_count(), or n < 0
 
-.. _onemkl_rng_generate_usm:
+.. _onemath_rng_generate_usm:
 
 generate (USM version)
 ----------------------
@@ -95,10 +95,10 @@ generate (USM version)
     .. rubric:: Input Parameters
 
     distr
-        Distribution object. See :ref:`onemkl_rng_distributions` for details.
+        Distribution object. See :ref:`onemath_rng_distributions` for details.
 
     engine
-        Engine object. See :ref:`onemkl_rng_engines_basic_random_number_generators` for details.
+        Engine object. See :ref:`onemath_rng_engines_basic_random_number_generators` for details.
 
     n
         Number of random values to be generated.
@@ -127,4 +127,4 @@ generate (USM version)
     Output event to wait on to ensure computation is complete.
 
 
-**Parent topic:** :ref:`onemkl_rng_generate_routine`
+**Parent topic:** :ref:`onemath_rng_generate_routine`

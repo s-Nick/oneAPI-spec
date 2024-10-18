@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_make_dataset:
+.. _onemath_stats_make_dataset:
 
 make_dataset
 ============
 
 Entry point to create a dataset from the provided parameters.
 
-.. _onemkl_stats_make_dataset_description:
+.. _onemath_stats_make_dataset_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::make_dataset function is used to create a dataset from the provided storage of the observations matrix, the number of dimensions and observations, and other parameters.
 
-:ref:`onemkl_stats_make_dataset` supports the following precisions for data:
+:ref:`onemath_stats_make_dataset` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::make_dataset function is used to create a dataset from t
         * - ``double``
 
 
-.. _onemkl_stats_make_dataset_buffer:
+.. _onemath_stats_make_dataset_buffer:
 
 make_dataset (buffer version)
 -----------------------------
@@ -49,7 +49,7 @@ make_dataset (buffer version)
     .. rubric:: Template Parameters
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
     Type
         Data precision.
@@ -87,7 +87,7 @@ make_dataset (buffer version)
     Dataset holding specified parameters.
 
 
-.. _onemkl_stats_make_dataset_usm:
+.. _onemath_stats_make_dataset_usm:
 
 make_dataset (USM version)
 --------------------------
@@ -108,7 +108,7 @@ make_dataset (USM version)
     .. rubric:: Template Parameters
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
     Type
         Data precision.
@@ -146,4 +146,4 @@ make_dataset (USM version)
     Dataset holding specified parameters.
 
 
-**Parent topic:** :ref:`onemkl_stats_service_routines`
+**Parent topic:** :ref:`onemath_stats_service_routines`

@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_raw_moment:
+.. _onemath_stats_raw_moment:
 
 raw_moment
 ==========
 
 Entry point to compute raw moments up to the 4th order.
 
-.. _onemkl_stats_raw_moment_description:
+.. _onemath_stats_raw_moment_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::raw_moment function is used to compute array of raw moments up to the 4th order (raw moments for each dataset's dimension).
 
-:ref:`onemkl_stats_raw_moment` supports the following precisions for data:
+:ref:`onemath_stats_raw_moment` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::raw_moment function is used to compute array of raw mome
         * - ``double``
 
 
-.. _onemkl_stats_raw_moment_buffer:
+.. _onemath_stats_raw_moment_buffer:
 
 oneapi::mkl::stats::raw_moment (buffer version)
 -----------------------------------------------
@@ -58,7 +58,7 @@ oneapi::mkl::stats::raw_moment (buffer version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -93,7 +93,7 @@ oneapi::mkl::stats::raw_moment (buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when mean.get_count() == 0 & raw_moment_2.get_count() == 0 & raw_moment_3.get_count() == 0 & raw_moment_4.get_count() == 0, or dataset object is invalid
 
-.. _onemkl_stats_raw_moment_usm:
+.. _onemath_stats_raw_moment_usm:
 
 raw_moment (USM version)
 ------------------------
@@ -128,7 +128,7 @@ raw_moment (USM version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -173,5 +173,5 @@ raw_moment (USM version)
     Output event to wait on to ensure computation is complete.
 
 
-**Parent topic:** :ref:`onemkl_stats_routines`
+**Parent topic:** :ref:`onemath_stats_routines`
 

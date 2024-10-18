@@ -2,19 +2,19 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_gemv_batch:
+.. _onemath_blas_gemv_batch:
 
 gemv_batch
 ==========
 
 Computes a group of ``gemv`` operations.
 
-.. _onemkl_blas_gemv_batch_description:
+.. _onemath_blas_gemv_batch_description:
 
 .. rubric:: Description
 
 The ``gemv_batch`` routines are batched versions of
-:ref:`onemkl_blas_gemv`, performing multiple ``gemv`` operations in a
+:ref:`onemath_blas_gemv`, performing multiple ``gemv`` operations in a
 single call. Each ``gemv`` operations perform a scalar-matrix-vector
 product and add the result to a scalar-vector product.
    
@@ -29,7 +29,7 @@ product and add the result to a scalar-vector product.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_gemv_batch_buffer:
+.. _onemath_blas_gemv_batch_buffer:
 
 gemv_batch (Buffer Version)
 ---------------------------
@@ -114,7 +114,7 @@ parameter.
 
    trans
       Specifies op(``A``) the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of ``A``. Must be at least zero.
@@ -174,22 +174,22 @@ parameter.
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_gemv_batch_usm:
+.. _onemath_blas_gemv_batch_usm:
 
 gemv_batch (USM Version)
 ---------------------------
@@ -293,7 +293,7 @@ total number of vectors in ``x`` and ``y`` and matrices in ``A`` are given by th
 
    trans
       Array of ``group_count`` ``oneapi::mkl::transpose`` values. ``trans[i]`` specifies the form of op(``A``) used in
-      the matrix-vector product in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      the matrix-vector product in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    m
       Array of ``group_count`` integers. ``m[i]`` specifies the
@@ -426,7 +426,7 @@ total number of vectors in ``x`` and ``y`` and matrices in ``A`` are given by th
 
    trans
       Specifies op(``A``) the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of ``A``. Must be at least zero.
@@ -492,20 +492,20 @@ total number of vectors in ``x`` and ``y`` and matrices in ``A`` are given by th
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

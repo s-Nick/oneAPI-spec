@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_expm1:
+.. _onemath_vm_expm1:
 
 expm1
 =====
@@ -161,14 +161,14 @@ expm1
 
    mode
       Overrides the global VM mode setting for this function call. See
-      :ref:`onemkl_vm_setmode`
+      :ref:`onemath_vm_setmode`
       function for possible values and their description. This is an
       optional parameter. The default value is ``oneapi::mkl::vm::mode::not_defined``.
 
 
    errhandler
       Sets local error handling mode for this function call. See the
-      :ref:`onemkl_vm_create_error_handler`
+      :ref:`onemath_vm_create_error_handler`
       function for arguments and their descriptions. This is an optional
       parameter. The local error handler is disabled by default.
 
@@ -194,14 +194,14 @@ expm1
 
    mode
       Overrides the global VM mode setting for this function call. See
-      the :ref:`onemkl_vm_setmode`
+      the :ref:`onemath_vm_setmode`
       function for possible values and their description. This is an
       optional parameter. The default value is ``oneapi::mkl::vm::mode::not_defined``.
 
 
    errhandler
       Sets local error handling mode for this function call. See the
-      :ref:`onemkl_vm_create_error_handler`
+      :ref:`onemath_vm_create_error_handler`
       function for arguments and their descriptions. This is an optional
       parameter. The local error handler is disabled by default.
 
@@ -236,7 +236,7 @@ expm1
     .. rubric:: Exceptions
         :class: sectiontitle
 
-    For list of generated exceptions please refer to  :ref:`onemkl_vm_exceptions`
+    For list of generated exceptions please refer to  :ref:`onemath_vm_exceptions`
 
 
 .. container:: familylinks
@@ -244,5 +244,5 @@ expm1
 
    .. container:: parentlink
 
-      **Parent topic:** :ref:`onemkl_vm_mathematical_functions`
+      **Parent topic:** :ref:`onemath_vm_mathematical_functions`
 

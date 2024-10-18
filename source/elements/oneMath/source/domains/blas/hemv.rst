@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_hemv:
+.. _onemath_blas_hemv:
 
 hemv
 ====
 
 Computes a matrix-vector product using a Hermitian matrix.
 
-.. _onemkl_blas_hemv_description:
+.. _onemath_blas_hemv_description:
 
 .. rubric:: Description
 
@@ -38,7 +38,7 @@ where:
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_hemv_buffer:
+.. _onemath_blas_hemv_buffer:
 
 hemv (Buffer Version)
 ---------------------
@@ -84,7 +84,7 @@ hemv (Buffer Version)
       The queue where the routine should be executed.
 
    upper_lower
-      Specifies whether *A* is upper or lower triangular. See :ref:`onemkl_datatypes` for more details.
+      Specifies whether *A* is upper or lower triangular. See :ref:`onemath_datatypes` for more details.
 
    n
       Number of rows and columns of ``A``. Must be at least zero.
@@ -133,22 +133,22 @@ hemv (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_hemv_usm:
+.. _onemath_blas_hemv_usm:
 
 hemv (USM Version)
 ------------------
@@ -196,7 +196,7 @@ hemv (USM Version)
       The queue where the routine should be executed.
 
    upper_lower
-      Specifies whether *A* is upper or lower triangular. See :ref:`onemkl_datatypes` for more details.
+      Specifies whether *A* is upper or lower triangular. See :ref:`onemath_datatypes` for more details.
 
    n
       Number of rows and columns of ``A``. Must be at least zero.
@@ -257,20 +257,20 @@ hemv (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-level-2-routines`

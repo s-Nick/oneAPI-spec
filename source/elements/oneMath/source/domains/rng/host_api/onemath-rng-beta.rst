@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_beta:
+.. _onemath_rng_beta:
 
 beta
 ====
 
 Class is used for generation of beta distributed real types random numbers.
 
-.. _onemkl_rng_beta_description:
+.. _onemath_rng_beta_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>`
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>`
 function to provide random numbers beta distributed with shape parameters :math:`p` and :math:`q`,
 displacement :math:`\alpha` and scale parameter :math:`(b, \beta)`, where :math:`p`, :math:`q`.
 :math:`\alpha`, :math:`\beta` :math:`\in R; p > 0; q > 0; \beta > 0`.
@@ -33,7 +33,7 @@ The cumulative distribution function is as follows:
 
 Where :math:`B(p, 1)` is the complete beta function.
 
-.. _onemkl_rng_beta_syntax:
+.. _onemath_rng_beta_syntax:
 
 class beta
 ----------
@@ -77,7 +77,7 @@ class beta
                 * ``oneapi::mkl::rng::beta_method::cja``
                 * ``oneapi::mkl::rng::beta_method::cja_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -228,4 +228,4 @@ class beta
 
             Returns the distribution parameter :math:`\beta` - scalefactor.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

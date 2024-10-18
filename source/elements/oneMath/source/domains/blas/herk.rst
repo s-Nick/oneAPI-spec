@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_herk:
+.. _onemath_blas_herk:
 
 herk
 ====
 
 Performs a Hermitian rank-k update.
 
-.. _onemkl_blas_herk_description:
+.. _onemath_blas_herk_description:
 
 .. rubric:: Description
 
@@ -42,7 +42,7 @@ Here op(``A``) is ``n`` x ``k``, and ``C`` is ``n`` x ``n``.
       * -  ``std::complex<double>`` 
         -  ``double`` 
 
-.. _onemkl_blas_herk_buffer:
+.. _onemath_blas_herk_buffer:
 
 herk (Buffer Version)
 ---------------------
@@ -89,11 +89,11 @@ herk (Buffer Version)
 
    upper_lower
       Specifies whether ``A``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    trans
       Specifies op(``A``), the transposition operation applied to ``A``. See
-      :ref:`onemkl_datatypes` for more
+      :ref:`onemath_datatypes` for more
       details. Supported operations are ``transpose::nontrans`` and
       ``transpose::conjtrans``.
 
@@ -174,22 +174,22 @@ herk (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_herk_usm:
+.. _onemath_blas_herk_usm:
 
 herk (USM Version)
 ------------------
@@ -238,11 +238,11 @@ herk (USM Version)
 
    upper_lower
       Specifies whether ``A``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    trans
       Specifies op(``A``), the transposition operation applied to
-      ``A``. See :ref:`onemkl_datatypes` for more details. Supported operations are ``transpose::nontrans``
+      ``A``. See :ref:`onemath_datatypes` for more details. Supported operations are ``transpose::nontrans``
       and ``transpose::conjtrans``.
 
    n
@@ -333,20 +333,20 @@ herk (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-level-3-routines`

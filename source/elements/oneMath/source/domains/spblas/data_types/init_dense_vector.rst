@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_init_dense_vector:
+.. _onemath_sparse_init_dense_vector:
 
 init_dense_vector
 =================
@@ -21,9 +21,9 @@ with ``set_dense_vector_data``.
 
 In the case of USM, the object does not take ownership of the data.
 
-See :ref:`onemkl_sparse_dense_vector_handle`.
+See :ref:`onemath_sparse_dense_vector_handle`.
 
-.. _onemkl_sparse_init_dense_vector_buffer:
+.. _onemath_sparse_init_dense_vector_buffer:
 
 init_dense_vector (Buffer version)
 ----------------------------------
@@ -47,7 +47,7 @@ init_dense_vector (Buffer version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
 .. container:: section
 
@@ -85,12 +85,12 @@ init_dense_vector (Buffer version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_init_dense_vector_usm:
+.. _onemath_sparse_init_dense_vector_usm:
 
 init_dense_vector (USM version)
 -------------------------------
@@ -114,7 +114,7 @@ init_dense_vector (USM version)
    .. rubric:: Template parameters
 
    dataType
-      See :ref:`supported template types<onemkl_sparse_supported_types>`.
+      See :ref:`supported template types<onemath_sparse_supported_types>`.
 
 .. container:: section
 
@@ -153,9 +153,9 @@ init_dense_vector (USM version)
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

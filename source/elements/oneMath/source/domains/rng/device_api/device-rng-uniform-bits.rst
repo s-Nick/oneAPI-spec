@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_uniform_bits:
+.. _onemath_device_rng_uniform_bits:
 
 uniform_bits
 ============
@@ -16,7 +16,7 @@ in 32/64-bit chunks. It is designed to ensure each bit in the 32/64-bit chunk is
 is supported for philox4x32x10 and mcg59 engines. When generating 64-bit chunks, twice as much engine offset needs to 
 be provided.
 
-``UIntType`` denotes the chunk size and can be ``std::uint32_t``, ``std::uint64_t``. See :ref:`VS Notes<onemkl_rng_bibliography>` for details.
+``UIntType`` denotes the chunk size and can be ``std::uint32_t``, ``std::uint64_t``. See :ref:`VS Notes<onemath_rng_bibliography>` for details.
 
 
 class uniform_bits
@@ -61,4 +61,4 @@ class uniform_bits
 
             The type which defines type of generated random numbers.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`

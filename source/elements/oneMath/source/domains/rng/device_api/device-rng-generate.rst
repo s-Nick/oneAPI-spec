@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_generate:
+.. _onemath_device_rng_generate:
 
 generate
 ========
@@ -37,10 +37,10 @@ Entry point to obtain random numbers from a given engine with proper statistics 
     .. rubric:: Input Parameters
 
     distr
-        Distribution object. See :ref:`onemkl_device_rng_distributions` for details.
+        Distribution object. See :ref:`onemath_device_rng_distributions` for details.
 
     engine
-        Engine object. See :ref:`onemkl_device_rng_engines` for details.
+        Engine object. See :ref:`onemath_device_rng_engines` for details.
 
 .. container:: section
 
@@ -49,4 +49,4 @@ Entry point to obtain random numbers from a given engine with proper statistics 
     Returns `Distr::result_type` if `Engine::vec_size == 1` or `sycl::vec<typename Distr::result_type, Engine::vec_size>` 
     with generated random numbers.
 
-**Parent topic:** :ref:`onemkl_device_rng_generate_routines`
+**Parent topic:** :ref:`onemath_device_rng_generate_routines`

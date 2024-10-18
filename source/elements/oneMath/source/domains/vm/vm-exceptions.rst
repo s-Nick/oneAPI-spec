@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_exceptions:
+.. _onemath_vm_exceptions:
 
 Exceptions
 ==========

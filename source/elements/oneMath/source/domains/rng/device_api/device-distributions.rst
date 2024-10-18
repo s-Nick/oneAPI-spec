@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_distributions:
+.. _onemath_device_rng_distributions:
 
 Device Distributions
 ====================
 
-oneMKL RNG routines are used to generate random numbers with different types of distributions. Each function group is
+oneMath RNG routines are used to generate random numbers with different types of distributions. Each function group is
 introduced below by the type of underlying distribution and contains a short description of its functionality, as well
 as specifications of the call sequence and the explanation of input and output parameters. The Device Continuous
 Distribution Generators table and Device Discrete Distribution Generators table mention random number generator routines
@@ -23,27 +23,27 @@ basic random number generators.
      -     Data Types
      -     BRNG Data Type
      -     Description
-   * -     :ref:`onemkl_device_rng_uniform_continuous`
+   * -     :ref:`onemath_device_rng_uniform_continuous`
      -     float, double
      -     float, double
      -     Uniform continuous distribution on the interval [``a,b``)
-   * -     :ref:`onemkl_device_rng_gaussian`
+   * -     :ref:`onemath_device_rng_gaussian`
      -     float, double
      -     float, double
      -     Normal (Gaussian) distribution
-   * -     :ref:`onemkl_device_rng_exponential`
+   * -     :ref:`onemath_device_rng_exponential`
      -     float, double
      -     float, double
      -     Exponential distribution
-   * -     :ref:`onemkl_device_rng_lognormal`
+   * -     :ref:`onemath_device_rng_lognormal`
      -     float, double
      -     float, double
      -     Lognormal distribution
-   * -     :ref:`onemkl_device_rng_beta`
+   * -     :ref:`onemath_device_rng_beta`
      -     float, double
      -     float, double
      -     Beta distribution
-   * -     :ref:`onemkl_device_rng_gamma`
+   * -     :ref:`onemath_device_rng_gamma`
      -     float, double
      -     float, double
      -     Gamma distribution
@@ -58,30 +58,30 @@ basic random number generators.
      -     Data Types
      -     BRNG Data Type
      -     Description
-   * -     :ref:`onemkl_device_rng_uniform_discrete`
+   * -     :ref:`onemath_device_rng_uniform_discrete`
      -     integer
      -     float
      -     Uniform discrete distribution on the interval [``a,b``)
-   * -     :ref:`onemkl_device_rng_bits`
+   * -     :ref:`onemath_device_rng_bits`
      -     integer
      -     integer
      -     Bits of underlying BRNG integer sequence
-   * -     :ref:`onemkl_device_rng_uniform_bits`
+   * -     :ref:`onemath_device_rng_uniform_bits`
      -     integer
      -     integer
      -     Uniformly distributed bits in 32/64-bit chunks
-   * -     :ref:`onemkl_device_rng_poisson`
+   * -     :ref:`onemath_device_rng_poisson`
      -     integer
      -     integer
      -     Poisson distribution
-   * -     :ref:`onemkl_device_rng_bernoulli`
+   * -     :ref:`onemath_device_rng_bernoulli`
      -     integer
      -     integer
      -     Bernoulli distribution
 
 `NOTE:` In case of ``integer`` check desired distribution for supported data types.
 
-**Parent topic:** :ref:`onemkl_device_rng_routines`
+**Parent topic:** :ref:`onemath_device_rng_routines`
 
 .. toctree::
    :maxdepth: 1

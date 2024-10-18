@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_distributions_template_parameter_mkl_rng_method_values:
+.. _onemath_rng_distributions_template_parameter_mkl_rng_method_values:
 
 Distributions Template Parameter Method
 =======================================
@@ -96,4 +96,4 @@ Distributions Template Parameter Method
           -     Inverse cumulative distribution function (ICDF) method.
 
 **Parent
-topic:** :ref:`onemkl_rng_distributions`
+topic:** :ref:`onemath_rng_distributions`

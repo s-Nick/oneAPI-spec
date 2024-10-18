@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_spblas:
+.. _onemath_spblas:
 
 Sparse BLAS
 ===========
@@ -18,13 +18,13 @@ Sparse BLAS
 
       * - Routines and Objects
         - Description
-      * - :ref:`onemkl_sparse_data_handles`
+      * - :ref:`onemath_sparse_data_handles`
         - Matrix and vector handle types
-      * - :ref:`onemkl_sparse_spmm_header`
+      * - :ref:`onemath_sparse_spmm_header`
         - Compute the product of a sparse matrix with a dense matrix
-      * - :ref:`onemkl_sparse_spmv_header`
+      * - :ref:`onemath_sparse_spmv_header`
         - Compute the product of a sparse matrix with a dense vector
-      * - :ref:`onemkl_sparse_spsv_header`
+      * - :ref:`onemath_sparse_spsv_header`
         - Solve a triangular sparse linear system
 
 .. toctree::
@@ -37,4 +37,4 @@ Sparse BLAS
    matrix_view
    supported-types
 
-**Parent topic:** :ref:`onemkl_sparse_linear_algebra`
+**Parent topic:** :ref:`onemath_sparse_linear_algebra`

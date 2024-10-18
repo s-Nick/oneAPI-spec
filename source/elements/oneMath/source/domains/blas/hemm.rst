@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_hemm:
+.. _onemath_blas_hemm:
 
 hemm
 ====
@@ -10,7 +10,7 @@ hemm
 Computes a matrix-matrix product where one input matrix is Hermitian
 and one is general.
 
-.. _onemkl_blas_hemm_description:
+.. _onemath_blas_hemm_description:
 
 .. rubric:: Description
 
@@ -50,7 +50,7 @@ matrices,
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_hemm_buffer:
+.. _onemath_blas_hemm_buffer:
 
 hemm (Buffer Version)
 ---------------------
@@ -101,11 +101,11 @@ hemm (Buffer Version)
 
    left_right
       Specifies whether ``A`` is on the left side of the multiplication
-      (``side::left``) or on the right side (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right side (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    uplo
       Specifies whether ``A``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    m
       Specifies the number of rows of the matrix ``B`` and ``C``.
@@ -180,22 +180,22 @@ hemm (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_hemm_usm:
+.. _onemath_blas_hemm_usm:
 
 hemm (USM Version)
 ------------------
@@ -249,11 +249,11 @@ hemm (USM Version)
    left_right
       Specifies whether ``A`` is on the left side of the
       multiplication (``side::left``) or on the right side
-      (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    uplo
       Specifies whether ``A``'s data is stored in its upper or lower
-      triangle. See :ref:`onemkl_datatypes` for more details.
+      triangle. See :ref:`onemath_datatypes` for more details.
 
    m
       Specifies the number of rows of the matrix ``B`` and ``C``.
@@ -340,20 +340,20 @@ hemm (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-level-3-routines`

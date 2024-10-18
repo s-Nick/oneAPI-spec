@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_central_sum:
+.. _onemath_stats_central_sum:
 
 central_sum
 ===========
 
 Entry point to compute central sums up to the 4th order.
 
-.. _onemkl_stats_central_sum_description:
+.. _onemath_stats_central_sum_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::central_sum function is used to compute an array of central sums up to the 4th order (central sums for each dataset's dimension).
 
-:ref:`onemkl_stats_central_sum` supports the following precisions for data:
+:ref:`onemath_stats_central_sum` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::central_sum function is used to compute an array of cent
         * - ``double``
 
 
-.. _onemkl_stats_central_sum_buffer:
+.. _onemath_stats_central_sum_buffer:
 
 central_sum (Buffer version)
 ----------------------------
@@ -57,7 +57,7 @@ central_sum (Buffer version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -89,7 +89,7 @@ central_sum (Buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when central_sum_2.get_count() == 0 & central_sum_3.get_count() == 0 & central_sum_4.get_count() == 0, or dataset object is invalid
 
-.. _onemkl_stats_central_sum_usm:
+.. _onemath_stats_central_sum_usm:
 
 central_sum (USM version)
 -------------------------
@@ -123,7 +123,7 @@ central_sum (USM version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -165,5 +165,5 @@ central_sum (USM version)
     Output event to wait on to ensure computation is complete.
 
 
-**Parent topic:** :ref:`onemkl_stats_routines`
+**Parent topic:** :ref:`onemath_stats_routines`
 

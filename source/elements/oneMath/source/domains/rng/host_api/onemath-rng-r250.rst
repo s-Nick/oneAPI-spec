@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_r250:
+.. _onemath_rng_r250:
 
 r250
 ====
 
-The 32-bit generalized feedback shift register pseudorandom number generator GFSR(250,103) :ref:`[Kirkpatrick81] <onemkl_rng_bibliography>`.
+The 32-bit generalized feedback shift register pseudorandom number generator GFSR(250,103) :ref:`[Kirkpatrick81] <onemath_rng_bibliography>`.
 
-.. _onemkl_rng_r250_description:
+.. _onemath_rng_r250_description:
 
 .. rubric:: Description
 
@@ -25,7 +25,7 @@ Feedback shift register generators possess ample theoretical foundation and were
     :math:`u_n=x_n / 2 ^ {32}`
 
 
-.. _onemkl_rng_r250_description_syntax:
+.. _onemath_rng_r250_description_syntax:
 
 class r250
 ----------
@@ -92,7 +92,7 @@ class r250
         .. rubric:: Input Parameters
 
         queue
-            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`x_{-250} = seed`. If :math:`seed = 0`, assume :math:`seed = 1`. Other values in state are initialized according to recurrent correlation :math:`x_{n+1} = 69069x_{n}(mod \ 2 ^ {32})`. Then the values :math:`x_{7k-247}, k = 0, 1, ..., 31` are interpreted as a binary matrix of size 32 x 32 and diagonal bits are set to 0, the under-diagonal bits to 0.
@@ -108,7 +108,7 @@ class r250
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state
@@ -166,4 +166,4 @@ class r250
         other
             Valid ``r250`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

@@ -2,24 +2,24 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_ars5:
+.. _onemath_rng_ars5:
 
 ars5
 ====
 
 The ars5 counter-based pseudorandom number generator.
 
-.. _onemkl_rng_ars5_description:
+.. _onemath_rng_ars5_description:
 
 .. rubric:: Description
 
-The ars5 engine is a keyed family of counter-based BRNG. The state consists of a 128-bit integer counter :math:`c` and a 128-bit key :math:`k`. The BRNG is based on the AES encryption algorithm [:ref:`FIPS-197 <onemkl_rng_bibliography>`].
+The ars5 engine is a keyed family of counter-based BRNG. The state consists of a 128-bit integer counter :math:`c` and a 128-bit key :math:`k`. The BRNG is based on the AES encryption algorithm [:ref:`FIPS-197 <onemath_rng_bibliography>`].
 
 .. container:: section
 
     .. rubric:: Generation algorithm
 
-    The generator has a 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemkl_rng_bibliography>`]:
+    The generator has a 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemath_rng_bibliography>`]:
 
     1. The i-th number is defined by the following formula :math:`r_i=(f(i/ 4) >> ((i \ mod \ 4) * 32)) \ mod \ 2 ^ {32}`
     2. Function :math:`f(c)` takes a 128-bit argument and returns a 128-bit number. The returned number is obtained as follows:
@@ -39,13 +39,13 @@ The ars5 engine is a keyed family of counter-based BRNG. The state consists of a
 
         :math:`Hi(k_{i+1}) = Hi(k) + 0xBB67AE8584CAA73B`
 
-        Specification for :math:`SubBytes, ShiftRows, MixColumns, AddRoundKey` functions can be found in [:ref:`FIPS-197 <onemkl_rng_bibliography>`].
+        Specification for :math:`SubBytes, ShiftRows, MixColumns, AddRoundKey` functions can be found in [:ref:`FIPS-197 <onemath_rng_bibliography>`].
 
         2.3. Put :math:`f(c) = c_N`, where :math:`N = 10`
 
     3. Real output: :math:`u_n=(int)r_n / 2^{32} + 1/2`
 
-.. _onemkl_rng_ars5_description_syntax:
+.. _onemath_rng_ars5_description_syntax:
 
 class ars5
 ----------
@@ -112,7 +112,7 @@ class ars5
         .. rubric:: Input Parameters
 
         queue
-            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`k = seed, c = 0`, where :math:`k` is 128-bit key, :math:`c` is 128-bit counter.
@@ -128,7 +128,7 @@ class ars5
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume
@@ -197,4 +197,4 @@ class ars5
         other
             Valid ``ars5`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

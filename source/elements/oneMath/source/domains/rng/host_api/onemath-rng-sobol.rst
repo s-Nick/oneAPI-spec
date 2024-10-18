@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_sobol:
+.. _onemath_rng_sobol:
 
 sobol
 =====
 
 The sobol is a 32-bit Gray code-based quasi-random number generator.
 
-.. _onemkl_rng_sobol_description:
+.. _onemath_rng_sobol_description:
 
 .. rubric:: Description
 
-Bratley and Fox :ref:`[Bratley88] <onemkl_rng_bibliography>` provide an implementation of the SOBOL quasi-random number generator. The default dimensions of quasi-random vectors can vary from 1 to 40 inclusive. It is also allowed to register user-defined parameters (direction numbers).
+Bratley and Fox :ref:`[Bratley88] <onemath_rng_bibliography>` provide an implementation of the SOBOL quasi-random number generator. The default dimensions of quasi-random vectors can vary from 1 to 40 inclusive. It is also allowed to register user-defined parameters (direction numbers).
 
 .. container:: section
 
@@ -26,7 +26,7 @@ Bratley and Fox :ref:`[Bratley88] <onemkl_rng_bibliography>` provide an implemen
 
     The value :math:`c` is the right-most zero bit in :math:`n-1`; :math:`x_n` is s-dimensional vector of 32-bit values. The s-dimensional vectors (calculated during engine initialization) :math:`v_i, i = 1, 32` are called direction numbers. The vector :math:`u_n` is the generator output normalized to the unit hypercube :math:`(0, 1) ^ s`.
 
-.. _onemkl_rng_sobol_description_syntax:
+.. _onemath_rng_sobol_description_syntax:
 
 class sobol
 -----------
@@ -93,7 +93,7 @@ class sobol
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         dimensions
             Number of dimensions. If :math:`dimen < 1` or :math:`dimen > 40`, assume :math:`dimen = 1`.
@@ -109,7 +109,7 @@ class sobol
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         direction_numbers
             If you want to generate quasi-random vectors of greater dimension or obtain another sequence, you can register a set of your own direction_numbers. The number of dimensions corresponds to direction_numbers.size() / 32.
@@ -166,4 +166,4 @@ class sobol
         other
             Valid ``sobol`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

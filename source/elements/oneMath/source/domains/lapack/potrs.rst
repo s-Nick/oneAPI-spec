@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_potrs:
+.. _onemath_lapack_potrs:
 
 potrs
 =====
@@ -42,7 +42,7 @@ where :math:`L` is a lower triangular matrix and :math:`U` is upper
 triangular. The system is solved with multiple right-hand sides
 stored in the columns of the matrix :math:`B`.
 
-Before calling this routine, you must call :ref:`onemkl_lapack_potrf` to compute
+Before calling this routine, you must call :ref:`onemath_lapack_potrf` to compute
 the Cholesky factorization of :math:`A`.
 
 potrs (Buffer Version)
@@ -79,7 +79,7 @@ nrhs
    The number of right-hand sides (:math:`0 \le \text{nrhs}`).
 
 a
-   Buffer containing the factorization of the matrix A, as    returned by   :ref:`onemkl_lapack_potrf`.   The second dimension of ``a`` must be at least :math:`\max(1, n)`.
+   Buffer containing the factorization of the matrix A, as    returned by   :ref:`onemath_lapack_potrf`.   The second dimension of ``a`` must be at least :math:`\max(1, n)`.
 
 lda
    The leading dimension of ``a``.
@@ -92,7 +92,7 @@ ldb
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_potrs_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_potrs_scratchpad_size` function.
 
 .. container:: section
 
@@ -110,17 +110,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -164,7 +164,7 @@ nrhs
    The number of right-hand sides (:math:`0 \le \text{nrhs}`).
 
 a
-   Pointer to array containing the factorization of the matrix :math:`A`, as    returned by   :ref:`onemkl_lapack_potrf`.   The second dimension of ``a`` must be at least :math:`\max(1, n)`.
+   Pointer to array containing the factorization of the matrix :math:`A`, as    returned by   :ref:`onemath_lapack_potrf`.   The second dimension of ``a`` must be at least :math:`\max(1, n)`.
 
 lda
    The leading dimension of ``a``.
@@ -177,7 +177,7 @@ ldb
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_potrs_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_potrs_scratchpad_size` function.
 
 events
    List of events to wait for before starting computation. Defaults to empty list.
@@ -198,17 +198,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -224,6 +224,6 @@ This routine shall throw the following exceptions if the associated condition is
          
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-linear-equation-routines`
+**Parent topic:** :ref:`onemath_lapack-linear-equation-routines`
 
 

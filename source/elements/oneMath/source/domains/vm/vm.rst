@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm:
+.. _onemath_vm:
 
 Vector Math
 ------------
@@ -18,12 +18,12 @@ Vector Math
    operations they perform:
 
 
-   - :ref:`onemkl_vm_mathematical_functions` compute values of mathematical
+   - :ref:`onemath_vm_mathematical_functions` compute values of mathematical
      functions, such as sine, cosine, exponential, or logarithm, on vectors
      stored contiguously in memory.
 
 
-   - :ref:`onemkl_vm_service_functions` set/get the accuracy modes and the
+   - :ref:`onemath_vm_service_functions` set/get the accuracy modes and the
      error codes, and create error handlers for mathematical functions.
 
 
@@ -33,7 +33,7 @@ Vector Math
    can perform in-place operations, where the input and output arrays
    are at the same memory locations.
 
-   - :ref:`onemkl_vm_special_value_notations`
+   - :ref:`onemath_vm_special_value_notations`
 
 .. toctree::
     :hidden:
@@ -44,4 +44,4 @@ Vector Math
     vm-exceptions.rst
     bibliography.rst
 
-**Parent topic:** :ref:`onemkl_vm_inc`
+**Parent topic:** :ref:`onemath_vm_inc`

@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_format_descriptions:
+.. _onemath_sparse_format_descriptions:
 
 Sparse storage formats
 ======================
@@ -13,12 +13,12 @@ Compressed Sparse Row (CSR) format.
 
 In this specification, "non-zero" elements or "non-zero" entries refer to
 explicitly defined elements or entries which may take any value supported by the
-the `:ref:data type<onemkl_sparse_supported_types>`. Undefined elements or
+the `:ref:data type<onemath_sparse_supported_types>`. Undefined elements or
 entries are implicitly zeros.
 
 .. container:: section
 
-   .. _onemkl_sparse_coo:
+   .. _onemath_sparse_coo:
 
    .. rubric:: COO
 
@@ -87,7 +87,7 @@ one-based indexing):
 
 .. container:: section
 
-   .. _onemkl_sparse_csr:
+   .. _onemath_sparse_csr:
 
    .. rubric:: CSR
 
@@ -152,4 +152,4 @@ zero-based indexing):
 | val        | 1          | 2         | -1        | 4         | 3         |
 +------------+------------+-----------+-----------+-----------+-----------+
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

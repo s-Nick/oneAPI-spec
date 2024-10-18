@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_spsv_header:
+.. _onemath_sparse_spsv_header:
 
 spsv
 ====
@@ -33,7 +33,7 @@ for a square matrix:
                                  A^\mathsf{H},& \text{oneapi::mkl::transpose::conjtrans}
                    \end{cases}
 
-.. _onemkl_sparse_spsv_descr:
+.. _onemath_sparse_spsv_descr:
 
 spsv_descr
 ----------
@@ -59,7 +59,7 @@ spsv_descr
    stages of the spsv operation to house relevant state, optimizations and
    workspaces.
 
-.. _onemkl_sparse_init_spsv_descr:
+.. _onemath_sparse_init_spsv_descr:
 
 init_spsv_descr
 ---------------
@@ -103,12 +103,12 @@ init_spsv_descr
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_release_spsv_descr:
+.. _onemath_sparse_release_spsv_descr:
 
 release_spsv_descr
 ------------------
@@ -155,11 +155,11 @@ release_spsv_descr
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_spsv_alg:
+.. _onemath_sparse_spsv_alg:
 
 spsv_alg
 --------
@@ -188,7 +188,7 @@ spsv_alg
    implementation-defined and must be documented in the library implementing the
    oneAPI specification.
 
-.. _onemkl_sparse_spsv:
+.. _onemath_sparse_spsv:
 
 spsv
 ----
@@ -261,10 +261,10 @@ spsv
    - In the general case, not calling the functions in the order specified above
      is undefined behavior. Not calling ``spsv_buffer_size`` or
      ``spsv_optimize`` at least once with a given descriptor will throw an
-     :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
+     :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
      exception. Calling ``spsv`` with arguments not matching ``spsv_optimize``
      will throw an
-     :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+     :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
      exception, unless stated otherwise.
    - The data of the dense handle ``x_handle`` and scalar ``alpha`` can be reset
      before each call to ``spsv``. Changing the data of the sparse handle
@@ -284,7 +284,7 @@ spsv
 
    opA
       Specifies operation ``op()`` on the input matrix. The possible options are
-      described in :ref:`onemkl_enum_transpose` enum class.
+      described in :ref:`onemath_enum_transpose` enum class.
 
    alpha
       Host or USM pointer representing :math:`\alpha`. The USM allocation can be
@@ -293,7 +293,7 @@ spsv
 
    A_view
       Specifies which part of the handle should be read as described by
-      :ref:`onemkl_sparse_matrix_view`. The ``type_view`` field must be
+      :ref:`onemath_sparse_matrix_view`. The ``type_view`` field must be
       ``matrix_descr::triangular``. The ``diag_view`` field can be
       ``diag::nonunit`` or ``diag::unit``.
 
@@ -307,10 +307,10 @@ spsv
       Dense vector handle object representing :math:`y`.
 
    alg
-      Specifies the :ref:`spsv algorithm<onemkl_sparse_spsv_alg>` to use.
+      Specifies the :ref:`spsv algorithm<onemath_sparse_spsv_alg>` to use.
 
    spsv_descr
-      Initialized :ref:`spsv descriptor<onemkl_sparse_spsv_descr>`.
+      Initialized :ref:`spsv descriptor<onemath_sparse_spsv_descr>`.
 
    temp_buffer_size
       Output buffer size in bytes.
@@ -320,7 +320,7 @@ spsv
         ``temp_buffer_size`` bytes and the address aligned on the size of the
         handles' data type.
       | If it is a buffer, its lifetime is extended until the :ref:`spsv
-        descriptor<onemkl_sparse_spsv_descr>` is released or the workspace is
+        descriptor<onemath_sparse_spsv_descr>` is released or the workspace is
         reset by ``spsv_optimize``. The workspace cannot be a sub-buffer.
       | If it is a USM pointer, it must not be free'd until the corresponding
         ``spsv`` has completed. The data must be accessible on the device.
@@ -357,11 +357,11 @@ spsv
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::computation_error<onemkl_exception_computation_error>`
-   | :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::computation_error<onemath_exception_computation_error>`
+   | :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_spblas`
+**Parent topic:** :ref:`onemath_spblas`

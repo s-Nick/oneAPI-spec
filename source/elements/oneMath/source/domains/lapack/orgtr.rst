@@ -2,13 +2,13 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_orgtr:
+.. _onemath_lapack_orgtr:
 
 orgtr
 =====
 
 Generates the real orthogonal matrix :math:`Q` determined by
-:ref:`onemkl_lapack_sytrd`.
+:ref:`onemath_lapack_sytrd`.
 
 .. container:: section
 
@@ -24,10 +24,10 @@ Generates the real orthogonal matrix :math:`Q` determined by
        * -  ``double`` 
 
 The routine explicitly generates the :math:`n \times n` orthogonal matrix
-:math:`Q` formed by :ref:`onemkl_lapack_sytrd` when
+:math:`Q` formed by :ref:`onemath_lapack_sytrd` when
 reducing a real symmetric matrix :math:`A` to tridiagonal form:
 :math:`A = QTQ^T`. Use this routine after a call to
-:ref:`onemkl_lapack_sytrd`.
+:ref:`onemath_lapack_sytrd`.
 
 orgtr (Buffer Version)
 ----------------------
@@ -51,25 +51,25 @@ queue
 
 upper_lower
    Must be ``uplo::upper`` or ``uplo::lower``. Uses the same
-   ``upper_lower`` as supplied to :ref:`onemkl_lapack_sytrd`.
+   ``upper_lower`` as supplied to :ref:`onemath_lapack_sytrd`.
 
 n
    The order of the matrix :math:`Q` :math:`(0 \le n)`.
 
 a
-   The buffer ``a`` as returned by :ref:`onemkl_lapack_sytrd`. The
+   The buffer ``a`` as returned by :ref:`onemath_lapack_sytrd`. The
    second dimension of ``a`` must be at least :math:`\max(1,n)`.
 
 lda
    The leading dimension of ``a`` :math:`(n \le \text{lda})`.
 
 tau
-   The buffer ``tau`` as returned by :ref:`onemkl_lapack_sytrd`. The
+   The buffer ``tau`` as returned by :ref:`onemath_lapack_sytrd`. The
    dimension of ``tau`` must be at least :math:`\max(1, n-1)`.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_orgtr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_orgtr_scratchpad_size` function.
 
 .. container:: section
 
@@ -87,17 +87,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -128,26 +128,26 @@ queue
 upper_lower
    Must be ``uplo::upper`` or ``uplo::lower``. Uses the same
    ``upper_lower`` as supplied
-   to :ref:`onemkl_lapack_sytrd`.
+   to :ref:`onemath_lapack_sytrd`.
 
 n
    The order of the matrix :math:`Q` :math:`(0 \le n)`.
 
 a
    The pointer to ``a`` as returned by
-   :ref:`onemkl_lapack_sytrd`. The
+   :ref:`onemath_lapack_sytrd`. The
    second dimension of ``a`` must be at least :math:`\max(1,n)`.
 
 lda
    The leading dimension of ``a`` :math:`(n \le \text{lda})`.
 
 tau
-   The pointer to ``tau`` as returned by :ref:`onemkl_lapack_sytrd`. The
+   The pointer to ``tau`` as returned by :ref:`onemath_lapack_sytrd`. The
    dimension of ``tau`` must be at least :math:`\max(1, n-1)`.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_orgtr_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_orgtr_scratchpad_size` function.
 
 events
    List of events to wait for before starting computation. Defaults to empty list.
@@ -168,17 +168,17 @@ scratchpad
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -192,5 +192,5 @@ This routine shall throw the following exceptions if the associated condition is
          
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-singular-value-eigenvalue-routines`
+**Parent topic:** :ref:`onemath_lapack-singular-value-eigenvalue-routines`
 

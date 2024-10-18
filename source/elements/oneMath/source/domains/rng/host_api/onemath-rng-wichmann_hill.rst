@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_wichmann_hill:
+.. _onemath_rng_wichmann_hill:
 
 wichmann_hill
 =============
 
-The wichmann_hill engine is the set of 273 Wichmann-Hill's combined multiplicative congruential generators from NAG Numerical Libraries :ref:`[NAG] <onemkl_rng_bibliography>`.
+The wichmann_hill engine is the set of 273 Wichmann-Hill's combined multiplicative congruential generators from NAG Numerical Libraries :ref:`[NAG] <onemath_rng_bibliography>`.
 
-.. _onemkl_rng_wichmann_hill_description:
+.. _onemath_rng_wichmann_hill_description:
 
 .. rubric:: Description
 
@@ -32,7 +32,7 @@ The set of 372 different basic pseudorandom number generators wichmann_hill is t
     The constants :math:`a_{i, j}` range from 112 to 127, the constants :math:`m_{i, j}` are prime numbers ranging from 16718909 to 16776917, close to :math:`2 ^ {24}`.
 
 
-.. _onemkl_rng_wichmann_hill_description_syntax:
+.. _onemath_rng_wichmann_hill_description_syntax:
 
 class wichmann_hill
 -------------------
@@ -107,7 +107,7 @@ class wichmann_hill
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state. Assume :math:`x_0=seed \ mod \ m_1, y_0 = z_0 = w_0 = 1`. If :math:`x_0 = 0`, assume :math:`x_0 = 1`.
@@ -123,7 +123,7 @@ class wichmann_hill
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state. Assume :math:`x_0=seed \ mod \ m_1, y_0 = z_0 = w_0 = 1`. If :math:`x_0 = 0`, assume :math:`x_0 = 1`.
@@ -149,7 +149,7 @@ class wichmann_hill
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume:
@@ -177,7 +177,7 @@ class wichmann_hill
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume:
@@ -248,4 +248,4 @@ class wichmann_hill
         other
             Valid ``wichmann_hill`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

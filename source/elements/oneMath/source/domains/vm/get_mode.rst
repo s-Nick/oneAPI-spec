@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_get_mode:
+.. _onemath_vm_get_mode:
 
 get_mode
 ========
@@ -56,7 +56,7 @@ get_mode
          * - ``oneapi::mkl::vm::mode::not_defined``
            - VM mode not defined. It means that no special provisions
              for accuracy have been made for this queue.
-             See :ref:`onemkl_vm_setmode` for details.
+             See :ref:`onemath_vm_setmode` for details.
 
 
 .. container:: section
@@ -86,4 +86,4 @@ get_mode
 
    .. container:: parentlink
 
-      **Parent topic:** :ref:`onemkl_vm_service_functions`
+      **Parent topic:** :ref:`onemath_vm_service_functions`

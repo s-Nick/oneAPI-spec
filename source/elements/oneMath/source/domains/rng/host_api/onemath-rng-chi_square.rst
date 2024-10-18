@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_chi_square:
+.. _onemath_rng_chi_square:
 
 chi_square
 ==========
 
 Class is used for generation of chi-square distributed real types random numbers.
 
-.. _onemkl_rng_chi_square_description:
+.. _onemath_rng_chi_square_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers chi-square distributed with :math:`n` degrees of freedom, :math:`n \in N; n > 0`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers chi-square distributed with :math:`n` degrees of freedom, :math:`n \in N; n > 0`.
 
 The probability distribution is given by:
 
@@ -28,7 +28,7 @@ The cumulative distribution function is as follows:
     F_{n}(x) = \left\{ \begin{array}{rcl} \int^{x}_{0}\frac{y^{\frac{n - 2}{2}}e^{-\frac{x}{2}}}{2^{n/2}\Gamma(n/2)}dy, x \ge 0 \\ 0, x < 0 \end{array}\right.
 
 
-.. _onemkl_rng_chi_square_syntax:
+.. _onemath_rng_chi_square_syntax:
 
 class chi_square
 ----------------
@@ -68,7 +68,7 @@ class chi_square
                 * ``oneapi::mkl::rng::chi_square_method::by_default``
                 * ``oneapi::mkl::rng::chi_square_method::gamma_based``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -171,4 +171,4 @@ class chi_square
 
             Returns the distribution parameter `n` - number of degrees of freedom.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

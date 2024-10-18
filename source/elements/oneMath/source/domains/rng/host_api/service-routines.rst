@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_service_routines:
+.. _onemath_rng_service_routines:
 
 Host Service Routines
 =====================
@@ -19,14 +19,14 @@ Host Service Routines
 
          * -  Routine
            -  Description
-         * -                      \ :ref:`onemkl_rng_leapfrog`\
+         * -                      \ :ref:`onemath_rng_leapfrog`\
            -  Proceed state of engine by the leapfrog method to generate a       subsequence of the original sequence
-         * -                      \ :ref:`onemkl_rng_skip_ahead`\
+         * -                      \ :ref:`onemath_rng_skip_ahead`\
            -  Proceed state of engine by the skip-ahead method to skip a       given number of elements from the original sequence
 
 
 
-      **Parent topic:** :ref:`onemkl_rng_manual_offload_routines`
+      **Parent topic:** :ref:`onemath_rng_manual_offload_routines`
 
 .. toctree::
     :hidden:

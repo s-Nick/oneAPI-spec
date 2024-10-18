@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_dataset:
+.. _onemath_stats_dataset:
 
 dataset
 =======
 
 The structure consolidates the information of a multi-dimensional dataset.
 
-.. _onemkl_stats_dataset_description:
+.. _onemath_stats_dataset_description:
 
 .. rubric:: Description
 
-The ``dataset`` struct object is used in :ref:`onemkl_stats_routines` as a multi-dimensional data storage. ``dataset`` struct contains information about observations matrix and its size (dimensions x observations), observations weights and indices for dimensions (defines dimensions to be processed).
+The ``dataset`` struct object is used in :ref:`onemath_stats_routines` as a multi-dimensional data storage. ``dataset`` struct contains information about observations matrix and its size (dimensions x observations), observations weights and indices for dimensions (defines dimensions to be processed).
 
-.. _onemkl_stats_dataset_syntax_buffer:
+.. _onemath_stats_dataset_syntax_buffer:
 
 structure dataset (Buffer version)
 ----------------------------------
@@ -109,7 +109,7 @@ structure dataset (Buffer version)
             oneapi::mkl::invalid_argument
                 Exception is thrown when `n_dims_` :math:`\leq 0`, or `n_observations_` :math:`\leq 0`, or `observations_.get_count() == 0`
 
-.. _onemkl_stats_dataset_syntax_usm:
+.. _onemath_stats_dataset_syntax_usm:
 
 structure dataset (USM version)
 -------------------------------
@@ -201,5 +201,5 @@ structure dataset (USM version)
             oneapi::mkl::invalid_argument
                 Exception is thrown when `n_dims_` :math:`\leq 0`, or `n_observations_` :math:`\leq 0`, or `observations_ == nullptr`
 
-**Parent topic:** :ref:`onemkl_stats`
+**Parent topic:** :ref:`onemath_stats`
 

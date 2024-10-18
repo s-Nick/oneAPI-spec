@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_mt2203:
+.. _onemath_rng_mt2203:
 
 mt2203
 ======
 
-The mt2203 engine is the set of 6024 Mersenne Twister pseudorandom number generators MT2203 [:ref:`Matsumoto98 <onemkl_rng_bibliography>`], [:ref:`Matsumoto00 <onemkl_rng_bibliography>`].
+The mt2203 engine is the set of 6024 Mersenne Twister pseudorandom number generators MT2203 [:ref:`Matsumoto98 <onemath_rng_bibliography>`], [:ref:`Matsumoto00 <onemath_rng_bibliography>`].
 
-.. _onemkl_rng_mt2203_description:
+.. _onemath_rng_mt2203_description:
 
 .. rubric:: Description
 
@@ -43,7 +43,7 @@ The set of 6024 basic pseudorandom number generators MT2203 is a natural additio
     \left [ \begin{array}{ccccc} 0 & 1 & 0 & ... & ... \\ 0 & 0 & ... & 0 & ... \\ ... & ... & ... & ... & ... \\ 0 & ... & 0 & 0 & 1 \\ a_{31, j} & a_{30, j} & ... & ... & a_{0, 1} \end{array}\right ]
 
 
-.. _onemkl_rng_mt2203_description_syntax:
+.. _onemath_rng_mt2203_description_syntax:
 
 class mt2203
 ------------
@@ -118,10 +118,10 @@ class mt2203
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
     .. _`mt2203(sycl::queue queue, std::uint32_t seed, std::uint32_t engine_idx)`:
 
@@ -134,10 +134,10 @@ class mt2203
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
         engine_idx
             The index of the set 1, ..., 6024.
@@ -160,10 +160,10 @@ class mt2203
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
     .. _`mt2203(sycl::queue queue, std::initializer_list<std::uint32_t> seed, std::uint32_t engine_idx)`:
 
@@ -176,10 +176,10 @@ class mt2203
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
         engine_idx
             The index of the set 1, ..., 6024.
@@ -236,4 +236,4 @@ class mt2203
         other
             Valid ``mt2203`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

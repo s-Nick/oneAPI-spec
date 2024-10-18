@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_engines_basic_random_number_generators:
+.. _onemath_rng_engines_basic_random_number_generators:
 
 Host Engines (Basic Random Number Generators)
 =============================================
@@ -11,7 +11,7 @@ Host Engines (Basic Random Number Generators)
 .. container::
 
 
-   oneMKL RNG provides pseudorandom, quasi-random, and non-deterministic
+   oneMath RNG provides pseudorandom, quasi-random, and non-deterministic
    random number generators for Data Parallel C++:
 
 
@@ -23,43 +23,43 @@ Host Engines (Basic Random Number Generators)
 
          * -  Routine
            -  Description
-         * -                      \ :ref:`onemkl_rng_default_engine`\
+         * -                      \ :ref:`onemath_rng_default_engine`\
            -     The default random engine
-         * -                      \ :ref:`onemkl_rng_mrg32k3a`\
-           -     The combined multiple recursive pseudorandom number       generator      ``MRG32k3a``\ :ref:`[L'Ecuyer99a] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_philox4x32x10`\
-           -     Philox4x32-10 counter-based pseudorandom number       generator with a period of      2\ :sup:`128`\ ``PHILOX4X32X10``\ :ref:`[Salmon11] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_mcg31m1`\
-           -     The 31-bit multiplicative congruential pseudorandom       number generator MCG(1132489760, 231 -1)      :ref:`[L'Ecuyer99] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_r250`\
-           -     The 32-bit generalized feedback shift register       pseudorandom number generator      ``GFSR(250,103)``\ :ref:`[Kirkpatrick81] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_mcg59`\
-           -     The 59-bit multiplicative congruential pseudorandom       number generator ``MCG(13``\ :sup:`13`\ ``, 2``\ :sup:`59`) from      NAG Numerical Libraries      :ref:`[NAG] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_wichmann_hill`\
-           -     Wichmann-Hill pseudorandom number generator (a set of       273 basic generators) from NAG Numerical Libraries      :ref:`[NAG] <onemkl_rng_bibliography>`\
-         * -                      \ :ref:`onemkl_rng_mt19937`\
-           -     Mersenne Twister pseudorandom number generator       ``MT19937``\ :ref:`[Matsumoto98] <onemkl_rng_bibliography>`      with period length 2\ :sup:`19937`-1 of the produced sequence
-         * -                      \ :ref:`onemkl_rng_mt2203`\
-           -     Set of 6024 Mersenne Twister pseudorandom number       generators      ``MT2203``\ :ref:`[Matsumoto98] <onemkl_rng_bibliography>`,      :ref:`[Matsumoto00] <onemkl_rng_bibliography>`.      Each of them generates a sequence of period length equal to      2\ :sup:`2203`-1. Parameters of the generators provide mutual      independence of the corresponding sequences.
-         * -                      \ :ref:`onemkl_rng_sfmt19937`\
-           -     SIMD-oriented Fast Mersenne Twister pseudorandom       number generator      ``SFMT19937``\ :ref:`[Saito08] <onemkl_rng_bibliography>`      with a period length equal to 2\ :sup:`19937`-1 of the produced      sequence.
-         * -                      \ :ref:`onemkl_rng_sobol`\
-           -     Sobol quasi-random number generator       :ref:`[Sobol76] <onemkl_rng_bibliography>`,      :ref:`[Bratley88] <onemkl_rng_bibliography>`,      which works in arbitrary dimension.
-         * -                      \ :ref:`onemkl_rng_niederreiter`\
-           -     Niederreiter quasi-random number generator       :ref:`[Bratley92] <onemkl_rng_bibliography>`,      which works in arbitrary dimension.
-         * -                      \ :ref:`onemkl_rng_ars5`\
-           -     ARS-5 counter-based pseudorandom number generator with       a period of 2\ :sup:`128`, which uses instructions from the AES-NI      set      ``ARS5``\ :ref:`[Salmon11] <onemkl_rng_bibliography>`.
-         * -                      \ :ref:`onemkl_rng_nondeterministic`\
+         * -                      \ :ref:`onemath_rng_mrg32k3a`\
+           -     The combined multiple recursive pseudorandom number       generator      ``MRG32k3a``\ :ref:`[L'Ecuyer99a] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_philox4x32x10`\
+           -     Philox4x32-10 counter-based pseudorandom number       generator with a period of      2\ :sup:`128`\ ``PHILOX4X32X10``\ :ref:`[Salmon11] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_mcg31m1`\
+           -     The 31-bit multiplicative congruential pseudorandom       number generator MCG(1132489760, 231 -1)      :ref:`[L'Ecuyer99] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_r250`\
+           -     The 32-bit generalized feedback shift register       pseudorandom number generator      ``GFSR(250,103)``\ :ref:`[Kirkpatrick81] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_mcg59`\
+           -     The 59-bit multiplicative congruential pseudorandom       number generator ``MCG(13``\ :sup:`13`\ ``, 2``\ :sup:`59`) from      NAG Numerical Libraries      :ref:`[NAG] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_wichmann_hill`\
+           -     Wichmann-Hill pseudorandom number generator (a set of       273 basic generators) from NAG Numerical Libraries      :ref:`[NAG] <onemath_rng_bibliography>`\
+         * -                      \ :ref:`onemath_rng_mt19937`\
+           -     Mersenne Twister pseudorandom number generator       ``MT19937``\ :ref:`[Matsumoto98] <onemath_rng_bibliography>`      with period length 2\ :sup:`19937`-1 of the produced sequence
+         * -                      \ :ref:`onemath_rng_mt2203`\
+           -     Set of 6024 Mersenne Twister pseudorandom number       generators      ``MT2203``\ :ref:`[Matsumoto98] <onemath_rng_bibliography>`,      :ref:`[Matsumoto00] <onemath_rng_bibliography>`.      Each of them generates a sequence of period length equal to      2\ :sup:`2203`-1. Parameters of the generators provide mutual      independence of the corresponding sequences.
+         * -                      \ :ref:`onemath_rng_sfmt19937`\
+           -     SIMD-oriented Fast Mersenne Twister pseudorandom       number generator      ``SFMT19937``\ :ref:`[Saito08] <onemath_rng_bibliography>`      with a period length equal to 2\ :sup:`19937`-1 of the produced      sequence.
+         * -                      \ :ref:`onemath_rng_sobol`\
+           -     Sobol quasi-random number generator       :ref:`[Sobol76] <onemath_rng_bibliography>`,      :ref:`[Bratley88] <onemath_rng_bibliography>`,      which works in arbitrary dimension.
+         * -                      \ :ref:`onemath_rng_niederreiter`\
+           -     Niederreiter quasi-random number generator       :ref:`[Bratley92] <onemath_rng_bibliography>`,      which works in arbitrary dimension.
+         * -                      \ :ref:`onemath_rng_ars5`\
+           -     ARS-5 counter-based pseudorandom number generator with       a period of 2\ :sup:`128`, which uses instructions from the AES-NI      set      ``ARS5``\ :ref:`[Salmon11] <onemath_rng_bibliography>`.
+         * -                      \ :ref:`onemath_rng_nondeterministic`\
            -     Non-deterministic random number generator \
 
 
 
 
-   For some basic generators, oneMKL RNG provides two methods of
+   For some basic generators, oneMath RNG provides two methods of
    creating independent states in multiprocessor computations, which are
    the leapfrog method and the block-splitting method. These sequence
    splitting methods are also useful in sequential Monte Carlo. The
-   description of these functions can be found in the :ref:`onemkl_rng_service_routines` section.
+   description of these functions can be found in the :ref:`onemath_rng_service_routines` section.
 
 
    In addition, the MT2203 pseudorandom number generator is a set of 6024
@@ -69,60 +69,60 @@ Host Engines (Basic Random Number Generators)
    allows creating up to 273 independent random streams. The properties
    of the generators designed for parallel computations are discussed in
    detail in
-   [:ref:`Coddington94 <onemkl_rng_bibliography>`].
+   [:ref:`Coddington94 <onemath_rng_bibliography>`].
 
 
-   **Parent topic:** :ref:`onemkl_rng_manual_offload_routines`
+   **Parent topic:** :ref:`onemath_rng_manual_offload_routines`
 
 
 .. container::
 
 
-   -  :ref:`onemkl_rng_default_engine`
+   -  :ref:`onemath_rng_default_engine`
       The default random engine (implementation defined)
-   -  :ref:`onemkl_rng_mrg32k3a`
+   -  :ref:`onemath_rng_mrg32k3a`
       The combined multiple recursive pseudorandom number generator
       MRG32k3a [ L'Ecuyer99a]
-   -  :ref:`onemkl_rng_philox4x32x10`
+   -  :ref:`onemath_rng_philox4x32x10`
       A Philox4x32-10 counter-based pseudorandom number generator.
       [Salmon11].
-   -  :ref:`onemkl_rng_mcg31m1`
+   -  :ref:`onemath_rng_mcg31m1`
       The 31-bit multiplicative congruential pseudorandom number
       generator MCG(1132489760, 231 -1) [L'Ecuyer99]
-   -  :ref:`onemkl_rng_mcg59`
+   -  :ref:`onemath_rng_mcg59`
       The 59-bit multiplicative congruential pseudorandom number
       generator MCG(1313, 259) from NAG Numerical Libraries [NAG].
-   -  :ref:`onemkl_rng_r250`
+   -  :ref:`onemath_rng_r250`
       The 32-bit generalized feedback shift register pseudorandom number
       generator GFSR(250,103)[Kirkpatrick81].
-   -  :ref:`onemkl_rng_wichmann_hill`
+   -  :ref:`onemath_rng_wichmann_hill`
       Wichmann-Hill pseudorandom number generator (a set of 273 basic
       generators) from NAG Numerical Libraries [NAG].
-   -  :ref:`onemkl_rng_mt19937`
+   -  :ref:`onemath_rng_mt19937`
       Mersenne Twister pseudorandom number generator MT19937
       [Matsumoto98] with period length 2\ :sup:`19937`-1 of the produced
       sequence.
-   -  :ref:`onemkl_rng_sfmt19937`
+   -  :ref:`onemath_rng_sfmt19937`
       SIMD-oriented Fast Mersenne Twister pseudorandom number generator
       SFMT19937 [Saito08] with a period length equal to
       2\ :sup:`19937`-1 of the produced sequence.
-   -  :ref:`onemkl_rng_mt2203`
+   -  :ref:`onemath_rng_mt2203`
       Set of 6024 Mersenne Twister pseudorandom number generators MT2203
       [Matsumoto98], [Matsumoto00]. Each of them generates a sequence of
       period length equal to 2\ :sup:`2203`-1. Parameters of the
       generators provide mutual independence of the corresponding
       sequences..
-   -  :ref:`onemkl_rng_ars5`
+   -  :ref:`onemath_rng_ars5`
       ARS-5 counter-based pseudorandom number generator with a period of
       2\ :sup:`128`, which uses instructions from the AES-NI set
       ARS5[Salmon11].
-   -  :ref:`onemkl_rng_sobol`
+   -  :ref:`onemath_rng_sobol`
       Sobol quasi-random number generator [Sobol76], [Bratley88], which
       works in arbitrary dimension.
-   -  :ref:`onemkl_rng_niederreiter`
+   -  :ref:`onemath_rng_niederreiter`
       Niederreiter quasi-random number generator [Bratley92], which
       works in arbitrary dimension.
-   -  :ref:`onemkl_rng_nondeterministic`
+   -  :ref:`onemath_rng_nondeterministic`
       Non-deterministic random number generator.
 
 .. toctree::

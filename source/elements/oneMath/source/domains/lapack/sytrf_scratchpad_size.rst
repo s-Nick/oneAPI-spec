@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_sytrf_scratchpad_size:
+.. _onemath_lapack_sytrf_scratchpad_size:
 
 sytrf_scratchpad_size
 =====================
 
-Computes size of scratchpad memory required for :ref:`onemkl_lapack_sytrf` function.
+Computes size of scratchpad memory required for :ref:`onemath_lapack_sytrf` function.
 
 .. container:: section
 
@@ -24,7 +24,7 @@ Computes size of scratchpad memory required for :ref:`onemkl_lapack_sytrf` funct
         * -  ``std::complex<float>`` 
         * -  ``std::complex<double>`` 
 
-Computes the number of elements of type ``T`` the scratchpad memory to be passed to :ref:`onemkl_lapack_sytrf` function should be able to hold.
+Computes the number of elements of type ``T`` the scratchpad memory to be passed to :ref:`onemath_lapack_sytrf` function should be able to hold.
 Calls to this routine must specify the template parameter
 explicitly.
 
@@ -47,7 +47,7 @@ sytrf_scratchpad_size
   .. rubric:: Input Parameters
          
 queue
-   Device queue where calculations by :ref:`onemkl_lapack_sytrf` function will be performed.
+   Device queue where calculations by :ref:`onemath_lapack_sytrf` function will be performed.
 
 upper_lower
    Indicates whether the upper or lower triangular part of :math:`A` is
@@ -73,11 +73,11 @@ lda
          
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    Exception is thrown in case of incorrect supplied argument value.
    Position of wrong argument can be determined by `info()` method of exception object.
@@ -86,7 +86,7 @@ This routine shall throw the following exceptions if the associated condition is
 
   .. rubric:: Return Value
 
-The number of elements of type ``T`` the scratchpad memory to be passed to :ref:`onemkl_lapack_sytrf` function should be able to hold.
+The number of elements of type ``T`` the scratchpad memory to be passed to :ref:`onemath_lapack_sytrf` function should be able to hold.
 
-**Parent topic:** :ref:`onemkl_lapack-linear-equation-routines`
+**Parent topic:** :ref:`onemath_lapack-linear-equation-routines`
 

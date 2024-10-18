@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_sfmt19937:
+.. _onemath_rng_sfmt19937:
 
 sfmt19937
 =========
 
 The SIMD-oriented Mersenne Twister pseudorandom number generator.
 
-.. _onemkl_rng_sfmt19937_description:
+.. _onemath_rng_sfmt19937_description:
 
 .. rubric:: Description
 
-SIMD-oriented Fast Mersenne Twister pseudorandom number generator SFMT19937 [:ref:`Saito08 <onemkl_rng_bibliography>`] with a period length equal to :math:`2 ^ {19937}-1` of the produced sequence. The state of the engine contains the array of 156 128-bit integers.
+SIMD-oriented Fast Mersenne Twister pseudorandom number generator SFMT19937 [:ref:`Saito08 <onemath_rng_bibliography>`] with a period length equal to :math:`2 ^ {19937}-1` of the produced sequence. The state of the engine contains the array of 156 128-bit integers.
 
 .. container:: section
 
@@ -36,7 +36,7 @@ SIMD-oriented Fast Mersenne Twister pseudorandom number generator SFMT19937 [:re
     :math:`u_n = (int) r_n / 2^{32} + 1/2`
 
 
-.. _onemkl_rng_sfmt19937_description_syntax:
+.. _onemath_rng_sfmt19937_description_syntax:
 
 class sfmt19937
 ---------------
@@ -103,10 +103,10 @@ class sfmt19937
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`Saito08 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`Saito08 <onemath_rng_bibliography>`].
 
     .. _`sfmt19937(sycl::queue queue, std::initializer_list<std::uint32_t> seed)`:
 
@@ -119,10 +119,10 @@ class sfmt19937
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`Saito08 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`Saito08 <onemath_rng_bibliography>`].
 
     .. _`sfmt19937(const sfmt19937& other)`:
 
@@ -176,4 +176,4 @@ class sfmt19937
         other
             Valid ``sfmt19937`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

@@ -11,7 +11,7 @@ Matrix Storage
 .. container::
 
 
-   The oneMKL BLAS and LAPACK routines for DPC++ use several matrix and
+   The oneMath BLAS and LAPACK routines for DPC++ use several matrix and
    vector storage formats. These are the same formats used in
    traditional Fortran BLAS/LAPACK. LAPACK routines require column
    major layout.
@@ -582,5 +582,5 @@ Matrix Storage
              }_\text{1 + (1-n) x incx}] \quad if \:incx \:< \:0 
 
 
-      **Parent topic:** :ref:`onemkl_dense_linear_algebra`
+      **Parent topic:** :ref:`onemath_dense_linear_algebra`
 

@@ -2,15 +2,15 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_dft:
+.. _onemath_dft:
 
 Discrete Fourier Transform Functions
 ------------------------------------
 
-oneMKL provides a DPC++ interface to :math:`d`-dimensional :math:`\left(d \in
+oneMath provides a DPC++ interface to :math:`d`-dimensional :math:`\left(d \in
 \mathbb{Z}_{>0}\right)` Discrete Fourier Transforms (DFTs).
 
-.. _onemkl_dft_definitions:
+.. _onemath_dft_definitions:
 
 Definitions
 +++++++++++
@@ -29,7 +29,7 @@ For every :math:`m \in \lbrace 0, 1, \ldots, M - 1 \rbrace`, the DFT of sequence
 :math:`w^{m}` is the :math:`d`-dimensional discrete sequence :math:`z^{m}` of
 length(s) :math:`n_1 \times n_2 \times \dots \times n_d` whose entries are defined as
 
-.. _onemkl_dft_formula:
+.. _onemath_dft_formula:
 
 .. math::
     z^{m}_{k_1, k_2,\ldots, k_d} = \sigma_{\delta} \displaystyle\sum_{j_d=0}^{n_d-1}\dots\displaystyle\sum_{j_2=0}^{n_2-1}\displaystyle\sum_{j_1=0}^{n_1-1} w^{m}_{j_1, j_2,\dots,j_d} \exp \left[ \delta 2\pi \imath \left( \sum_{\ell=1}^{d} \frac{j_{\ell}k_{\ell}}{n_{\ell}} \right) \right],
@@ -45,7 +45,7 @@ backward) DFT is referred to as "forward domain". Conversely, the domain of
 output (resp. input) discrete sequences for forward (resp. backward) DFT is
 referred to as "backward domain".
 
-oneMKL supports single-precision (fp32) and double-precision (fp64)
+oneMath supports single-precision (fp32) and double-precision (fp64)
 floating-point arithmetic for the calculation of DFTs, using two kinds of
 forward domains:
 
@@ -62,7 +62,7 @@ The calculation of the same DFT for several, *i.e.*, :math:`M > 1`, data sets of
 the same kind of forward domain, using the same precision is referred to as a
 "batched DFT".
 
-.. _onemkl_dft_elementary_range_of_indices:
+.. _onemath_dft_elementary_range_of_indices:
 
 Elementary range of indices
 +++++++++++++++++++++++++++
@@ -82,12 +82,12 @@ and :math:`\lambda^{*}` represents the conjugate of complex number
 redundant in backward domain: in case of real DFTs, the data sequences in
 backward domain can be fully determined even if one of the :math:`d` indices
 :math:`k_{\ell}` is limited to the range
-:math:`0\leq k_{\ell} \leq \lfloor \frac{n_{\ell}}{2}\rfloor`. In oneMKL, the
+:math:`0\leq k_{\ell} \leq \lfloor \frac{n_{\ell}}{2}\rfloor`. In oneMath, the
 index :math:`k_d`, *i.e.*, the last dimension's index, is restricted as such to
 capture an elementary set of non-redundant entries for data sequences belonging
 to the backward domain of real DFTs.
 
-In other words, oneMKL expects and produces a set of :math:`M`
+In other words, oneMath expects and produces a set of :math:`M`
 :math:`d`-dimensional data sequences
 :math:`\left(\cdot \right)^{m}_{k_1, k_2,\ldots, k_d}` with integer indices 
 :math:`m` and
@@ -99,7 +99,7 @@ elementary range
 - :math:`0 \leq k_d < n_d`, except for backward domain's data sequences of real DFTs;
 - :math:`0 \leq k_d \leq \lfloor\frac{n_d}{2}\rfloor`, for backward domain's data sequences of real DFTs.
 
-.. _onemkl_dft_additional_constraints_in_bwd_domain_for_real_dft:
+.. _onemath_dft_additional_constraints_in_bwd_domain_for_real_dft:
 
 Additional constraints for data in backward domain of real DFTs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,32 +121,32 @@ DFTs. Specifically, for any of the :math:`M` sequences,
   that this case falls back to the above constraint if :math:`n_1 = 2`).
 
 .. note::
-  The behavior of oneMKL is undefined for real backward DFT if the input data
-  does not satisfy those constraints. oneMKL considers it the user's
+  The behavior of oneMath is undefined for real backward DFT if the input data
+  does not satisfy those constraints. oneMath considers it the user's
   responsibility to guarantee that these constraints are satisfied by the input
   data for real backward DFTs.
 
-.. _onemkl_dft_recommended_usage:
+.. _onemath_dft_recommended_usage:
 
 Recommended usage
 +++++++++++++++++
 
 The desired DFT to be computed is entirely defined by an object ``desc`` of a
 specialization of the ``oneapi::mkl::dft::descriptor``
-:ref:`class template<onemkl_dft_descriptor>`.
+:ref:`class template<onemath_dft_descriptor>`.
 The desired floating-point format and kind of forward domain are determined by
 ``desc``'s particular class, *i.e.*, by the specialization values of the
-:ref:`template parameters<onemkl_dft_descriptor_template_parameters>` ``prec``
+:ref:`template parameters<onemath_dft_descriptor_template_parameters>` ``prec``
 and ``dom`` of the ``descriptor`` class template, respectively. Once ``desc`` is
 created, the length(s) :math:`\lbrace n_1, n_2, \ldots, n_d\rbrace` (and the
 dimension :math:`d`) cannot be changed, as they are read-only parameters. Other
 configuration details for the DFT under consideration may be specified by
 invoking the appropriate
-:ref:`configuration-setting member function(s)<onemkl_dft_descriptor_set_value>`
+:ref:`configuration-setting member function(s)<onemath_dft_descriptor_set_value>`
 of ``desc`` for every relevant configuration parameter (*e.g.*, the number
 :math:`M` of sequences to consider in case of a batched DFT). Once configured
 as desired, ``desc`` must be initialized for computation by using its
-:ref:`committing member function<onemkl_dft_descriptor_commit>`, which requires
+:ref:`committing member function<onemath_dft_descriptor_commit>`, which requires
 a ``sycl::queue`` object. The successful completion of that operation makes
 ``desc`` ready to compute the desired DFT *as configured*, for the particular
 device and context encapsulated by the latter. ``desc`` may then be used with
@@ -165,7 +165,7 @@ to the desired forward (resp. backward) DFT calculations.
   - deliver best performance for DFT calculations when created, configured and
     committed outside applications' hotpath(s) that use them multiple times for
     identically-configured DFTs. ``oneapi::mkl::dft::compute_forward`` and/or
-    ``oneapi::mkl::dft::compute_backward`` should be the only oneMKL DFT-related
+    ``oneapi::mkl::dft::compute_backward`` should be the only oneMath DFT-related
     routines invoked in programs' hotpaths.
 
 Summary table
@@ -174,7 +174,7 @@ Summary table
 The table below summarizes the identifiers of the ``oneapi::mkl::dft`` namespace
 relevant to computing DFTs.
 
-.. _onemkl_dft_summary_table:
+.. _onemath_dft_summary_table:
 .. container::
 
 
@@ -193,43 +193,43 @@ relevant to computing DFTs.
                  be calculated and its configuration. Template
                  parameters are omitted in this table for conciseness (more
                  details are available in the page dedicated to
-                 :ref:`the descriptor class template<onemkl_dft_descriptor>`).
+                 :ref:`the descriptor class template<onemath_dft_descriptor>`).
          * -     ``domain``, ``precision``, ``config_param`` and ``config_value``
-           -     :ref:`Scoped enumerations<onemkl_dft_enums>` pertaining to the
+           -     :ref:`Scoped enumerations<onemath_dft_enums>` pertaining to the
                  definition of any configuration parameter or its associated
                  value, for any instance of a ``descriptor`` class.
          * -     ``descriptor::set_value``
            -     Member functions to
-                 :ref:`set (writable) configuration parameters<onemkl_dft_descriptor_set_value>`
+                 :ref:`set (writable) configuration parameters<onemath_dft_descriptor_set_value>`
                  for any instance of a ``descriptor`` class.
          * -     ``descriptor::get_value``
            -     Member functions to
-                 :ref:`query configuration parameters<onemkl_dft_descriptor_get_value>`
+                 :ref:`query configuration parameters<onemath_dft_descriptor_get_value>`
                  from any instance of a ``descriptor`` class.
          * -     ``descriptor::commit``
            -     A member function to
-                 :ref:`commit<onemkl_dft_descriptor_commit>` any instance
+                 :ref:`commit<onemath_dft_descriptor_commit>` any instance
                  of a ``descriptor`` class to the DFT calculations it defines,
                  on a given queue.
          * -     ``descriptor::set_workspace``
            -     A member function to equip any instance of a ``descriptor``
                  class with an
-                 :ref:`externally-allocated workspace<onemkl_dft_descriptor_set_workspace>`.
+                 :ref:`externally-allocated workspace<onemath_dft_descriptor_set_workspace>`.
          * -     ``compute_forward``
            -     Function templates for computing a forward DFT, as defined by
                  a (successfully-committed) instance of a ``descriptor`` class
                  (required argument). Template parameters are omitted in this
                  table for conciseness (more details are available in the
-                 :ref:`dedicated page<onemkl_dft_compute_forward>`).
+                 :ref:`dedicated page<onemath_dft_compute_forward>`).
          * -     ``compute_backward``
            -     Function templates for computing a backward DFT, as defined by
                  a (successfully-committed) instance of a ``descriptor`` class
                  (required argument). Template parameters are omitted in this
                  table for conciseness (more details are available in the
-                 :ref:`dedicated page<onemkl_dft_compute_backward>`).
+                 :ref:`dedicated page<onemath_dft_compute_backward>`).
 
 
-**Parent topic:** :ref:`onemkl_domains`
+**Parent topic:** :ref:`onemath_domains`
 
 .. toctree::
     :hidden:

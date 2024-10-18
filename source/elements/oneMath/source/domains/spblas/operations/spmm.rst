@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_spmm_header:
+.. _onemath_sparse_spmm_header:
 
 spmm
 ====
@@ -33,7 +33,7 @@ matrix product defined as:
                                  A^\mathsf{H},& \text{oneapi::mkl::transpose::conjtrans}
                    \end{cases}
 
-.. _onemkl_sparse_spmm_descr:
+.. _onemath_sparse_spmm_descr:
 
 spmm_descr
 ----------
@@ -59,7 +59,7 @@ spmm_descr
    stages of the spmm operation to house relevant state, optimizations and
    workspaces.
 
-.. _onemkl_sparse_init_spmm_descr:
+.. _onemath_sparse_init_spmm_descr:
 
 init_spmm_descr
 ---------------
@@ -103,12 +103,12 @@ init_spmm_descr
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_release_spmm_descr:
+.. _onemath_sparse_release_spmm_descr:
 
 release_spmm_descr
 ------------------
@@ -155,11 +155,11 @@ release_spmm_descr
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-.. _onemkl_sparse_spmm_alg:
+.. _onemath_sparse_spmm_alg:
 
 spmm_alg
 --------
@@ -195,7 +195,7 @@ spmm_alg
    implementation-defined and must be documented in the library implementing the
    oneAPI specification.
 
-.. _onemkl_sparse_spmm:
+.. _onemath_sparse_spmm:
 
 spmm
 ----
@@ -276,10 +276,10 @@ spmm
    - In the general case, not calling the functions in the order specified above
      is undefined behavior. Not calling ``spmm_buffer_size`` or
      ``spmm_optimize`` at least once with a given descriptor will throw an
-     :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
+     :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
      exception. Calling ``spmm`` with arguments not matching ``spmm_optimize``
      will throw an
-     :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+     :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
      exception, unless stated otherwise.
    - The data of the dense handles ``B_handle`` and ``C_handle`` and the scalars
      ``alpha`` and ``beta`` can be reset before each call to ``spmm``. Changing
@@ -299,11 +299,11 @@ spmm
 
    opA
       Specifies operation ``op()`` on the input matrix A. The possible options
-      are described in :ref:`onemkl_enum_transpose` enum class.
+      are described in :ref:`onemath_enum_transpose` enum class.
 
    opB
       Specifies operation ``op()`` on the input matrix B. The possible options
-      are described in :ref:`onemkl_enum_transpose` enum class.
+      are described in :ref:`onemath_enum_transpose` enum class.
 
    alpha
       Host or USM pointer representing :math:`\alpha`. The USM allocation can be
@@ -315,7 +315,7 @@ spmm
 
    A_view
       Specifies which part of the handle should be read as described by
-      :ref:`onemkl_sparse_matrix_view`. The ``type_view`` field must be
+      :ref:`onemath_sparse_matrix_view`. The ``type_view`` field must be
       ``matrix_descr::general`` and the ``uplo_view`` and ``diag_view`` fields
       are ignored.
 
@@ -337,10 +337,10 @@ spmm
       Dense matrix handle object representing :math:`C`.
 
    alg
-      Specifies the :ref:`spmm algorithm<onemkl_sparse_spmm_alg>` to use.
+      Specifies the :ref:`spmm algorithm<onemath_sparse_spmm_alg>` to use.
 
    spmm_descr
-      Initialized :ref:`spmm descriptor<onemkl_sparse_spmm_descr>`.
+      Initialized :ref:`spmm descriptor<onemath_sparse_spmm_descr>`.
 
    temp_buffer_size
       Output buffer size in bytes.
@@ -350,7 +350,7 @@ spmm
         ``temp_buffer_size`` bytes and the address aligned on the size of the
         handles' data type.
       | If it is a buffer, its lifetime is extended until the :ref:`spmm
-        descriptor<onemkl_sparse_spmm_descr>` is released or the workspace is
+        descriptor<onemath_sparse_spmm_descr>` is released or the workspace is
         reset by ``spmm_optimize``. The workspace cannot be a sub-buffer.
       | If it is a USM pointer, it must not be free'd until the corresponding
         ``spmm`` has completed. The data must be accessible on the device.
@@ -387,11 +387,11 @@ spmm
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::computation_error<onemkl_exception_computation_error>`
-   | :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::computation_error<onemath_exception_computation_error>`
+   | :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_spblas`
+**Parent topic:** :ref:`onemath_spblas`

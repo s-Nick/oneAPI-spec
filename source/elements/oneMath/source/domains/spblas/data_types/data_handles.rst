@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_data_handles:
+.. _onemath_sparse_data_handles:
 
 Data handles
 ============
 
-.. _onemkl_sparse_dense_vector_handle:
+.. _onemath_sparse_dense_vector_handle:
 
 Dense vector handle
 -------------------
@@ -33,11 +33,11 @@ Dense vector handle
 
    See related functions:
 
-   - :ref:`onemkl_sparse_init_dense_vector`
-   - :ref:`onemkl_sparse_set_dense_vector_data`
-   - :ref:`onemkl_sparse_release_dense_vector`
+   - :ref:`onemath_sparse_init_dense_vector`
+   - :ref:`onemath_sparse_set_dense_vector_data`
+   - :ref:`onemath_sparse_release_dense_vector`
 
-.. _onemkl_sparse_dense_matrix_handle:
+.. _onemath_sparse_dense_matrix_handle:
 
 Dense matrix handle
 -------------------
@@ -63,11 +63,11 @@ Dense matrix handle
 
    See related functions:
 
-   - :ref:`onemkl_sparse_init_dense_matrix`
-   - :ref:`onemkl_sparse_set_dense_matrix_data`
-   - :ref:`onemkl_sparse_release_dense_matrix`
+   - :ref:`onemath_sparse_init_dense_matrix`
+   - :ref:`onemath_sparse_set_dense_matrix_data`
+   - :ref:`onemath_sparse_release_dense_matrix`
 
-.. _onemkl_sparse_matrix_handle:
+.. _onemath_sparse_matrix_handle:
 
 Sparse matrix handle
 --------------------
@@ -93,14 +93,14 @@ Sparse matrix handle
 
    See related functions:
 
-   - :ref:`onemkl_sparse_init_coo_matrix`
-   - :ref:`onemkl_sparse_init_csr_matrix`
-   - :ref:`onemkl_sparse_set_coo_matrix_data`
-   - :ref:`onemkl_sparse_set_csr_matrix_data`
-   - :ref:`onemkl_sparse_set_matrix_property`
-   - :ref:`onemkl_sparse_release_sparse_matrix`
+   - :ref:`onemath_sparse_init_coo_matrix`
+   - :ref:`onemath_sparse_init_csr_matrix`
+   - :ref:`onemath_sparse_set_coo_matrix_data`
+   - :ref:`onemath_sparse_set_csr_matrix_data`
+   - :ref:`onemath_sparse_set_matrix_property`
+   - :ref:`onemath_sparse_release_sparse_matrix`
 
-   See a description of the supported :ref:`sparse formats<onemkl_sparse_format_descriptions>`.
+   See a description of the supported :ref:`sparse formats<onemath_sparse_format_descriptions>`.
 
 .. toctree::
    :hidden:
@@ -119,4 +119,4 @@ Sparse matrix handle
    set_matrix_property
    format-descriptions
 
-**Parent topic:** :ref:`onemkl_spblas`
+**Parent topic:** :ref:`onemath_spblas`

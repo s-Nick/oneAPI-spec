@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_linear_algebra:
+.. _onemath_sparse_linear_algebra:
 
 Sparse Linear Algebra
 ----------------------
@@ -12,7 +12,7 @@ Sparse Linear Algebra
    The oneAPI Math Kernel Library provides a C++ interface to a set of Sparse
    Linear Algebra routines using SYCL.
 
-   :ref:`onemkl_spblas` provides basic operations on sparse vectors and
+   :ref:`onemath_spblas` provides basic operations on sparse vectors and
    matrices. Most operations are split into three stages: query of the external
    workspace size, optimization stage and execution. For a given configuration,
    the first two stages would typically be called once for a set of input

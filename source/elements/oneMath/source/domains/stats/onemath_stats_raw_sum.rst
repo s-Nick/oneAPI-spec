@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_raw_sum:
+.. _onemath_stats_raw_sum:
 
 raw_sum
 =======
 
 Entry point to compute raw sums up to the 4th order.
 
-.. _onemkl_stats_raw_sum_description:
+.. _onemath_stats_raw_sum_description:
 
 .. rubric:: Description and Assumptions
 
 The oneapi::mkl::stats::raw_sum function is used to compute an array of raw sums up to the 4th order (raw sums for each dataset's dimension).
 
-:ref:`onemkl_stats_raw_sum` supports the following precisions for data:
+:ref:`onemath_stats_raw_sum` supports the following precisions for data:
 
     .. list-table::
         :header-rows: 1
@@ -25,7 +25,7 @@ The oneapi::mkl::stats::raw_sum function is used to compute an array of raw sums
         * - ``double``
 
 
-.. _onemkl_stats_raw_sum_buffer:
+.. _onemath_stats_raw_sum_buffer:
 
 raw_sum (Buffer version)
 ------------------------
@@ -58,7 +58,7 @@ raw_sum (Buffer version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -93,7 +93,7 @@ raw_sum (Buffer version)
     oneapi::mkl::invalid_argument
         Exception is thrown when sum.get_count() == 0 & raw_sum_2.get_count() == 0 & raw_sum_3.get_count() == 0 & raw_sum_4.get_count() == 0, or dataset object is invalid
 
-.. _onemkl_stats_raw_sum_usm:
+.. _onemath_stats_raw_sum_usm:
 
 raw_sum (USM version)
 ---------------------
@@ -127,7 +127,7 @@ raw_sum (USM version)
         Data precision.
 
     ObservationsLayout
-        Data layout. The specific values are described in :ref:`onemkl_stats_dataset`.
+        Data layout. The specific values are described in :ref:`onemath_stats_dataset`.
 
 .. container:: section
 
@@ -172,5 +172,5 @@ raw_sum (USM version)
     Output event to wait on to ensure computation is complete.
 
 
-**Parent topic:** :ref:`onemkl_stats_routines`
+**Parent topic:** :ref:`onemath_stats_routines`
 

@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_ungqr_batch:
+.. _onemath_lapack_ungqr_batch:
 
 ungqr_batch
 ===========
 
-Generates the complex unitary matrices :math:`Q_i` of the batch of QR factorizations formed by the :ref:`onemkl_lapack_geqrf_batch` function.
+Generates the complex unitary matrices :math:`Q_i` of the batch of QR factorizations formed by the :ref:`onemath_lapack_geqrf_batch` function.
 
 .. container:: section
 
@@ -22,7 +22,7 @@ Generates the complex unitary matrices :math:`Q_i` of the batch of QR factorizat
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_lapack_ungqr_batch_buffer:
+.. _onemath_lapack_ungqr_batch_buffer:
 
 ungqr_batch (Buffer Version)
 ----------------------------
@@ -35,7 +35,7 @@ The buffer version of ``ungqr_batch`` supports only the strided API.
    
 **Strided API**
 
- | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Strided API of the :ref:`onemkl_lapack_geqrf_batch_buffer`.
+ | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Strided API of the :ref:`onemath_lapack_geqrf_batch_buffer`.
  | Usually :math:`Q_i` is determined from the QR factorization of an :math:`m \times p` matrix :math:`A_i` with :math`m \ge p`.
  | To compute the whole matrices :math:`Q_i`, use:
  | ``ungqr_batch(queue, m, m, p, a, ...)``
@@ -73,7 +73,7 @@ k
   Number of elementary reflectors whose product defines the matrices :math:`Q_i` (:math:`0 \le k \le n`).
 
 a
-  Array resulting after call to the Strided API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Strided API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 lda
   Leading dimension of :math:`A_i` (:math:`\text{lda} \le m`).
@@ -82,7 +82,7 @@ stride_a
   Stride between the beginnings of matrices :math:`A_i` inside the batch array ``a``.
 
 tau
-  Array resulting after call to the Strided API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Strided API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 stride_tau
   Stride between the beginnings of arrays :math:`tau_i` inside the array ``tau``.
@@ -94,7 +94,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size 
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by strided version of the Strided API of the :ref:`onemkl_lapack_ungqr_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by strided version of the Strided API of the :ref:`onemath_lapack_ungqr_batch_scratchpad_size` function.
 
 .. container:: section
 
@@ -109,13 +109,13 @@ a
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
   
    Exception is thrown in case of problems during calculations. The info code of the problem can be obtained by info() method of exception object:
 
@@ -125,7 +125,7 @@ This routine shall throw the following exceptions if the associated condition is
 
     If ``info`` is not zero and `detail()` returns zero, then there were some errors for some of the problems in the supplied batch and ``info`` code contains the number of failed calculations in a batch.
 
-.. _onemkl_lapack_ungqr_batch_usm:
+.. _onemath_lapack_ungqr_batch_usm:
 
 ungqr_batch (USM Version)
 -------------------------
@@ -138,7 +138,7 @@ The USM version of ``ungqr_batch`` supports the group API and strided API.
 
 **Group API**
 
- | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Group API of the :ref:`onemkl_lapack_geqrf_batch_buffer`.
+ | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Group API of the :ref:`onemath_lapack_geqrf_batch_buffer`.
  | Usually :math:`Q_i` is determined from the QR factorization of an :math:`m \times p` matrix :math:`A_i` with :math`m \ge p`.
  | To compute the whole matrices :math:`Q_i`, use:
  | ``ungqr_batch(queue, m, m, p, a, ...)``
@@ -167,23 +167,23 @@ queue
   Device queue where calculations will be performed.
 
 m
-  Array of ``group_count`` :math:`m_g` parameters as previously supplied to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array of ``group_count`` :math:`m_g` parameters as previously supplied to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 n
-  Array of ``group_count`` :math:`n_g` parameters as previously supplied to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array of ``group_count`` :math:`n_g` parameters as previously supplied to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 k
- | Array of ``group_count`` :math:`k_g` parameters as previously supplied to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+ | Array of ``group_count`` :math:`k_g` parameters as previously supplied to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
  | The number of elementary reflectors whose product defines the matrices :math:`Q_i` (:math:`0 \le k_g \le n_g`).
 
 a
-  Array resulting after call to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 lda
-  Array of leading dimensions of :math:`A_i` as previously supplied to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array of leading dimensions of :math:`A_i` as previously supplied to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 tau
-  Array resulting after call to the Group API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Group API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 group_count
   Number of groups of parameters. Must be at least 0.
@@ -195,7 +195,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by Group API of the :ref:`onemkl_lapack_ungqr_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by Group API of the :ref:`onemath_lapack_ungqr_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -219,13 +219,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
  
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -236,7 +236,7 @@ This routine shall throw the following exceptions if the associated condition is
 
 **Strided API**
 
- | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Strided API of the :ref:`onemkl_lapack_geqrf_batch_usm`.
+ | The routine generates the wholes or parts of :math`m \times m` unitary matrices :math:`Q_i` of the batch of QR factorization formed by the Strided API of the :ref:`onemath_lapack_geqrf_batch_usm`.
  | Usually :math:`Q_i` is determined from the QR factorization of an :math:`m \times p` matrix :math:`A_i` with :math`m \ge p`.
  | To compute the whole matrices :math:`Q_i`, use:
  | ``ungqr_batch(queue, m, m, p, a, ...)``
@@ -274,7 +274,7 @@ k
   Number of elementary reflectors whose product defines the matrices :math:`Q_i` (:math:`0 \le k \le n`).
 
 a
-  Array resulting after call to the Strided API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Strided API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 lda
   Leading dimension of :math:`A_i` (:math:`\text{lda} \le m`).
@@ -283,7 +283,7 @@ stride_a
   Stride between the beginnings of matrices :math:`A_i` inside the batch array ``a``.
 
 tau
-  Array resulting after call to the Strided API of the :ref:`onemkl_lapack_geqrf_batch_usm` function.
+  Array resulting after call to the Strided API of the :ref:`onemath_lapack_geqrf_batch_usm` function.
 
 stride_tau
   Stride between the beginnings of arrays :math:`tau_i` inside the array ``tau``.
@@ -295,7 +295,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size 
-  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by strided version of the Strided API of the :ref:`onemkl_lapack_ungqr_batch_scratchpad_size` function.
+  Size of scratchpad memory as a number of floating point elements of type ``T``. Size should not be less then the value returned by strided version of the Strided API of the :ref:`onemath_lapack_ungqr_batch_scratchpad_size` function.
 
 events  
   List of events to wait for before starting computation. Defaults to empty list.
@@ -319,13 +319,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
   
@@ -335,5 +335,5 @@ This routine shall throw the following exceptions if the associated condition is
 
    If ``info`` is not zero and `detail()` returns zero, then there were some errors for some of the problems in the supplied batch and ``info`` code contains the number of failed calculations in a batch.
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`
 

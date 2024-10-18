@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_mt19937:
+.. _onemath_rng_mt19937:
 
 mt19937
 =======
 
 Mersenne Twister pseudorandom number generator.
 
-.. _onemkl_rng_mt19937_description:
+.. _onemath_rng_mt19937_description:
 
 .. rubric:: Description
 
-The Mersenne Twister pseudorandom number generator, mt19937, is a modification of twisted generalized feedback shift register generator [:ref:`Matsumoto98 <onemkl_rng_bibliography>`]. MT19937 has the period length of :math:`2^{19937} - 1` and is 623-dimensionally equidistributed with up to 32-bit accuracy. These properties make the generator applicable for simulations in various fields of science and engineering. The state of the generator is represented by 624 32-bit unsigned integer numbers.
+The Mersenne Twister pseudorandom number generator, mt19937, is a modification of twisted generalized feedback shift register generator [:ref:`Matsumoto98 <onemath_rng_bibliography>`]. MT19937 has the period length of :math:`2^{19937} - 1` and is 623-dimensionally equidistributed with up to 32-bit accuracy. These properties make the generator applicable for simulations in various fields of science and engineering. The state of the generator is represented by 624 32-bit unsigned integer numbers.
 
 .. container:: section
 
@@ -46,7 +46,7 @@ The Mersenne Twister pseudorandom number generator, mt19937, is a modification o
 
     Where the 32-bit vector :math:`a = a_{31}..a_{0}` has the value :math:`a=0x9908B0DF`.
 
-.. _onemkl_rng_mt19937_description_syntax:
+.. _onemath_rng_mt19937_description_syntax:
 
 class mt19937
 --------------
@@ -113,10 +113,10 @@ class mt19937
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
     .. _`mt19937(sycl::queue queue, std::initializer_list<std::uint32_t> seed)`:
 
@@ -129,10 +129,10 @@ class mt19937
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
-            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemkl_rng_bibliography>`].
+            The initial conditions of the generator state. The initialization algorithm described in [:ref:`MT2203 <onemath_rng_bibliography>`].
 
     .. _`mt19937(const mt19937& other)`:
 
@@ -186,4 +186,4 @@ class mt19937
         other
             Valid ``mt19937`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

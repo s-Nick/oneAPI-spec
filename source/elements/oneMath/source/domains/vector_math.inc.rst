@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_inc:
+.. _onemath_vm_inc:
 
 Vector Math
 -----------
 
 .. container::
 
-   oneMKL :ref:`Vector Mathematics functions <onemkl_vm>` (VM) compute a mathematical
+   oneMath :ref:`Vector Mathematics functions <onemath_vm>` (VM) compute a mathematical
    function of each of the vector elements. VM includes a set of
    functions (arithmetic, power, trigonometric, exponential,
    hyperbolic, special, and rounding) that operate on vectors of real

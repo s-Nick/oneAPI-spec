@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_leapfrog:
+.. _onemath_rng_leapfrog:
 
 leapfrog
 ========
 
 Proceed state of engine by the leapfrog method.
 
-.. _onemkl_rng_leapfrog_description:
+.. _onemath_rng_leapfrog_description:
 
 .. rubric:: Description and Assumptions
 
@@ -22,7 +22,7 @@ oneapi::mkl::rng::leapfrog function generates random numbers in an engine with n
 
     |image0|
 
-.. _onemkl_rng_leapfrog_common:
+.. _onemath_rng_leapfrog_common:
 
 leapfrog
 --------
@@ -74,6 +74,6 @@ leapfrog
     // Generating random numbers
 
 
-**Parent topic:** :ref:`onemkl_rng_service_routines`
+**Parent topic:** :ref:`onemath_rng_service_routines`
 
 .. |image0| image:: ../../equations/rng-leapfrog.png

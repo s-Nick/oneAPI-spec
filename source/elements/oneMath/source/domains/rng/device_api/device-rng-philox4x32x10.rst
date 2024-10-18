@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_philox4x32x10:
+.. _onemath_device_rng_philox4x32x10:
 
 philox4x32x10
 =============
 
-A Philox4x32-10 counter-based pseudorandom number generator [:ref:`Salmon11<onemkl_rng_bibliography>`].
+A Philox4x32-10 counter-based pseudorandom number generator [:ref:`Salmon11<onemath_rng_bibliography>`].
 
 .. rubric:: Description
 
@@ -17,7 +17,7 @@ The Philox4x32x10 engine is a keyed family of generator of counter-based BRNG. T
 
     .. rubric:: Generation algorithm
 
-    The generator has 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemkl_rng_bibliography>`]:
+    The generator has 32-bit integer output obtained in the following way [:ref:`Salmon11 <onemath_rng_bibliography>`]:
 
     1. :math:`c_n=c_{n-1} + 1`
     2. :math:`\omega_n = f(c_n)`, where :math:`f` is a function that takes 128-bit argument and returns a 128-bit number. The returned number is obtained as follows:
@@ -189,4 +189,4 @@ class philox4x32x10
         offset
             Number of skipped elements. Offset is calculated as: ``num_to_skip`` [0]+ ``num_to_skip`` [1]*2\ :sup:`64` + ``num_to_skip`` [2]\* 2\ :sup:`128` + … + ``num_to_skip`` [``n``-1]\*2\ :sup:`64` \*(``n``-1).
 
-**Parent topic:** :ref:`onemkl_device_rng_engines`
+**Parent topic:** :ref:`onemath_device_rng_engines`

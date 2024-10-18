@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_multinomial:
+.. _onemath_rng_multinomial:
 
 multinomial
 ===========
 
 Class is used for generation of multinomially distributed integer types random numbers.
 
-.. _onemkl_rng_multinomial_description:
+.. _onemath_rng_multinomial_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide `n` random numbers multinomially distributed, with independent trials :math:`(ntrial, m)` and possible mutually exclusive outcomes :math:`k`, with corresponding probabilities :math:`p_i`, where :math:`p_i \in R; 0 \leq p_i \leq 1; m, k \in N`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide `n` random numbers multinomially distributed, with independent trials :math:`(ntrial, m)` and possible mutually exclusive outcomes :math:`k`, with corresponding probabilities :math:`p_i`, where :math:`p_i \in R; 0 \leq p_i \leq 1; m, k \in N`.
 
 The probability distribution is given by:
 
@@ -21,7 +21,7 @@ The probability distribution is given by:
 
     P(X_1 = x_1, ..., X_k = x_k) = \frac{m!}{\Pi^k_{i = 1}x_i!}\Pi^k_{i = 1}p_i^{x_i}, 0 \leq x_i \leq m, \sum^{k}_{i = 1}x_i = m
 
-.. _onemkl_rng_multinomial_syntax:
+.. _onemath_rng_multinomial_syntax:
 
 class multinomial
 -----------------
@@ -64,7 +64,7 @@ It's implementation defined which type ``SequenceContainerOrView`` represents.
                 * ``oneapi::mkl::rng::multinomial_method::by_default``
                 * ``oneapi::mkl::rng::multinomial_method::poisson_icdf_based``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -167,4 +167,4 @@ It's implementation defined which type ``SequenceContainerOrView`` represents.
 
             Returns the distribution parameter `p`.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

@@ -2,20 +2,20 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_nondeterministic:
+.. _onemath_rng_nondeterministic:
 
 nondeterministic
 ================
 
 Non-deterministic random number generator.
 
-.. _onemkl_rng_nondeterministic_description:
+.. _onemath_rng_nondeterministic_description:
 
 .. rubric:: Description
 
 Implementation defined generator with non-deterministic source of randomness (for example, a hardware device).
 
-.. _onemkl_rng_nondeterministic_description_syntax:
+.. _onemath_rng_nondeterministic_description_syntax:
 
 class nondeterministic
 ----------------------
@@ -76,7 +76,7 @@ class nondeterministic
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
 
     .. _`nondeterministic(const nondeterministic& other)`:
@@ -131,4 +131,4 @@ class nondeterministic
         other
             Valid ``nondeterministic`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

@@ -2,10 +2,10 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_acknowledgment:
+.. _onemath_acknowledgment:
 
 Acknowledgment
 ---------------
-The oneMKL `Technical Advisory Board <https://github.com/oneapi-src/oneAPI-tab>`__ members
+The oneMath `Technical Advisory Board <https://github.com/oneapi-src/oneAPI-tab>`__ members
 provided valuable feedback to the specification and are thanked for their contributions.
 

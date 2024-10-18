@@ -2,13 +2,13 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_getri:
+.. _onemath_lapack_getri:
 
 getri
 =====
 
 Computes the inverse of an LU-factored general matrix determined by
-:ref:`onemkl_lapack_getrf`.
+:ref:`onemath_lapack_getrf`.
 
 .. container:: section
 
@@ -26,7 +26,7 @@ Computes the inverse of an LU-factored general matrix determined by
         * -  ``std::complex<double>`` 
 
 The routine computes the inverse :math:`A^{-1}` of a general matrix
-:math:`A`. Before calling this routine, call :ref:`onemkl_lapack_getrf`
+:math:`A`. Before calling this routine, call :ref:`onemath_lapack_getrf`
 to factorize :math:`A`.
 
 getri (BUFFER Version)
@@ -53,19 +53,19 @@ n
    The order of the matrix :math:`A` :math:`(0 \le n)`.
 
 a
-   The buffer ``a`` as returned by :ref:`onemkl_lapack_getrf`. Must
+   The buffer ``a`` as returned by :ref:`onemath_lapack_getrf`. Must
    be of size at least :math:`\text{lda} \cdot \max(1,n)`.
 
 lda
    The leading dimension of ``a`` :math:`(n \le \text{lda})`.
 
 ipiv
-   The buffer as returned by :ref:`onemkl_lapack_getrf`. The
+   The buffer as returned by :ref:`onemath_lapack_getrf`. The
    dimension of ``ipiv`` must be at least :math:`\max(1, n)`.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_getri_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_getri_scratchpad_size` function.
 
 .. container:: section
 
@@ -83,17 +83,17 @@ scratchpad
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -125,19 +125,19 @@ n
    The order of the matrix :math:`A` :math:`(0 \le n)`.
 
 a
-   The array as returned by :ref:`onemkl_lapack_getrf`. Must
+   The array as returned by :ref:`onemath_lapack_getrf`. Must
    be of size at least :math:`\text{lda} \cdot \max(1,n)`.
 
 lda
    The leading dimension of ``a`` :math:`(n \le \text{lda})`.
 
 ipiv
-   The array as returned by :ref:`onemkl_lapack_getrf`. The
+   The array as returned by :ref:`onemath_lapack_getrf`. The
    dimension of ``ipiv`` must be at least :math:`\max(1, n)`.
 
 scratchpad_size
    Size of scratchpad memory as a number of floating point elements of type ``T``.
-   Size should not be less than the value returned by :ref:`onemkl_lapack_getri_scratchpad_size` function.
+   Size should not be less than the value returned by :ref:`onemath_lapack_getri_scratchpad_size` function.
 
 events
    List of events to wait for before starting computation. Defaults to empty list.
@@ -158,17 +158,17 @@ scratchpad
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+:ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
 
-:ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+:ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
-:ref:`oneapi::mkl::lapack::computation_error<onemkl_lapack_exception_computation_error>`
+:ref:`oneapi::mkl::lapack::computation_error<onemath_lapack_exception_computation_error>`
 
    Exception is thrown in case of problems during calculations. The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -182,5 +182,5 @@ This routine shall throw the following exceptions if the associated condition is
 
 Output event to wait on to ensure computation is complete.
 
-**Parent topic:** :ref:`onemkl_lapack-linear-equation-routines`
+**Parent topic:** :ref:`onemath_lapack-linear-equation-routines`
 

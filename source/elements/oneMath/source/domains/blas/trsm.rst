@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_trsm:
+.. _onemath_blas_trsm:
 
 trsm
 ====
 
 Solves a triangular matrix equation (forward or backward solve).
 
-.. _onemkl_blas_trsm_description:
+.. _onemath_blas_trsm_description:
 
 .. rubric:: Description
 
@@ -66,7 +66,7 @@ For the out-of-place operation, ``B`` remains untouched and the solution is adde
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_trsm_buffer:
+.. _onemath_blas_trsm_buffer:
 
 trsm (Buffer Version)
 ---------------------
@@ -118,17 +118,17 @@ trsm (Buffer Version)
 
    left_right
       Specifies whether ``A`` multiplies ``X`` on the left
-      (``side::left``) or on the right (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
-      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemkl_datatypes` for more details.
+      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemath_datatypes` for more details.
 
    trans
-      Specifies op(``A``), the transposition operation applied to ``A``. See :ref:`onemkl_datatypes` for more details.
+      Specifies op(``A``), the transposition operation applied to ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
       Specifies whether ``A`` is assumed to be unit triangular (all
-      diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Specifies the number of rows of ``B``. The value of ``m`` must be
@@ -184,19 +184,19 @@ trsm (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 **Out-of-place API**
 --------------------
@@ -253,16 +253,16 @@ trsm (Buffer Version)
 
    left_right
       Specifies whether ``A`` is on the left side of the matrix solve
-      (``side::left``) or on the right side (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right side (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
-      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemkl_datatypes` for more details.
+      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemath_datatypes` for more details.
 
    trans
-      Specifies op(``A``), the transposition operation applied to matrix ``A``. See :ref:`onemkl_datatypes` for more details.
+      Specifies op(``A``), the transposition operation applied to matrix ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
-      Specifies whether ``A`` is assumed to be unit triangular (all diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      Specifies whether ``A`` is assumed to be unit triangular (all diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Specifices the number of rows of ``B``. The value of ``m`` must be at least zero.
@@ -310,22 +310,22 @@ trsm (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
 
-.. _onemkl_blas_trsm_usm:
+.. _onemath_blas_trsm_usm:
 
 trsm (USM Version)
 ------------------
@@ -379,19 +379,19 @@ trsm (USM Version)
 
    left_right
       Specifies whether ``A`` multiplies ``X`` on the left
-      (``side::left``) or on the right (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
       Specifies whether the matrix ``A`` is upper or lower
-      triangular. See :ref:`onemkl_datatypes` for more details.
+      triangular. See :ref:`onemath_datatypes` for more details.
 
    transa
       Specifies op(``A``), the transposition operation applied to
-      ``A``. See :ref:`onemkl_datatypes` for more details.
+      ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
       Specifies whether ``A`` is assumed to be unit triangular (all
-      diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Specifies the number of rows of ``B``. The value of ``m`` must
@@ -458,20 +458,20 @@ trsm (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
 **Out-of-place API**
 --------------------
@@ -530,16 +530,16 @@ trsm (USM Version)
 
    left_right
       Specifies whether ``A`` is on the left side of the matrix solve
-      (``side::left``) or on the right side (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right side (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
-      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemkl_datatypes` for more details.
+      Specifies whether the matrix ``A`` is upper or lower triangular. See :ref:`onemath_datatypes` for more details.
 
    trans
-      Specifies op(``A``), the transposition operation applied to matrix ``A``. See :ref:`onemkl_datatypes` for more details.
+      Specifies op(``A``), the transposition operation applied to matrix ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
-      Specifies whether ``A`` is assumed to be unit triangular (all diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      Specifies whether ``A`` is assumed to be unit triangular (all diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Specifices the number of rows of ``B``. The value of ``m`` must be at least zero.
@@ -591,19 +591,19 @@ trsm (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
    
 
    **Parent topic:** :ref:`blas-level-3-routines`

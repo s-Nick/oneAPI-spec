@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_future_considerations:
+.. _onemath_future_considerations:
 
 Future considerations
 ---------------------

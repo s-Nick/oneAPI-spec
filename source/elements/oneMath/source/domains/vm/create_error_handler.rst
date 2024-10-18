@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_create_error_handler:
+.. _onemath_vm_create_error_handler:
 
 create_error_handler
 ====================
@@ -215,4 +215,4 @@ create_error_handler
 
    .. container:: parentlink
 
-      **Parent topic:** :ref:`onemkl_vm_service_functions`
+      **Parent topic:** :ref:`onemath_vm_service_functions`

@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_mcg59:
+.. _onemath_device_rng_mcg59:
 
 mcg59
 =====
@@ -12,7 +12,7 @@ from NAG Numerical Libraries.
 
 .. rubric:: Description
 
-The mcg59 engine is a 59-bit multiplicative congruential generator from NAG Numerical Libraries :ref:`NAG <onemkl_rng_bibliography>`. 
+The mcg59 engine is a 59-bit multiplicative congruential generator from NAG Numerical Libraries :ref:`NAG <onemath_rng_bibliography>`. 
 The mcg59 generator belongs to linear congruential generators with the period length of approximately :math:`2^{57}`.
 
 .. container:: section
@@ -94,4 +94,4 @@ class mcg59
         offset
             Number of skipped elements.
 
-**Parent topic:** :ref:`onemkl_device_rng_engines`
+**Parent topic:** :ref:`onemath_device_rng_engines`

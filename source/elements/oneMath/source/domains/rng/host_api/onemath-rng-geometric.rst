@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_geometric:
+.. _onemath_rng_geometric:
 
 geometric
 =========
 
 Class is used for generation of geometrically distributed integer types random numbers.
 
-.. _onemkl_rng_geometric_description:
+.. _onemath_rng_geometric_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers geometrically distributed with probability :math:`p` of a single success trial, where :math:`p \in R; 0 < p < 1`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers geometrically distributed with probability :math:`p` of a single success trial, where :math:`p \in R; 0 < p < 1`.
 
 The probability distribution is given by:
 
@@ -27,7 +27,7 @@ The cumulative distribution function is as follows:
 
      F_{p}(x) = \left\{ \begin{array}{rcl} 0, x < 0 \\ 1 - (1 - p)^{\lfloor x + 1 \rfloor}, x \ge 0 \end{array}\right.
 
-.. _onemkl_rng_geometric_syntax:
+.. _onemath_rng_geometric_syntax:
 
 class geometric
 ---------------
@@ -67,7 +67,7 @@ class geometric
                 * ``oneapi::mkl::rng::geometric_method::by_default``
                 * ``oneapi::mkl::rng::geometric_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -170,4 +170,4 @@ class geometric
 
             Returns the distribution parameter `p` - probability value.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

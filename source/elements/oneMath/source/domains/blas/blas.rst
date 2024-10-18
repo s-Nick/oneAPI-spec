@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas:
+.. _onemath_blas:
 
 BLAS Routines
 +++++++++++++
 
-oneMKL provides DPC++ interfaces to the Basic Linear Algebra Subprograms (BLAS) routines (Level1, Level2, Level3), as well as several BLAS-like extension routines.
+oneMath provides DPC++ interfaces to the Basic Linear Algebra Subprograms (BLAS) routines (Level1, Level2, Level3), as well as several BLAS-like extension routines.
 
 .. toctree::
     :maxdepth: 1
@@ -18,4 +18,4 @@ oneMKL provides DPC++ interfaces to the Basic Linear Algebra Subprograms (BLAS) 
     blas-like-extensions.rst
 
 
-**Parent topic:** :ref:`onemkl_dense_linear_algebra`
+**Parent topic:** :ref:`onemath_dense_linear_algebra`

@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_gemmt:
+.. _onemath_blas_gemmt:
 
 gemmt
 =====
@@ -10,7 +10,7 @@ gemmt
 Computes a matrix-matrix product with general matrices, but updates
 only the upper or lower triangular part of the result matrix.
 
-.. _onemkl_blas_gemmt_description:
+.. _onemath_blas_gemmt_description:
 
 .. rubric:: Description
 
@@ -45,7 +45,7 @@ op(``A``) is ``n`` x ``k``, op(``B``) is ``k`` x ``n``, and
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_gemmt_buffer:
+.. _onemath_blas_gemmt_buffer:
 
 gemmt (Buffer Version)
 ----------------------
@@ -98,15 +98,15 @@ gemmt (Buffer Version)
 
    upper_lower
       Specifies whether ``C``\ ’s data is stored in its upper or
-      lower triangle. See :ref:`onemkl_datatypes` for more details.
+      lower triangle. See :ref:`onemath_datatypes` for more details.
    
    transa
       Specifies op(``A``), the transposition operation applied to
-      ``A``. See :ref:`onemkl_datatypes` for more details.
+      ``A``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Specifies op(``B``), the transposition operation applied to
-      ``B``. See :ref:`onemkl_datatypes` for more details.
+      ``B``. See :ref:`onemath_datatypes` for more details.
 
    n
       Number of rows of op(``A``), columns of op(``B``), and
@@ -228,22 +228,22 @@ gemmt (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_gemmt_usm:
+.. _onemath_blas_gemmt_usm:
 
 gemmt (USM Version)
 -------------------
@@ -299,19 +299,19 @@ gemmt (USM Version)
    upper_lower
       Specifies whether ``C``\ ’s data is stored in its upper or
       lower triangle. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
 
    transa
       Specifies op(``A``), the transposition operation applied to
       ``A``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
 
    transb
       Specifies op(``B``), the transposition operation applied to
       ``B``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
 
    n
@@ -444,20 +444,20 @@ gemmt (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_syrk_batch:
+.. _onemath_blas_syrk_batch:
 
 syrk_batch
 ==========
 
 Computes a group of ``syrk`` operations.
 
-.. _onemkl_blas_syrk_batch_description:
+.. _onemath_blas_syrk_batch_description:
 
 .. rubric:: Description
 
-The ``syrk_batch`` routines are batched versions of :ref:`onemkl_blas_syrk`, performing
+The ``syrk_batch`` routines are batched versions of :ref:`onemath_blas_syrk`, performing
 multiple ``syrk`` operations in a single call. Each ``syrk`` 
 operation perform a rank-k update with general matrices.
    
@@ -28,7 +28,7 @@ operation perform a rank-k update with general matrices.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_syrk_batch_buffer:
+.. _onemath_blas_syrk_batch_buffer:
 
 syrk_batch (Buffer Version)
 ---------------------------
@@ -109,12 +109,12 @@ of matrices in ``a`` and ``c`` buffers is given by the ``batch_size`` parameter.
 
    upper_lower
       Specifies whether data in ``C`` is stored in its upper or lower triangle.
-      For more details, see :ref:`onemkl_datatypes`.
+      For more details, see :ref:`onemath_datatypes`.
 
    trans
       Specifies op(``A``) the transposition operation applied to the
       matrix ``A``. Conjugation is never performed, even if trans =
-      transpose::conjtrans. See :ref:`onemkl_datatypes` for more
+      transpose::conjtrans. See :ref:`onemath_datatypes` for more
       details.
 
    n
@@ -181,22 +181,22 @@ of matrices in ``a`` and ``c`` buffers is given by the ``batch_size`` parameter.
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_syrk_batch_usm:
+.. _onemath_blas_syrk_batch_usm:
 
 syrk_batch (USM Version)
 ---------------------------
@@ -301,7 +301,7 @@ in ``a`` and ``c`` are given by the ``batch_size`` parameter.
 
    trans
       Array of ``group_count`` ``oneapi::mkl::transpose`` values. ``trans[i]`` specifies the form of op(``A``) used in
-      the rank-k update in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      the rank-k update in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    n
       Array of ``group_count`` integers. ``n[i]`` specifies the
@@ -429,12 +429,12 @@ in ``a`` and ``c`` are given by the ``batch_size`` parameter.
 
    upper_lower
       Specifies whether data in ``C`` is stored in its upper or lower triangle.
-      For more details, see :ref:`onemkl_datatypes`.
+      For more details, see :ref:`onemath_datatypes`.
 
    trans
       Specifies op(``A``) the transposition operation applied to the
       matrices ``A``. Conjugation is never performed, even if trans =
-      transpose::conjtrans. See :ref:`onemkl_datatypes` for more
+      transpose::conjtrans. See :ref:`onemath_datatypes` for more
       details.
 
    n
@@ -510,20 +510,20 @@ in ``a`` and ``c`` are given by the ``batch_size`` parameter.
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

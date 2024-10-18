@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_gaussian:
+.. _onemath_rng_gaussian:
 
 gaussian
 ========
 
 Class is used for generation of normally distributed real types random numbers.
 
-.. _onemkl_rng_gaussian_description:
+.. _onemath_rng_gaussian_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers normally distributed with mean :math:`(mean, a)` and standard deviation :math:`(stddev, \sigma)`, where :math:`a, \sigma \in R; \sigma > 0`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers normally distributed with mean :math:`(mean, a)` and standard deviation :math:`(stddev, \sigma)`, where :math:`a, \sigma \in R; \sigma > 0`.
 
 The probability distribution is given by:
 
@@ -28,7 +28,7 @@ The cumulative distribution function is as follows:
     F_{a, \sigma}(x) = \int^x_{-\infty}\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(y - a)^2}{2*\sigma^2})dy, x \in R.
 
 
-.. _onemkl_rng_gaussian_syntax:
+.. _onemath_rng_gaussian_syntax:
 
 class gaussian
 --------------
@@ -71,7 +71,7 @@ class gaussian
                 * ``oneapi::mkl::rng::gaussian_method::box_muller2``
                 * ``oneapi::mkl::rng::gaussian_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`
 
 .. container:: section
 
@@ -190,4 +190,4 @@ class gaussian
 
             Returns the distribution parameter `stddev` - standard deviation value.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

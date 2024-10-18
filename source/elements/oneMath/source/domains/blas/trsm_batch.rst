@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_trsm_batch:
+.. _onemath_blas_trsm_batch:
 
 trsm_batch
 ==========
 
 Computes a group of ``trsm`` operations.
 
-.. _onemkl_blas_trsm_batch_description:
+.. _onemath_blas_trsm_batch_description:
 
 .. rubric:: Description
 
-The ``trsm_batch`` routines are batched versions of :ref:`onemkl_blas_trsm`, performing
+The ``trsm_batch`` routines are batched versions of :ref:`onemath_blas_trsm`, performing
 multiple ``trsm`` operations in a single call. Each ``trsm`` 
 solves an equation of the form op(A) \* X = alpha \* B or X \* op(A) = alpha \* B. 
    
@@ -28,7 +28,7 @@ solves an equation of the form op(A) \* X = alpha \* B or X \* op(A) = alpha \* 
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_trsm_batch_buffer:
+.. _onemath_blas_trsm_batch_buffer:
 
 trsm_batch (Buffer Version)
 ---------------------------
@@ -121,19 +121,19 @@ of matrices in ``a`` and ``b`` buffers are given by the ``batch_size`` parameter
 
    left_right
       Specifies whether the matrices ``A`` multiply ``X`` on the left
-      (``side::left``) or on the right (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
       Specifies whether the matrices ``A`` are upper or lower
-      triangular. See :ref:`onemkl_datatypes` for more details.
+      triangular. See :ref:`onemath_datatypes` for more details.
 
    trans
       Specifies op(``A``), the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
       Specifies whether the matrices ``A`` are assumed to be unit
-      triangular (all diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      triangular (all diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of the ``B`` matrices. Must be at least zero.
@@ -190,19 +190,19 @@ of matrices in ``a`` and ``b`` buffers are given by the ``batch_size`` parameter
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
 trsm_batch (USM Version)
 ---------------------------
@@ -320,19 +320,19 @@ in ``a`` and ``b`` are given by the ``batch_size`` parameter.
    left_right
       Array of ``group_count`` ``oneapi::mkl::side`` values. ``left_right[i]`` specifies whether ``A`` multiplies
       ``X`` on the left (``side::left``) or on the right
-      (``side::right``) for every ``trsm`` operation in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      (``side::right``) for every ``trsm`` operation in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    upper_lower
       Array of ``group_count`` ``oneapi::mkl::uplo`` values. ``upper_lower[i]`` specifies whether ``A`` is upper or lower
-      triangular for every matrix in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      triangular for every matrix in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    trans
       Array of ``group_count`` ``oneapi::mkl::transpose`` values. ``trans[i]`` specifies the form of op(``A``) used
-      for every ``trsm`` operation in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      for every ``trsm`` operation in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
       Array of ``group_count`` ``oneapi::mkl::diag`` values. ``unit_diag[i]`` specifies whether ``A`` is assumed to
-      be unit triangular (all diagonal elements are 1) for every matrix in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      be unit triangular (all diagonal elements are 1) for every matrix in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    m
       Array of ``group_count`` integers. ``m[i]`` specifies the
@@ -450,19 +450,19 @@ in ``a`` and ``b`` are given by the ``batch_size`` parameter.
 
    left_right
       Specifies whether the matrices ``A`` multiply ``X`` on the left
-      (``side::left``) or on the right (``side::right``). See :ref:`onemkl_datatypes` for more details.
+      (``side::left``) or on the right (``side::right``). See :ref:`onemath_datatypes` for more details.
 
    upper_lower
       Specifies whether the matrices ``A`` are upper or lower
-      triangular. See :ref:`onemkl_datatypes` for more details.
+      triangular. See :ref:`onemath_datatypes` for more details.
 
    trans
       Specifies op(``A``), the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    unit_diag
       Specifies whether the matrices ``A`` are assumed to be unit
-      triangular (all diagonal elements are 1). See :ref:`onemkl_datatypes` for more details.
+      triangular (all diagonal elements are 1). See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of the ``B`` matrices. Must be at least zero.
@@ -525,20 +525,20 @@ in ``a`` and ``b`` are given by the ``batch_size`` parameter.
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

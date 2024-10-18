@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_mcg31m1:
+.. _onemath_rng_mcg31m1:
 
 mcg31m1
 =======
 
 The 31-bit multiplicative congruential pseudorandom number generator MCG(1132489760, 231 -1).
 
-.. _onemkl_rng_mcg31m1_description:
+.. _onemath_rng_mcg31m1_description:
 
 .. rubric:: Description
 
-The mcg31m1 engine is a 31-bit multiplicative congruential generator :ref:`[L'Ecuyer99] <onemkl_rng_bibliography>`. The mcg31m1 generator belongs to linear congruential generators with the period length of approximately :math:`2^{31}`. Such generators are still used as default random number generators in various software systems, mainly due to the simplicity of the portable versions implementation, speed, and compatibility with the earlier systems versions. However, their period length does not meet the requirements for modern basic generators. Still, the mcg31m1 generator possesses good statistic properties and you may successfully use it to generate random numbers of different distributions for small samplings.
+The mcg31m1 engine is a 31-bit multiplicative congruential generator :ref:`[L'Ecuyer99] <onemath_rng_bibliography>`. The mcg31m1 generator belongs to linear congruential generators with the period length of approximately :math:`2^{31}`. Such generators are still used as default random number generators in various software systems, mainly due to the simplicity of the portable versions implementation, speed, and compatibility with the earlier systems versions. However, their period length does not meet the requirements for modern basic generators. Still, the mcg31m1 generator possesses good statistic properties and you may successfully use it to generate random numbers of different distributions for small samplings.
 
 .. container:: section
 
@@ -25,7 +25,7 @@ The mcg31m1 engine is a 31-bit multiplicative congruential generator :ref:`[L'Ec
 
     :math:`a = 1132489760, m=2^{31} - 1`
 
-.. _onemkl_rng_mcg31m1_description_syntax:
+.. _onemath_rng_mcg31m1_description_syntax:
 
 class mcg31m1
 -------------
@@ -88,7 +88,7 @@ class mcg31m1
         .. rubric:: Input Parameters
 
         queue
-            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid sycl::queue object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`x_0 = seed \ mod \ 0x7FFFFFFF`, if :math:`x_0 = 0`, assume :math:`x_0 = 1`.
@@ -145,4 +145,4 @@ class mcg31m1
         other
             Valid ``mcg31m1`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

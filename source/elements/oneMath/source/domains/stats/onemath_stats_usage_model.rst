@@ -2,9 +2,9 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_usage_model:
+.. _onemath_stats_usage_model:
 
-oneMKL Summary Statistics Usage Model
+oneMath Summary Statistics Usage Model
 =====================================
 
 
@@ -17,7 +17,7 @@ A typical algorithm for summary statistics is as follows:
 #. Call the summary statistics routine to calculate the appropriate estimate.
 
 
-The following example demonstrates how to calculate mean values for a 3-dimensional dataset filled with random numbers. For dataset creation, the :ref:`onemkl_stats_make_dataset` helper function is used.
+The following example demonstrates how to calculate mean values for a 3-dimensional dataset filled with random numbers. For dataset creation, the :ref:`onemath_stats_make_dataset` helper function is used.
 
 
 USM-based example
@@ -48,4 +48,4 @@ USM-based example
         // ...
     }
 
-**Parent topic:** :ref:`onemkl_stats`
+**Parent topic:** :ref:`onemath_stats`

@@ -2,19 +2,19 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_arch_other:
+.. _onemath_arch_other:
 
 Other Features
 ----------------
-This section covers all other features in the design of oneMKL architecture.
+This section covers all other features in the design of oneMath architecture.
 
 
-.. _onemkl_spec_current_version:
+.. _onemath_spec_current_version:
 
 Specification Version and Compliance
 +++++++++++++++++++++++++++++++++++++++++++++
 
-Each oneMKL domain must define a preprocessor macro to represent the version of the specification that the implementation is compliant with.
+Each oneMath domain must define a preprocessor macro to represent the version of the specification that the implementation is compliant with.
 
 The macros for each domain are listed as follows:
 
@@ -49,11 +49,11 @@ Macro Example
 
 Versioning details are defined here: https://github.com/uxlfoundation/oneAPI-spec/blob/main/doc/versioning.rst#provisional-versions
 
-.. _onemkl_pre_post_conditions:
+.. _onemath_pre_post_conditions:
 
 Pre/Post Condition Checking
 +++++++++++++++++++++++++++++++++++++++
 
-The individual oneMKL computational routines will define any preconditions and postconditions and will define in this specification any specific checks or verifications that should be enabled for all implementations.
+The individual oneMath computational routines will define any preconditions and postconditions and will define in this specification any specific checks or verifications that should be enabled for all implementations.
 
 

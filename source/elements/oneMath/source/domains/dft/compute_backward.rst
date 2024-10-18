@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_dft_compute_backward:
+.. _onemath_dft_compute_backward:
 
 The ``compute_backward`` function templates
 ===========================================
@@ -13,7 +13,7 @@ computation of backward DFT(s), as defined by a (committed)
 templates are declared in the ``oneapi::mkl::dft`` namespace; the usage of
 prepended namespace specifiers ``oneapi::mkl::dft`` is omitted below for conciseness.
 
-.. _onemkl_dft_compute_backward_description:
+.. _onemath_dft_compute_backward_description:
 
 .. rubric:: Description
 
@@ -34,9 +34,9 @@ progress of the enqueued DFT calculations.
    The ``compute_backward`` functions may need to access the internals and
    private/protected members of (some) ``descriptor`` classes.  This could be
    done, for instance, by labeling them as friend functions to the
-   ``descriptor`` :ref:`class template<onemkl_dft_descriptor>`.
+   ``descriptor`` :ref:`class template<onemath_dft_descriptor>`.
 
-.. onemkl_dft_compute_backward_buffer:
+.. onemath_dft_compute_backward_buffer:
 
 ``compute_backward`` (Buffer versions)
 --------------------------------------
@@ -198,7 +198,7 @@ progress of the enqueued DFT calculations.
    .. rubric:: Throws
 
    The ``compute_backward`` functions shall throw the following
-   :ref:`exception<onemkl_common_exceptions>` if the associated condition is
+   :ref:`exception<onemath_common_exceptions>` if the associated condition is
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
@@ -207,7 +207,7 @@ progress of the enqueued DFT calculations.
       associated with configuration parameter ``config_param::COMMIT_STATUS`` is
       not ``config_param::COMMITTED``.
 
-.. onemkl_dft_compute_backward_usm:
+.. onemath_dft_compute_backward_usm:
 
 ``compute_backward`` (USM versions)
 -----------------------------------
@@ -374,7 +374,7 @@ progress of the enqueued DFT calculations.
    .. rubric:: Throws
 
    The ``compute_backward`` functions shall throw the following
-   :ref:`exception<onemkl_common_exceptions>` if the associated condition is
+   :ref:`exception<onemath_common_exceptions>` if the associated condition is
    detected. An implementation may throw additional implementation-specific
    exception(s) in case of error conditions not covered here:
 
@@ -393,4 +393,4 @@ progress of the enqueued DFT calculations.
    routines, which may depend on the result of the backward transform(s) before
    proceeding with other operations.
 
-**Parent topic:** :ref:`onemkl_dft`
+**Parent topic:** :ref:`onemath_dft`

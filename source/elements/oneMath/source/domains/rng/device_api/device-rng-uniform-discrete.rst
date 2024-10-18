@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_uniform_discrete:
+.. _onemath_device_rng_uniform_discrete:
 
 uniform (Discrete)
 ==================
@@ -84,7 +84,7 @@ class uniform
                 * ``oneapi::mkl::rng::device::uniform_method::standard``
                 * ``oneapi::mkl::rng::device::uniform_method::accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_device_rng_distributions_method>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_device_rng_distributions_method>`.
 
 
 .. container:: section
@@ -177,4 +177,4 @@ class uniform
 
             Returns the distribution parameter `b` - right bound.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`

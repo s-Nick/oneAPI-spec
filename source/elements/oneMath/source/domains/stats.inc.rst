@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats:
+.. _onemath_stats:
 
 Summary Statistics
 -------------------
 
-The oneMKL provides a set of :ref:`Summary Statistics routines <onemkl_stats_overview>` that compute basic statistical estimates for single and double precision multi-dimensional datasets.
+The oneMath provides a set of :ref:`Summary Statistics routines <onemath_stats_overview>` that compute basic statistical estimates for single and double precision multi-dimensional datasets.
 
 .. toctree::
 	:hidden:
 
-	stats/onemkl_stats_overview.rst
+	stats/onemath_stats_overview.rst

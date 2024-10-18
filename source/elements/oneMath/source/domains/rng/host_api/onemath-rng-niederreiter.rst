@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_niederreiter:
+.. _onemath_rng_niederreiter:
 
 niederreiter
 ============
 
 The niederreiter generator is a 32-bit Gray code-based quasi-random number generator.
 
-.. _onemkl_rng_niederreiter_description:
+.. _onemath_rng_niederreiter_description:
 
 .. rubric:: Description
 
-According to results of Bratley, Fox and Niederreiter :ref:`[Bratley92] <onemkl_rng_bibliography>` Niederreiter sequences have the best known theoretical asymptotic properties. The default dimension of quasi-random vectors can vary from 1 to 318 inclusive. It is also allowed to register user-defined parameters (irreducible polynomials).
+According to results of Bratley, Fox and Niederreiter :ref:`[Bratley92] <onemath_rng_bibliography>` Niederreiter sequences have the best known theoretical asymptotic properties. The default dimension of quasi-random vectors can vary from 1 to 318 inclusive. It is also allowed to register user-defined parameters (irreducible polynomials).
 
 .. container:: section
 
@@ -26,7 +26,7 @@ According to results of Bratley, Fox and Niederreiter :ref:`[Bratley92] <onemkl_
 
     The value :math:`c` is the right-most zero bit in :math:`n-1`; :math:`x_n` is s-dimensional vector of 32-bit values. The s-dimensional vectors (calculated during engine initialization) :math:`v_i, i = 1, 32` are called direction numbers. The vector :math:`u_n` is the generator output normalized to the unit hypercube :math:`(0, 1) ^ s`.
 
-.. _onemkl_rng_niederreiter_description_syntax:
+.. _onemath_rng_niederreiter_description_syntax:
 
 class niederreiter
 ------------------
@@ -93,7 +93,7 @@ class niederreiter
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         dimensions
             Number of dimensions. If :math:`dimen < 1` or :math:`dimen > 318`, assume :math:`dimen = 1`.
@@ -109,7 +109,7 @@ class niederreiter
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         irred_polynomials
             If you want to generate quasi-random vectors of greater dimension or obtain another sequence, you can register a set of your own irreducible polynomials. The number of dimensions corresponds to the length of the vector.
@@ -166,4 +166,4 @@ class niederreiter
         other
             Valid ``niederreiter`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

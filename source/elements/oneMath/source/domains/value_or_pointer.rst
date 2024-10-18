@@ -9,7 +9,7 @@ Scalar Arguments in BLAS
 
 .. container::
 
-   The USM version of oneMKL BLAS routines for DPC++ will accept either
+   The USM version of oneMath BLAS routines for DPC++ will accept either
    a scalar (for example ``float``) or pointer (``float*``) for parameters
    that represent a single fixed value (not a vector or matrix). These
    parameters are often named ``alpha`` or ``beta`` in BLAS.
@@ -60,21 +60,21 @@ Scalar Arguments in BLAS
          :name: wrapper-time
          :class: sectiontitle
 
-      The USM version of oneMKL BLAS routines use a templated
+      The USM version of oneMath BLAS routines use a templated
       ``value_or_pointer<T>`` wrapper to enable either pointers or values
       to be passed to routines that take a scalar parameter.
 
       In general, users should not explicitly use this type in their
       code. There is no need to construct an object of type
-      ``value_or_pointer`` in order to use the oneMKL functions that
+      ``value_or_pointer`` in order to use the oneMath functions that
       include it in their function signatures. Instead, values and pointers
       in user code will be implicitly converted to this type when a user
-      calls a oneMKL function.
+      calls a oneMath function.
 
       The ``value_or_pointer<T>`` wrapper has two constructors, one that
       converts a value of type ``T`` (or anything convertible to ``T``) to
       ``value_or_pointer<T>``, and another that converts a pointer to ``T``
-      to ``value_or_pointer<T>``. Internally, the oneMKL functions can
+      to ``value_or_pointer<T>``. Internally, the oneMath functions can
       behave slightly differently depending on whether the underlying data
       is a value or a pointer, and if it points to host-side memory or
       device-side memory, but these uses should be transparent to users.
@@ -85,7 +85,7 @@ Scalar Arguments in BLAS
          :name: dependencies
          :class: sectiontitle
 
-      For scalar parameters passed to oneMKL BLAS routines as pointers, the
+      For scalar parameters passed to oneMath BLAS routines as pointers, the
       timing of pointer dereferencing depends on whether it is a USM-managed
       pointer or a raw pointer.
 
@@ -100,5 +100,5 @@ Scalar Arguments in BLAS
       function is called and it may not be assigned asynchronously.
 
 
-      **Parent topic:** :ref:`onemkl_dense_linear_algebra`
+      **Parent topic:** :ref:`onemath_dense_linear_algebra`
 

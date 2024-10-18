@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_gemm_bias:
+.. _onemath_blas_gemm_bias:
 
 gemm_bias
 =========
 
 Computes a matrix-matrix product using general integer matrices with bias.
 
-.. _onemkl_blas_gemm_bias_description:
+.. _onemath_blas_gemm_bias_description:
 
 .. rubric:: Description
 
@@ -56,7 +56,7 @@ op(``A``) is ``m`` x ``k``, op(``B``) is ``k`` x ``n``, and
      * -  ``std::int8_t`` 
        -  ``std::int8_t`` 
 
-.. _onemkl_blas_gemm_bias_buffer:
+.. _onemath_blas_gemm_bias_buffer:
 
 gemm_bias (Buffer Version)
 --------------------------
@@ -118,19 +118,19 @@ gemm_bias (Buffer Version)
    transa
       Specifies op(``A``), the transposition operation applied to
       ``A``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    transb
       Specifies op(``B``), the transposition operation applied to
       ``B``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    offset_type
       Specifies the form of ``C_offset`` used in the matrix
       multiplication. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    m
@@ -279,22 +279,22 @@ gemm_bias (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_gemm_bias_usm:
+.. _onemath_blas_gemm_bias_usm:
 
 gemm_bias (USM Version)
 -----------------------
@@ -358,19 +358,19 @@ gemm_bias (USM Version)
    transa
       Specifies op(``A``), the transposition operation applied to
       ``A``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    transb
       Specifies op(``B``), the transposition operation applied to
       ``B``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    offset_type
       Specifies the form of ``C_offset`` used in the matrix
       multiplication. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
  
    m
@@ -529,20 +529,20 @@ gemm_bias (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_lapack_geqrf_batch:
+.. _onemath_lapack_geqrf_batch:
 
 geqrf_batch
 ===========
@@ -24,7 +24,7 @@ Computes the QR factorizations of a batch of general matrices.
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_lapack_geqrf_batch_buffer:
+.. _onemath_lapack_geqrf_batch_buffer:
 
 geqrf_batch (Buffer Version)
 ----------------------------
@@ -79,7 +79,7 @@ scratchpad
    Scratchpad memory to be used by routine for storing intermediate results.
          
 scratchpad_size
-   Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemkl_lapack_geqrf_batch_scratchpad_size` function.
+   Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemath_lapack_geqrf_batch_scratchpad_size` function.
 
 .. container:: section
 
@@ -97,13 +97,13 @@ tau
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -113,7 +113,7 @@ This routine shall throw the following exceptions if the associated condition is
 
     If ``info`` is not zero and `detail()` returns zero, then there were some errors for some of the problems in the supplied batch and ``info`` code contains the number of failed calculations in a batch.
 
-.. _onemkl_lapack_geqrf_batch_usm:
+.. _onemath_lapack_geqrf_batch_usm:
 
 geqrf_batch (USM Version)
 -------------------------
@@ -171,7 +171,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Group API of the :ref:`onemkl_lapack_geqrf_batch_scratchpad_size` function.
+  Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Group API of the :ref:`onemath_lapack_geqrf_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -198,13 +198,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -261,7 +261,7 @@ scratchpad
   Scratchpad memory to be used by routine for storing intermediate results.
 
 scratchpad_size
-  Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemkl_lapack_geqrf_batch_scratchpad_size` function.
+  Size of scratchpad memory as the number of floating point elements of type ``T``. Size should not be less than the value returned by the Strided API of the :ref:`onemath_lapack_geqrf_batch_scratchpad_size` function.
 
 events
   List of events to wait for before starting computation. Defaults to empty list.
@@ -288,13 +288,13 @@ Output event to wait on to ensure computation is complete.
 
 This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-:ref:`oneapi::mkl::lapack::batch_error<onemkl_lapack_exception_batch_error>`
+:ref:`oneapi::mkl::lapack::batch_error<onemath_lapack_exception_batch_error>`
 
-:ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+:ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
 
-:ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+:ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-:ref:`oneapi::mkl::lapack::invalid_argument<onemkl_lapack_exception_invalid_argument>`
+:ref:`oneapi::mkl::lapack::invalid_argument<onemath_lapack_exception_invalid_argument>`
 
    The ``info`` code of the problem can be obtained by `info()` method of exception object:
 
@@ -304,4 +304,4 @@ This routine shall throw the following exceptions if the associated condition is
 
    If ``info`` is not zero and `detail()` returns zero, then there were some errors for some of the problems in the supplied batch and ``info`` code contains the number of failed calculations in a batch.
 
-**Parent topic:** :ref:`onemkl_lapack-like-extensions-routines`
+**Parent topic:** :ref:`onemath_lapack-like-extensions-routines`

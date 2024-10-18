@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_gamma:
+.. _onemath_rng_gamma:
 
 gamma
 =====
 
 Class is used for generation of gamma distributed real types random numbers.
 
-.. _onemkl_rng_gamma_description:
+.. _onemath_rng_gamma_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>`
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>`
 function to provide random numbers gamma distributed with shape :math:`\alpha`,
 displacement :math:`a`, and scale parameter :math:`\beta`, where
 :math:`a, \alpha, \beta \in R; \alpha > 0; \beta > 0`.
@@ -30,7 +30,7 @@ The cumulative distribution function is as follows:
 
     F_{a, \alpha, \beta}(x) = \left\{ \begin{array}{rcl} \int^x_a\frac{1}{\Gamma(\alpha)\beta^{\alpha}}(y - a)^{\alpha - 1}e^{-(y - a) / \beta}dy, x \ge a \\ 0, x < a \end{array}\right.
 
-.. _onemkl_rng_gamma_syntax:
+.. _onemath_rng_gamma_syntax:
 
 class gamma
 -----------
@@ -73,7 +73,7 @@ class gamma
                 * ``oneapi::mkl::rng::gamma_method::marsaglia``
                 * ``oneapi::mkl::rng::gamma_method::marsaglia_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -208,4 +208,4 @@ class gamma
 
             Returns the distribution parameter `beta` - scale parameter.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

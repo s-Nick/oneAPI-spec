@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_lognormal:
+.. _onemath_rng_lognormal:
 
 lognormal
 =========
 
 Class is used for generation of lognormally distributed real types random numbers.
 
-.. _onemkl_rng_lognormal_description:
+.. _onemath_rng_lognormal_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers lognormally distributed with mean :math:`(m, a)` and standard deviation :math:`(s, \sigma)` of subject normal distribution, displacement :math:`(displ, b)`, and scalefactor :math:`(scale, \beta)`, where :math:`a, \sigma, b, \beta \in R; \sigma > 0; \beta > 0`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers lognormally distributed with mean :math:`(m, a)` and standard deviation :math:`(s, \sigma)` of subject normal distribution, displacement :math:`(displ, b)`, and scalefactor :math:`(scale, \beta)`, where :math:`a, \sigma, b, \beta \in R; \sigma > 0; \beta > 0`.
 
 The probability distribution is given by:
 
@@ -27,7 +27,7 @@ The cumulative distribution function is as follows:
 
     F_{a, \sigma, b, \beta}(x) = \left\{ \begin{array}{rcl} \Phi( \frac{(ln((x - b) / \beta) - a)}{\sigma}), x > b \\ 0, x \leq b \end{array}\right.
 
-.. _onemkl_rng_lognormal_syntax:
+.. _onemath_rng_lognormal_syntax:
 
 class lognormal
 ---------------
@@ -73,7 +73,7 @@ class lognormal
                 * ``oneapi::mkl::rng::lognormal_method::box_muller2_accurate``
                 * ``oneapi::mkl::rng::lognormal_method::icdf_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -224,4 +224,4 @@ class lognormal
 
             Returns the distribution parameter `scale` - scalefactor value.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

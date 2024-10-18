@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_service_functions:
+.. _onemath_vm_service_functions:
 
 VM Service Functions
 ====================
@@ -25,21 +25,21 @@ VM Service Functions
 
          * - Function Short Name
            - Description
-         * - :ref:`onemkl_vm_setmode`
+         * - :ref:`onemath_vm_setmode`
            - Sets the VM mode for given queue
-         * - :ref:`onemkl_vm_get_mode`
+         * - :ref:`onemath_vm_get_mode`
            - Gets the VM mode for given queue
-         * - :ref:`onemkl_vm_set_status`
+         * - :ref:`onemath_vm_set_status`
            - Sets the VM status code for given queue
-         * - :ref:`onemkl_vm_get_status`
+         * - :ref:`onemath_vm_get_status`
            - Gets the VM status code for given queue
-         * - :ref:`onemkl_vm_clear_status`
+         * - :ref:`onemath_vm_clear_status`
            - Clears the VM status code for given queue
-         * - :ref:`onemkl_vm_create_error_handler`
+         * - :ref:`onemath_vm_create_error_handler`
            - Creates the local VM error handler for a function
 
 
-**Parent topic:** :ref:`onemkl_vm`
+**Parent topic:** :ref:`onemath_vm`
 
 .. toctree::
     :hidden:

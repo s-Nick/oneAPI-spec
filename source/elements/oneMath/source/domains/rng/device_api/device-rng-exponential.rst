@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_device_rng_exponential:
+.. _onemath_device_rng_exponential:
 
 exponential
 ===========
@@ -84,7 +84,7 @@ class exponential
                 * ``oneapi::mkl::rng::device::exponential_method::icdf``
                 * ``oneapi::mkl::rng::device::exponential_method::icdf_accurate``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_device_rng_distributions_method>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_device_rng_distributions_method>`.
 
 
 .. container:: section
@@ -204,4 +204,4 @@ class exponential
 
             Returns the distribution parameter `beta` - scalefactor value.
 
-**Parent topic:** :ref:`onemkl_device_rng_distributions`
+**Parent topic:** :ref:`onemath_device_rng_distributions`

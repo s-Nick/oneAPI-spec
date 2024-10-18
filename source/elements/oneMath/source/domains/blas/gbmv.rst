@@ -2,14 +2,14 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_gbmv:
+.. _onemath_blas_gbmv:
 
 gbmv
 ====
 
 Computes a matrix-vector product with a general band matrix.
 
-.. _onemkl_blas_gbmv_description:
+.. _onemath_blas_gbmv_description:
 
 .. rubric:: Description
 
@@ -44,7 +44,7 @@ op(``A``) is one of op(``A``) = ``A``, or op(``A``) =
       * -  ``std::complex<float>`` 
       * -  ``std::complex<double>`` 
 
-.. _onemkl_blas_gbmv_buffer:
+.. _onemath_blas_gbmv_buffer:
 
 gbmv (Buffer Version)
 ---------------------
@@ -98,7 +98,7 @@ gbmv (Buffer Version)
    trans
       Specifies op(``A``), the transposition operation applied to ``A``.
       See
-      :ref:`onemkl_datatypes` for more
+      :ref:`onemath_datatypes` for more
       details.
 
    m
@@ -164,22 +164,22 @@ gbmv (Buffer Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_gbmv_usm:
+.. _onemath_blas_gbmv_usm:
 
 gbmv (USM Version)
 ------------------
@@ -235,7 +235,7 @@ gbmv (USM Version)
    trans
       Specifies op(``A``), the transposition operation applied to
       ``A``. See
-      :ref:`onemkl_datatypes` for
+      :ref:`onemath_datatypes` for
       more details.
 
    m
@@ -312,20 +312,20 @@ gbmv (USM Version)
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-level-2-routines`

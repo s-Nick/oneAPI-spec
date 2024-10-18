@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_set_matrix_property:
+.. _onemath_sparse_set_matrix_property:
 
 set_matrix_property
 ===================
@@ -24,7 +24,7 @@ Matrix properties
       }
 
    Matrix properties are optional and "strong" guarantees. Unlike
-   :ref:`onemkl_sparse_matrix_view`, the user must ensure that the handle's data
+   :ref:`onemath_sparse_matrix_view`, the user must ensure that the handle's data
    holds all the given properties. A property can be set as a hint for backends
    to optimize some operations. Multiple properties can be set to the same handle.
 
@@ -97,9 +97,9 @@ matrix handle.
    implementation-specific exception(s) in case of error conditions not covered
    here.
 
-   | :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
-   | :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
-   | :ref:`oneapi::mkl::uninitialized<onemkl_exception_uninitialized>`
-   | :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   | :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
+   | :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
+   | :ref:`oneapi::mkl::uninitialized<onemath_exception_uninitialized>`
+   | :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
 
-**Parent topic:** :ref:`onemkl_sparse_data_handles`
+**Parent topic:** :ref:`onemath_sparse_data_handles`

@@ -2,16 +2,16 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng:
+.. _onemath_rng:
 
 Random Number Generators
 -------------------------
 
-The oneAPI Math Kernel Library Random Number Generators provides a :ref:`set of routines <onemkl_rng_overview>` implementing commonly
-used :ref:`pseudorandom, quasi-random, and non-deterministic generators <onemkl_rng_engines_basic_random_number_generators>`
-with :ref:`continuous and discrete distributions <onemkl_rng_distributions>`.
+The oneAPI Math Kernel Library Random Number Generators provides a :ref:`set of routines <onemath_rng_overview>` implementing commonly
+used :ref:`pseudorandom, quasi-random, and non-deterministic generators <onemath_rng_engines_basic_random_number_generators>`
+with :ref:`continuous and discrete distributions <onemath_rng_distributions>`.
 
 .. toctree::
    :hidden:
 
-   rng/onemkl-rng-overview.rst
+   rng/onemath-rng-overview.rst

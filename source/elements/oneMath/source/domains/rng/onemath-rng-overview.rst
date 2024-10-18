@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_overview:
+.. _onemath_rng_overview:
 
 Random Number Generators (RNG)
 ==============================
@@ -40,9 +40,9 @@ In computational statistics, random variate generation is usually made in two st
 
 RNG domain supports two execution models:
 
-   #. :ref:`Host API<onemkl_rng_manual_offload_routines>`, which is aligned with the rest of oneMKL domains 
-      :ref:`oneMKL domains<onemkl_member_functions>`.
-   #. :ref:`Device API<onemkl_device_rng_routines>`, which is specific for RNG domain. These APIs 
+   #. :ref:`Host API<onemath_rng_manual_offload_routines>`, which is aligned with the rest of oneMath domains 
+      :ref:`oneMath domains<onemath_member_functions>`.
+   #. :ref:`Device API<onemath_device_rng_routines>`, which is specific for RNG domain. These APIs 
       are designed to be callable from the User's kernels as well as Host code.
 
 
@@ -52,4 +52,4 @@ RNG domain supports two execution models:
    host_api/rng-host-routines.rst
    device_api/device-routines.rst
 
-**Parent topic:** :ref:`onemkl_rng`
+**Parent topic:** :ref:`onemath_rng`

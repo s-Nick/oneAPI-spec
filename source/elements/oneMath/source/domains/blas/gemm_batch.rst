@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_blas_gemm_batch:
+.. _onemath_blas_gemm_batch:
 
 gemm_batch
 ==========
 
 Computes a group of ``gemm`` operations.
 
-.. _onemkl_blas_gemm_batch_description:
+.. _onemath_blas_gemm_batch_description:
 
 .. rubric:: Description
 
-The ``gemm_batch`` routines are batched versions of :ref:`onemkl_blas_gemm`, performing
+The ``gemm_batch`` routines are batched versions of :ref:`onemath_blas_gemm`, performing
 multiple ``gemm`` operations in a single call. Each ``gemm`` 
 operation perform a matrix-matrix product with general matrices.
    
@@ -71,7 +71,7 @@ operation perform a matrix-matrix product with general matrices.
         -  ``std::complex<double>`` 
         -  ``std::complex<double>`` 
 
-.. _onemkl_blas_gemm_batch_buffer:
+.. _onemath_blas_gemm_batch_buffer:
 
 gemm_batch (Buffer Version)
 ---------------------------
@@ -161,11 +161,11 @@ of matrices in ``a``, ``b`` and ``c`` buffers is given by the ``batch_size`` par
 
    transa
       Specifies op(``A``) the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Specifies op(``B``) the transposition operation applied to the
-      matrices ``B``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``B``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of op(``A``) and ``C``. Must be at least zero.
@@ -265,22 +265,22 @@ of matrices in ``a``, ``b`` and ``c`` buffers is given by the ``batch_size`` par
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
-.. _onemkl_blas_gemm_batch_usm:
+.. _onemath_blas_gemm_batch_usm:
 
 gemm_batch (USM Version)
 ---------------------------
@@ -442,11 +442,11 @@ in ``a``, ``b`` and ``c`` are given by the ``batch_size`` parameter.
 
    transa
       Array or span of ``group_count`` ``oneapi::mkl::transpose`` values. ``transa[i]`` specifies the form of op(``A``) used in
-      the matrix multiplication in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      the matrix multiplication in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Array or span of ``group_count`` ``oneapi::mkl::transpose`` values. ``transb[i]`` specifies the form of op(``B``) used in
-      the matrix multiplication in group ``i``. See :ref:`onemkl_datatypes` for more details.
+      the matrix multiplication in group ``i``. See :ref:`onemath_datatypes` for more details.
 
    m
       Array or span of ``group_count`` integers. ``m[i]`` specifies the
@@ -640,11 +640,11 @@ in ``a``, ``b`` and ``c`` are given by the ``batch_size`` parameter.
 
    transa
       Specifies op(``A``) the transposition operation applied to the
-      matrices ``A``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``A``. See :ref:`onemath_datatypes` for more details.
 
    transb
       Specifies op(``B``) the transposition operation applied to the
-      matrices ``B``. See :ref:`onemkl_datatypes` for more details.
+      matrices ``B``. See :ref:`onemath_datatypes` for more details.
 
    m
       Number of rows of op(``A``) and ``C``. Must be at least zero.
@@ -751,20 +751,20 @@ in ``a``, ``b`` and ``c`` are given by the ``batch_size`` parameter.
 
    This routine shall throw the following exceptions if the associated condition is detected. An implementation may throw additional implementation-specific exception(s) in case of error conditions not covered here.
 
-   :ref:`oneapi::mkl::invalid_argument<onemkl_exception_invalid_argument>`
+   :ref:`oneapi::mkl::invalid_argument<onemath_exception_invalid_argument>`
        
        
    
-   :ref:`oneapi::mkl::unsupported_device<onemkl_exception_unsupported_device>`
+   :ref:`oneapi::mkl::unsupported_device<onemath_exception_unsupported_device>`
        
 
-   :ref:`oneapi::mkl::host_bad_alloc<onemkl_exception_host_bad_alloc>`
+   :ref:`oneapi::mkl::host_bad_alloc<onemath_exception_host_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::device_bad_alloc<onemkl_exception_device_bad_alloc>`
+   :ref:`oneapi::mkl::device_bad_alloc<onemath_exception_device_bad_alloc>`
        
 
-   :ref:`oneapi::mkl::unimplemented<onemkl_exception_unimplemented>`
+   :ref:`oneapi::mkl::unimplemented<onemath_exception_unimplemented>`
       
 
    **Parent topic:** :ref:`blas-like-extensions`

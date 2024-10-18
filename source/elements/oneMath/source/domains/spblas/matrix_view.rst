@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_sparse_matrix_view_and_descr:
+.. _onemath_sparse_matrix_view_and_descr:
 
 Matrix view
 ===========
 
-.. _onemkl_sparse_matrix_descriptor:
+.. _onemath_sparse_matrix_descriptor:
 
 matrix_descr
 ------------
@@ -51,7 +51,7 @@ matrix_descr
       * - ``diagonal``
         - View as diagonal, use only main diagonal values.
 
-.. _onemkl_sparse_matrix_view:
+.. _onemath_sparse_matrix_view:
 
 matrix_view
 -----------
@@ -81,8 +81,8 @@ matrix_view
    The matrix view holds information to specify which part of the matrix should
    be read without changing the matrix's data.
 
-   See :ref:`onemkl_sparse_matrix_descriptor`, :ref:`onemkl_enum_uplo` and
-   :ref:`onemkl_enum_diag` for a description of the members.
+   See :ref:`onemath_sparse_matrix_descriptor`, :ref:`onemath_enum_uplo` and
+   :ref:`onemath_enum_diag` for a description of the members.
 
    Each operation documents which combination of ``type_view``, ``uplo_view``
    and ``diag_view`` are valid.
@@ -122,4 +122,4 @@ matrix_view
       the other members are initialized to the same value as the default
       constructor.
 
-**Parent topic:** :ref:`onemkl_spblas`
+**Parent topic:** :ref:`onemath_spblas`

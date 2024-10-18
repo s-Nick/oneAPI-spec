@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_bibliography:
+.. _onemath_rng_bibliography:
 
 Bibliography
 ============

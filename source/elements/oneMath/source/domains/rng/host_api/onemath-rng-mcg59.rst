@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_mcg59:
+.. _onemath_rng_mcg59:
 
 mcg59
 =====
 
 The 59-bit multiplicative congruential pseudorandom number generator.
 
-.. _onemkl_rng_mcg59_description:
+.. _onemath_rng_mcg59_description:
 
 .. rubric:: Description
 
-The mcg59 engine is a 59-bit multiplicative congruential generator from NAG Numerical Libraries :ref:`NAG <onemkl_rng_bibliography>`. The mcg59 generator belongs to linear congruential generators with the period length of approximately :math:`2^{57}`.
+The mcg59 engine is a 59-bit multiplicative congruential generator from NAG Numerical Libraries :ref:`NAG <onemath_rng_bibliography>`. The mcg59 generator belongs to linear congruential generators with the period length of approximately :math:`2^{57}`.
 
 .. container:: section
 
@@ -25,7 +25,7 @@ The mcg59 engine is a 59-bit multiplicative congruential generator from NAG Nume
 
     :math:`a = 13^{13}, m=2^{59}`
 
-.. _onemkl_rng_mcg59_description_syntax:
+.. _onemath_rng_mcg59_description_syntax:
 
 class mcg59
 -----------
@@ -88,7 +88,7 @@ class mcg59
         .. rubric:: Input Parameters
 
         queue
-            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
+            Valid ``sycl::queue`` object, calls of the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` routine submits kernels in this queue to obtain random numbers from a given engine.
 
         seed
             The initial conditions of the generator state, assume :math:`x_0 = seed \ mod \ 2^{59}`, if :math:`x_0 = 0`, assume :math:`x_0 = 1`.
@@ -145,4 +145,4 @@ class mcg59
         other
             Valid ``mcg59`` r-value object. The ``queue`` and state of the other engine is moved to the current engine.
 
-**Parent topic:** :ref:`onemkl_rng_engines_basic_random_number_generators`
+**Parent topic:** :ref:`onemath_rng_engines_basic_random_number_generators`

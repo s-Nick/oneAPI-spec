@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_gaussian_mv:
+.. _onemath_rng_gaussian_mv:
 
 gaussian_mv
 ===========
 
 Class is used for generation of multivariate normally distributed real types random numbers.
 
-.. _onemkl_rng_gaussian_mv_description:
+.. _onemath_rng_gaussian_mv_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide n random numbers :math:`d`-variate normally distributed, with mean :math:`a` and variance-covariance matrix :math:`C`, where :math:`a \in R^d;` :math:`C` is dxd symmetric positive matrix.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide n random numbers :math:`d`-variate normally distributed, with mean :math:`a` and variance-covariance matrix :math:`C`, where :math:`a \in R^d;` :math:`C` is dxd symmetric positive matrix.
 
 The probability density function is given by:
 
@@ -21,7 +21,7 @@ The probability density function is given by:
 
     f_{a, C}(x) = \frac{1}{\sqrt{det(2\pi C)}}exp(-1 / 2(x - a)^T C^{-1}(x-a)).
 
-.. _onemkl_rng_gaussian_mv_syntax:
+.. _onemath_rng_gaussian_mv_syntax:
 
 class gaussian_mv
 -----------------
@@ -77,7 +77,7 @@ It's implementation defined which type ``SequenceContainerOrView`` represents.
                 * ``oneapi::mkl::rng::gaussian_mv_method::box_muller2``
                 * ``oneapi::mkl::rng::gaussian_mv_method::icdf``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -196,4 +196,4 @@ It's implementation defined which type ``SequenceContainerOrView`` represents.
 
             Returns the variance-covariance matrix.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`

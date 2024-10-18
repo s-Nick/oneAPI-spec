@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_stats_service_routines:
+.. _onemath_stats_service_routines:
 
 Service Routines
 ================
@@ -19,14 +19,14 @@ Service Routines
 
          * -  Routine
            -  Description
-         * -                      \ :ref:`onemkl_stats_make_dataset`\
+         * -                      \ :ref:`onemath_stats_make_dataset`\
            -  Creates a dataset from the provided parameters
 
 
 
-      **Parent topic:** :ref:`onemkl_stats`
+      **Parent topic:** :ref:`onemath_stats`
 
 .. toctree::
     :hidden:
 
-    onemkl_stats_make_dataset
+    onemath_stats_make_dataset

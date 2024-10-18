@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_fmin:
+.. _onemath_vm_fmin:
 
 fmin
 ====
@@ -146,7 +146,7 @@ fmin
 
    mode
       Overrides the global VM mode setting for this function call. See
-      :ref:`onemkl_vm_setmode`
+      :ref:`onemath_vm_setmode`
       function for possible values and their description. This is an
       optional parameter. The default value is ``oneapi::mkl::vm::mode::not_defined``.
 
@@ -176,7 +176,7 @@ fmin
 
    mode
       Overrides the global VM mode setting for this function call. See
-      the :ref:`onemkl_vm_setmode`
+      the :ref:`onemath_vm_setmode`
       function for possible values and their description. This is an
       optional parameter. The default value is ``oneapi::mkl::vm::mode::not_defined``.
 
@@ -211,7 +211,7 @@ fmin
     .. rubric:: Exceptions
         :class: sectiontitle
 
-    For list of generated exceptions please refer to  :ref:`onemkl_vm_exceptions`
+    For list of generated exceptions please refer to  :ref:`onemath_vm_exceptions`
 
 
 .. container:: familylinks
@@ -219,6 +219,6 @@ fmin
 
    .. container:: parentlink
 
-      **Parent topic:** :ref:`onemkl_vm_mathematical_functions`
+      **Parent topic:** :ref:`onemath_vm_mathematical_functions`
 
 

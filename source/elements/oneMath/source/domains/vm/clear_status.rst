@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_vm_clear_status:
+.. _onemath_vm_clear_status:
 
 clear_status
 ============
@@ -104,6 +104,6 @@ clear_status
 
    .. container:: parentlink
 
-      **Parent topic:** :ref:`onemkl_vm_service_functions`
+      **Parent topic:** :ref:`onemath_vm_service_functions`
 
 

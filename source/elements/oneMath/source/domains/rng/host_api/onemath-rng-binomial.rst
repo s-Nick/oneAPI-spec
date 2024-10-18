@@ -2,18 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
-.. _onemkl_rng_binomial:
+.. _onemath_rng_binomial:
 
 binomial
 ========
 
 Class is used for generation of binomially distributed integer types random numbers.
 
-.. _onemkl_rng_binomial_description:
+.. _onemath_rng_binomial_description:
 
 .. rubric:: Description
 
-The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemkl_rng_generate>` function to provide random numbers binomially distributed with a number of independent Bernoulli trials :math:`m`, and with probability :math:`p` of a single trial success, where :math:`p \in R; 0 \leq p \leq 1, m \in N`.
+The class object is used in the :ref:`oneapi::mkl::rng::generate()<onemath_rng_generate>` function to provide random numbers binomially distributed with a number of independent Bernoulli trials :math:`m`, and with probability :math:`p` of a single trial success, where :math:`p \in R; 0 \leq p \leq 1, m \in N`.
 
 A binomially distributed variate represents the number of successes in :math:`m` independent Bernoulli trials with probability of a single trial success :math:`p`.
 
@@ -30,7 +30,7 @@ The cumulative distribution function is as follows:
     F_{m, p}(x) = \left\{ \begin{array}{rcl} 0, x < 0 \\ \sum^{\lfloor x \rfloor}_{k = 0} C^k_{m}p^k(1 - p)^{m - k}, 0 \leq x < m, x \in R \\ 1, x \ge m \end{array}\right.
 
 
-.. _onemkl_rng_binomial_syntax:
+.. _onemath_rng_binomial_syntax:
 
 class binomial
 --------------
@@ -70,7 +70,7 @@ class binomial
                 * ``oneapi::mkl::rng::binomial_method::by_default``
                 * ``oneapi::mkl::rng::binomial_method::btpe``
 
-            See description of the methods in :ref:`Distributions methods template parameter<onemkl_rng_distributions_template_parameter_mkl_rng_method_values>`.
+            See description of the methods in :ref:`Distributions methods template parameter<onemath_rng_distributions_template_parameter_mkl_rng_method_values>`.
 
 .. container:: section
 
@@ -189,4 +189,4 @@ class binomial
 
             Returns the distribution parameter `p` - success probability of a single trial.
 
-**Parent topic:** :ref:`onemkl_rng_distributions`
+**Parent topic:** :ref:`onemath_rng_distributions`
